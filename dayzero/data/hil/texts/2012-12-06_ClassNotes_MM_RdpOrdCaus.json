@@ -1,0 +1,898 @@
+[
+  {
+    "transcription": "túgtan",
+    "translations": {
+      "en": "allow"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "allow",
+    "analysis": [
+      {
+        "token": "túgtan",
+        "morphemes": "túgtan",
+        "gloss": "allow"
+      }
+    ],
+    "createdAt": 1388797396790
+  },
+  {
+    "transcription": "indí’ silá gústo",
+    "translations": {
+      "en": "they don’t want (me to go)."
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "they don’t want (me to go).",
+    "analysis": [
+      {
+        "token": "indí’",
+        "morphemes": "indí’",
+        "gloss": "NEG"
+      },
+      {
+        "token": "silá",
+        "morphemes": "silá",
+        "gloss": "they.ABS"
+      },
+      {
+        "token": "gústo",
+        "morphemes": "gústo",
+        "gloss": "like; want"
+      }
+    ],
+    "createdAt": 1388797396790
+  },
+  {
+    "transcription": "guin túgtan akó sang ákon guinikánan nga usarón ang salákyan.",
+    "translations": {
+      "en": "My parents allowed me to use the car."
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "My parents allowed me to use the car.",
+    "analysis": [
+      {
+        "token": "guin",
+        "morphemes": "guin",
+        "gloss": "PASSIVE"
+      },
+      {
+        "token": "túgtan",
+        "morphemes": "túgtan",
+        "gloss": "allow"
+      },
+      {
+        "token": "akó",
+        "morphemes": "akó",
+        "gloss": "I.ABS"
+      },
+      {
+        "token": "sang",
+        "morphemes": "sang",
+        "gloss": "OBL"
+      },
+      {
+        "token": "ákon",
+        "morphemes": "ákon",
+        "gloss": "my"
+      },
+      {
+        "token": "guinikánan",
+        "morphemes": "guinikánan",
+        "gloss": "parents"
+      },
+      {
+        "token": "nga",
+        "morphemes": "nga",
+        "gloss": "LINK"
+      },
+      {
+        "token": "usarón",
+        "morphemes": "usar-ón",
+        "gloss": "use-TRANS"
+      },
+      {
+        "token": "ang",
+        "morphemes": "ang",
+        "gloss": "DEF"
+      },
+      {
+        "token": "salákyan",
+        "morphemes": "salákyan",
+        "gloss": "car"
+      }
+    ],
+    "createdAt": 1388797396789
+  },
+  {
+    "transcription": "guin palántaw akó síne sang ákon guinikánang.",
+    "translations": {
+      "en": "My parents let me, asked me, made me, required me to go to the movies."
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "My parents let me, asked me, made me, required me to go to the movies.",
+    "analysis": [
+      {
+        "token": "guin",
+        "morphemes": "guin",
+        "gloss": "PASSIVE"
+      },
+      {
+        "token": "palántaw",
+        "morphemes": "pa-lántaw",
+        "gloss": "CAUS-allow"
+      },
+      {
+        "token": "akó",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "síne",
+        "morphemes": "síne",
+        "gloss": "movies"
+      },
+      {
+        "token": "sang",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "ákon",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "guinikánang",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396788
+  },
+  {
+    "transcription": "guiná pasímba akó sang ákon guinikánan",
+    "translations": {
+      "en": "My parents required me to/let me/made me go to church."
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "My parents required me to/let me/made me go to church.",
+    "analysis": [
+      {
+        "token": "guiná",
+        "morphemes": "guiná",
+        "gloss": "PASS.INTR"
+      },
+      {
+        "token": "pasímba",
+        "morphemes": "pa-símba",
+        "gloss": "CAUS-go.to.church"
+      },
+      {
+        "token": "akó",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "sang",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "ákon",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "guinikánan",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396787
+  },
+  {
+    "transcription": "mangamúyu’ ta or kitá para sa patáy",
+    "translations": {
+      "en": "praying for the dead"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "praying for the dead",
+    "analysis": [
+      {
+        "token": "mangamúyu’",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "ta",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "or",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "kitá",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "para",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "sa",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "patáy",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396786
+  },
+  {
+    "transcription": "pamísa sa patáy",
+    "translations": {
+      "en": "mass for the dead, praising the dead"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "mass for the dead, praising the dead",
+    "analysis": [
+      {
+        "token": "pamísa",
+        "morphemes": "pa-mísa",
+        "gloss": "CAUS-hold.mass"
+      },
+      {
+        "token": "sa",
+        "morphemes": "sa",
+        "gloss": "for; to"
+      },
+      {
+        "token": "patáy",
+        "morphemes": "patáy",
+        "gloss": "the.dead"
+      }
+    ],
+    "createdAt": 1388797396785
+  },
+  {
+    "transcription": "pangamúyu’",
+    "translations": {
+      "en": "praying"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "praying",
+    "analysis": [
+      {
+        "token": "pangamúyu’",
+        "morphemes": "pan-gamúyu’",
+        "gloss": "PAN-pray"
+      }
+    ],
+    "createdAt": 1388797396785
+  },
+  {
+    "transcription": "mísa",
+    "translations": {
+      "en": "mass"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "mass",
+    "analysis": [
+      {
+        "token": "mísa",
+        "morphemes": "mísa",
+        "gloss": "mass"
+      }
+    ],
+    "createdAt": 1388797396784
+  },
+  {
+    "transcription": "masímba silá",
+    "translations": {
+      "en": "they’re going to church"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "they’re going to church",
+    "analysis": [
+      {
+        "token": "masímba",
+        "morphemes": "ma-símba",
+        "gloss": "IRR-go.to.church"
+      },
+      {
+        "token": "silá",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396783
+  },
+  {
+    "transcription": "sulusímba",
+    "translations": {
+      "en": "going to church without concentrating, etc."
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "going to church without concentrating, etc.",
+    "analysis": [
+      {
+        "token": "sulusímba",
+        "morphemes": "s<ulu>-símba",
+        "gloss": "HALF.ASS-go.to.church"
+      }
+    ],
+    "createdAt": 1388797396783
+  },
+  {
+    "transcription": "símba",
+    "translations": {
+      "en": "worship"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "worship",
+    "analysis": [
+      {
+        "token": "símba",
+        "morphemes": "símba",
+        "gloss": "church; worship"
+      }
+    ],
+    "createdAt": 1388797396782
+  },
+  {
+    "transcription": "masímba",
+    "translations": {
+      "en": "going to church"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "going to church",
+    "analysis": [
+      {
+        "token": "masímba",
+        "morphemes": "ma-símba",
+        "gloss": "IRREALIS-go.to.church"
+      }
+    ],
+    "createdAt": 1388797396782
+  },
+  {
+    "transcription": "simbáhan",
+    "translations": {
+      "en": "church"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "church",
+    "analysis": [
+      {
+        "token": "simbáhan",
+        "morphemes": "simbá-han",
+        "gloss": "go.to.church-LOC"
+      }
+    ],
+    "createdAt": 1388797396781
+  },
+  {
+    "transcription": "símba",
+    "translations": {
+      "en": "go to church"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "go to church",
+    "analysis": [
+      {
+        "token": "símba",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396781
+  },
+  {
+    "transcription": "DOM",
+    "translations": {
+      "en": "dirty old man"
+    },
+    "comments": [
+      "lol."
+    ],
+    "tags": [],
+    "translation": "dirty old man",
+    "analysis": [
+      {
+        "token": "dom",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396780
+  },
+  {
+    "transcription": "ang iká tátlo",
+    "translations": {
+      "en": "the third one"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "the third one",
+    "analysis": [
+      {
+        "token": "ang",
+        "morphemes": "ang",
+        "gloss": "DEF"
+      },
+      {
+        "token": "iká",
+        "morphemes": "i-ká",
+        "gloss": "first-ORDINAL"
+      },
+      {
+        "token": "tátlo",
+        "morphemes": "tátlo",
+        "gloss": "three"
+      }
+    ],
+    "createdAt": 1388797396779
+  },
+  {
+    "transcription": "ang úna nga pahiná’ iká duhá nga versikulo sa Biblíya.",
+    "translations": {
+      "en": "the first page of the second verse in the Bible"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "the first page of the second verse in the Bible",
+    "analysis": [
+      {
+        "token": "ang",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "úna",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "nga",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "pahiná’",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "iká",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "duhá",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "nga",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "versikulo",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "sa",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "biblíya",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396779
+  },
+  {
+    "transcription": "ang na úna",
+    "translations": {
+      "en": "the first one"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "the first one",
+    "analysis": [
+      {
+        "token": "ang",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "na",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "úna",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396778
+  },
+  {
+    "transcription": "ang iká duhá",
+    "translations": {
+      "en": "the second one"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "the second one",
+    "analysis": [
+      {
+        "token": "ang",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "iká",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "duhá",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396778
+  },
+  {
+    "transcription": "sang",
+    "translations": {
+      "en": "when"
+    },
+    "comments": [
+      "‘J this is a sort of universal word. ‘’."
+    ],
+    "tags": [],
+    "translation": "when",
+    "analysis": [
+      {
+        "token": "sang",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396777
+  },
+  {
+    "transcription": "nadumdumán",
+    "translations": {
+      "en": "remembered"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "remembered",
+    "analysis": [
+      {
+        "token": "nadumdumán",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396776
+  },
+  {
+    "transcription": "indí’ ko kadúmdum sang ákon na dumdumán sang úna.",
+    "translations": {
+      "en": "I can’t remember what I remembered a long time ago."
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "I can’t remember what I remembered a long time ago.",
+    "analysis": [
+      {
+        "token": "indí’",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "ko",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "kadúmdum",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "sang",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "ákon",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "na",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "dumdumán",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "sang",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "úna",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396776
+  },
+  {
+    "transcription": "makupu’kú:pu’ ko anáy",
+    "translations": {
+      "en": "I will hug hug now for awhile"
+    },
+    "comments": [
+      "maybe say as going out of the house  anáy for awhile."
+    ],
+    "tags": [],
+    "translation": "I will hug hug now for awhile",
+    "analysis": [
+      {
+        "token": "makupu’kú:pu’",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "ko",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "anáy",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396775
+  },
+  {
+    "transcription": "dúmdum",
+    "translations": {
+      "en": "remember"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "remember",
+    "analysis": [
+      {
+        "token": "dúmdum",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396775
+  },
+  {
+    "transcription": "kup’anáy",
+    "translations": {
+      "en": "hugging each other"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "hugging each other",
+    "analysis": [
+      {
+        "token": "kup’anáy",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396774
+  },
+  {
+    "transcription": "kup’anáy",
+    "translations": {
+      "en": "hugging"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "hugging",
+    "analysis": [
+      {
+        "token": "kup’anáy",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396773
+  },
+  {
+    "transcription": "kupu’kúpu’",
+    "translations": {
+      "en": "hugging each other"
+    },
+    "comments": [
+      "pretending to be hugging each other, as if hugging,",
+      "but not actually hugging. \tNot full hugging."
+    ],
+    "tags": [],
+    "translation": "hugging each other",
+    "analysis": [
+      {
+        "token": "kupu’kúpu’",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396773
+  },
+  {
+    "transcription": "palíbot",
+    "translations": {
+      "en": "around, but doesn’t work"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "around, but doesn’t work",
+    "analysis": [
+      {
+        "token": "palíbot",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396772
+  },
+  {
+    "transcription": "kupú’",
+    "translations": {
+      "en": "hug"
+    },
+    "comments": [
+      "J"
+    ],
+    "tags": [],
+    "translation": "hug",
+    "analysis": [
+      {
+        "token": "kupú’",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396772
+  },
+  {
+    "transcription": "agbayán ka",
+    "translations": {
+      "en": "he/she will put his hand on your shoulder."
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "he/she will put his hand on your shoulder.",
+    "analysis": [
+      {
+        "token": "agbayán",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "ka",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396771
+  },
+  {
+    "transcription": "agbayán ka níla",
+    "translations": {
+      "en": "they will their hands on your shoulder"
+    },
+    "comments": [
+      "they will put their arms around your"
+    ],
+    "tags": [],
+    "translation": "they will their hands on your shoulder",
+    "analysis": [
+      {
+        "token": "agbayán",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "ka",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "níla",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396771
+  },
+  {
+    "transcription": "agbayán ta ka",
+    "translations": {
+      "en": "I’ll hand on your shoulder"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "I’ll hand on your shoulder",
+    "analysis": [
+      {
+        "token": "agbayán",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "ta",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "ka",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396770
+  },
+  {
+    "transcription": "ágba",
+    "translations": {
+      "en": "piggy back ride"
+    },
+    "comments": "",
+    "tags": [],
+    "translation": "piggy back ride",
+    "analysis": [
+      {
+        "token": "ágba",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388797396768
+  }
+]

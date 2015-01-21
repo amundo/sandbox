@@ -1,0 +1,173 @@
+* { 
+  box-sizing: border-box;
+}
+
+body { 
+  background: url(../img/cardboard.gif);
+  margin: 1em 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main { 
+  border: 1px solid red;
+  flex: 1;
+  display:flex;
+  padding:  1em;
+  margin: 1em;
+  border-radius: 10px;
+}
+
+#editor {
+  background: white;
+  border-radius: 5px;
+  padding: 2px;
+  flex: 3;
+}
+
+#editor textarea { 
+  display:block;
+  outline-color:none;
+  padding:1em;
+  min-height: 4em;
+  width: 100%;
+  outline: none; 
+  border: 1px solid #cecece;
+}
+
+#editor textarea:focus { 
+  outline: none; 
+  border: 1px solid #cecece;
+  background:whitesmoke;
+}
+
+#editor textarea#transcription { 
+  min-height: 4em;
+  background-color: #fff; 
+}
+
+#editor #analysis { 
+  background: white;
+  font-size: small;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+ol#analysis { 
+  padding:0;
+  margin:0;
+}
+
+ol#analysis > li { 
+  display:inline-block;
+  border-left: 1px solid #ccc;
+}
+
+ol#analysis li ol.word { 
+  margin: .5em .5em .2em;
+  display:inline-block;
+  padding: 0;
+  list-style-type: none;
+}
+
+ol.word input { 
+  border: none; 
+  margin: 0.5em 0 0;
+  border-width: 1px;
+  border-color: #ccc;
+  border-style: none none dotted;
+  font-family: Helvetica;
+  font-size: small;
+}
+
+main #lexicon { 
+  background: #fefefe;
+  margin: 0 4px;
+  padding: 4px;
+  border-radius: 4px;
+  flex: 1;
+}
+
+input.search { 
+  margin: 0 4px;
+}
+
+main #text { 
+  flex:2;
+  line-height: 1em;
+  background-size: 100% 1em;
+  background: #fefefe;
+  margin: 0 1em;
+  padding: 1em 0;
+  border-radius: 3px 20px 3px 3px;
+}
+
+#sentences .sentence { 
+  padding: 0 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px dashed lightblue;
+}
+
+header { 
+ display: flex;
+}
+
+h1 { 
+  font-family: 'Cedarville Cursive';
+  padding: 0 1em;
+  color:hsla(136, 3%, 50%, 0.6);
+  flex: 1;
+}
+
+nav { 
+  flex: 1;
+}
+
+.token, [lang=hil] { 
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.gloss, [lang=en] { 
+  font-style: italic;
+  font-family: serif;
+}
+
+
+::-webkit-input-placeholder, 
+::-moz-placeholder,
+:-ms-input-placeholder {  
+  font-style: italic;
+  font-size: small;
+  text-align:right;
+  font-family: serif;
+}
+
+
+nav button { 
+  background:none;
+  border: none;
+  cursor: pointer;
+}
+
+/*
+#word { 
+  background: #3e3e3e;
+  border-radius: 10px;
+  border: 2px solid black;
+  min-height: 100px; 
+  font-size: xx-large;
+  color: #cecece;
+  width: 100px; 
+  text-align:center;
+  line-height: 200%;
+}
+*/
+
+.morphemes { 
+  font-family: 'Andale Mono';
+  color: blue;
+}

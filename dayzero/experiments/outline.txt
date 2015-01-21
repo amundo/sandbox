@@ -1,0 +1,8 @@
+How to render an Analysis:
+
+when a Sentence is fetched,
+
+for Word in Analysis:
+  if Word.isComplete,
+    render 
+

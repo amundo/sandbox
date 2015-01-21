@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<title>test</title>
+<meta charset=utf-8>
+<script src=js/jquery.js></script>
+<script src=js/underscore.js></script>
+<script src=js/backbone.js></script>
+</head>
+<body>
+
+<script id=program>
+
+var dump = function(o){ console.log(JSON.stringify(o, null, 2))}
+
+var Word = Backbone.Model.extend({ })
+
+var Words = Backbone.Collection.extend({
+  model: Word,
+
+  initialize: function(){
+    _.bindAll(this, 'log', 'addWord');
+    this.on('add', this.addWord, this)
+  },
+
+  addWord : function(word){
+    if(word.isNew()){
+      var ids = this.pluck('id').map(function(i){ return parseInt(i,10) });
+      var max = _.max(ids);
+      console.log(max);
+      word.set('id', max+1 );
+    }
+    this.add(word);
+  },
+
+  log : function(){
+    this.each(function(word){
+      console.log(_.template('[<%- id %>] <%- word %>', word.toJSON()));
+    })
+  }
+
+})
+
+
+var words = new Words([
+  {id: 1, word: 'cat'},
+  {id: 2, word: 'dog'}
+]);
+
+
+
+</script>
+
+</body>
+</html>
+

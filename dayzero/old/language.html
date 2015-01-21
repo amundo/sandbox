@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<title>dayzero</title>
+<meta charset=utf-8>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'> -->
+
+<script src=js/jquery.js></script>
+<script src=js/underscore.js></script>
+<script src=js/backbone.js></script>
+<script src=js/backbone.localStorage.js></script>
+<script src=js/d3.v3.js></script>
+<script src=js/prefixfree.js></script>
+
+<!-- note: application code (dayzero.js) is included at the bottom of the page -->
+<link rel=stylesheet href=css/style.css />
+<link rel=stylesheet href=css/mobile.css />
+
+</head>
+<body>
+
+  <main>
+
+    <section id=lexicon> 
+      <i class="fa fa-search"></i><input class=search type=search />
+      <ol></ol>
+    </section>
+
+    <section id=editor>
+    </section>
+
+    <section id=text>
+      <p>Sentence count: <span id=sentencesCount>0</span></p>
+      <i class="fa fa-search"></i><input class=search type=search />
+      <div id=sentences></div>
+    </section>
+
+  </main>
+
+<footer>
+  <img src=img/class_diagram3.svg>
+  <h1>dayzero</h1>
+</footer>
+
+<script id=sentenceTemplate type=text/html> 
+  <p lang=hil><%- transcription %></p>
+  <p lang=en><%- translation %></p>
+</script>
+
+<script id=inlineWordTemplate type=text/html>
+    <li><span class=token><%- token %></span> [<span class=morphemes><%- morphemes %></span>] <span class=gloss><%- gloss %></span></li>
+</script>
+
+<script id=wordTemplate type=text/html>
+  <ol class=word>
+    <li class=token><%- token %></li>
+    <li class=morphemes><input name=morphemes class=morphemes placeholder=morphemes type=text value="<%- morphemes %>"></li>
+    <li class=gloss>     <input name=gloss      class=gloss      placeholder=gloss      type=text value="<%- gloss %>"></li>
+  </ol>
+</script>
+
+<script id=editorTemplate type=text/html>
+  <textarea spellcheck=false placeholder=transcription autofocus id=transcription><%- transcription %></textarea>
+  <ol id=analysis>
+    <li>
+      <ol class=word>
+        <li class=token>analysis here…</li>
+      </ol>
+    </li>
+  </ol>
+  <textarea placeholder=translation id=translation><%- translation %></textarea>
+  <button id=announceSentence type=submit>Add sentence to text</button>
+</script>
+
+
+<script src=js/language.js> </script>
+<script src=js/dayzero.js> </script>
+
+</body>
+</html>

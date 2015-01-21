@@ -1,0 +1,714 @@
+[
+  {
+    "transcription": "Mujhe tumse mohobet he.",
+    "translations": {
+      "en": "I love you."
+    },
+    "comments": [
+      "Mohobet is more formal word for love."
+    ],
+    "tags": "",
+    "translation": "I love you.",
+    "analysis": [
+      {
+        "token": "mujhe",
+        "morphemes": "mujhe",
+        "gloss": "1.S.OBL"
+      },
+      {
+        "token": "tumse",
+        "morphemes": "tumse",
+        "gloss": "2.S.OBL"
+      },
+      {
+        "token": "mohobet",
+        "morphemes": "mohobet",
+        "gloss": "love"
+      },
+      {
+        "token": "he",
+        "morphemes": "he",
+        "gloss": "3.to.be"
+      }
+    ],
+    "createdAt": 1388530675765
+  },
+  {
+    "transcription": "Tumhare lia accha.",
+    "translations": {
+      "en": "It's good for you."
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "It's good for you.",
+    "analysis": [
+      {
+        "token": "tumhare",
+        "morphemes": "tum-hare",
+        "gloss": "2.S.POSS"
+      },
+      {
+        "token": "lia",
+        "morphemes": "lia",
+        "gloss": "for.2.F"
+      },
+      {
+        "token": "accha",
+        "morphemes": "accha",
+        "gloss": "good"
+      }
+    ],
+    "createdAt": 1388530675764
+  },
+  {
+    "transcription": "Mathilau.",
+    "translations": {
+      "en": "Don't mix it."
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "Don't mix it.",
+    "analysis": [
+      {
+        "token": "mathilau",
+        "morphemes": "mat-hila-u",
+        "gloss": "NEG-mix-IMP"
+      }
+    ],
+    "createdAt": 1388530675764
+  },
+  {
+    "transcription": "Khub surat",
+    "translations": {
+      "en": "Beautiful"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "Beautiful",
+    "analysis": [
+      {
+        "token": "khub",
+        "morphemes": "khub",
+        "gloss": "very"
+      },
+      {
+        "token": "surat",
+        "morphemes": "surat",
+        "gloss": "beautiful"
+      }
+    ],
+    "createdAt": 1388530675763
+  },
+  {
+    "transcription": "Fikar matkaro",
+    "translations": {
+      "en": "Don't worry."
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "Don't worry.",
+    "analysis": [
+      {
+        "token": "fikar",
+        "morphemes": "fikar",
+        "gloss": "think;worry"
+      },
+      {
+        "token": "matkaro",
+        "morphemes": "mat-ka-ro",
+        "gloss": "NEG-to.do-IMP"
+      }
+    ],
+    "createdAt": 1388530675763
+  },
+  {
+    "transcription": "Fikar",
+    "translations": {
+      "en": "Thought; worry"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "Thought; worry",
+    "analysis": [
+      {
+        "token": "fikar",
+        "morphemes": "fikar",
+        "gloss": "thought.worry"
+      }
+    ],
+    "createdAt": 1388530675763
+  },
+  {
+    "transcription": "Yalla",
+    "translations": {
+      "en": "Let's go"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "Let's go",
+    "analysis": [
+      {
+        "token": "yalla",
+        "morphemes": "yalla",
+        "gloss": "lets_go"
+      }
+    ],
+    "createdAt": 1388530675762
+  },
+  {
+    "transcription": "Méra hat gahã he?",
+    "translations": {
+      "en": "Where is my hat?"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "Where is my hat?",
+    "analysis": [
+      {
+        "token": "méra",
+        "morphemes": "méra",
+        "gloss": "1.S.POSS"
+      },
+      {
+        "token": "hat",
+        "morphemes": "hat",
+        "gloss": "hat"
+      },
+      {
+        "token": "gahã",
+        "morphemes": "gahã",
+        "gloss": "where"
+      },
+      {
+        "token": "he",
+        "morphemes": "he",
+        "gloss": "3.S.to.be"
+      }
+    ],
+    "createdAt": 1388530675762
+  },
+  {
+    "transcription": "Hamari",
+    "translations": {
+      "en": "Ours"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "Ours",
+    "analysis": [
+      {
+        "token": "hamari",
+        "morphemes": "ham-ari",
+        "gloss": "2.P-POSS.NOM"
+      }
+    ],
+    "createdAt": 1388530675761
+  },
+  {
+    "transcription": "Heme walnut ki zerurat he.",
+    "translations": {
+      "en": "We need walnuts."
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "We need walnuts.",
+    "analysis": [
+      {
+        "token": "heme",
+        "morphemes": "hem-e",
+        "gloss": "hem-1.PL.POSS"
+      },
+      {
+        "token": "walnut",
+        "morphemes": "walnut",
+        "gloss": "walnut"
+      },
+      {
+        "token": "ki",
+        "morphemes": "ki",
+        "gloss": "GEN"
+      },
+      {
+        "token": "zarurat",
+        "morphemes": "zarurat",
+        "gloss": "necessary"
+      },
+      {
+        "token": "he",
+        "morphemes": "he",
+        "gloss": "3.S.to.be"
+      }
+    ],
+    "createdAt": 1388530675761
+  },
+  {
+    "transcription": "Gese gete … he?",
+    "translations": {
+      "en": "How do you say …?"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "How do you say …?",
+    "analysis": [
+      {
+        "token": "gese",
+        "morphemes": "gese",
+        "gloss": "how"
+      },
+      {
+        "token": "gete",
+        "morphemes": "gete",
+        "gloss": "say"
+      },
+      {
+        "token": "he",
+        "morphemes": "he",
+        "gloss": "1.S.to.be"
+      }
+    ],
+    "createdAt": 1388530675760
+  },
+  {
+    "transcription": "Heme zerurat te walnuts ki.",
+    "translations": {
+      "en": "We need walnuts."
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "We need walnuts.",
+    "analysis": [
+      {
+        "token": "heme",
+        "morphemes": "hem-e",
+        "gloss": "1.P-POSS"
+      },
+      {
+        "token": "zerurat",
+        "morphemes": "zerurat",
+        "gloss": "necessary"
+      },
+      {
+        "token": "te",
+        "morphemes": "te",
+        "gloss": "?"
+      },
+      {
+        "token": "walnuts",
+        "morphemes": "walnuts",
+        "gloss": "walnuts"
+      },
+      {
+        "token": "ki",
+        "morphemes": "ki",
+        "gloss": "GEN"
+      }
+    ],
+    "createdAt": 1388530675760
+  },
+  {
+    "transcription": "Ye coffee mazidar lag rehí he.",
+    "translations": {
+      "en": "This coffee looks delicious."
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "This coffee looks delicious.",
+    "analysis": [
+      {
+        "token": "ye",
+        "morphemes": "ye",
+        "gloss": "1.PROX.DEM"
+      },
+      {
+        "token": "coffee",
+        "morphemes": "coffee",
+        "gloss": "coffee"
+      },
+      {
+        "token": "lag",
+        "morphemes": "lag",
+        "gloss": "to.look"
+      },
+      {
+        "token": "rehí",
+        "morphemes": "reh-í",
+        "gloss": "?-F"
+      },
+      {
+        "token": "he",
+        "morphemes": "he",
+        "gloss": "3.S.to.be"
+      }
+    ],
+    "createdAt": 1388530675759
+  },
+  {
+    "transcription": "Ye puzzle mashkil lag rehá he.",
+    "translations": {
+      "en": "This puzzle looks difficult."
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "This puzzle looks difficult.",
+    "analysis": [
+      {
+        "token": "ye",
+        "morphemes": "ye",
+        "gloss": "1.PROX.DEF"
+      },
+      {
+        "token": "puzzle",
+        "morphemes": "puzzle",
+        "gloss": "puzzle"
+      },
+      {
+        "token": "mashkil",
+        "morphemes": "mashkil",
+        "gloss": "difficult"
+      },
+      {
+        "token": "lag",
+        "morphemes": "lag",
+        "gloss": "to.look"
+      },
+      {
+        "token": "rehá",
+        "morphemes": "reh-á",
+        "gloss": "?-F"
+      },
+      {
+        "token": "he",
+        "morphemes": "he",
+        "gloss": "3.S.to.be"
+      }
+    ],
+    "createdAt": 1388530675759
+  },
+  {
+    "transcription": "Vo coffee mazidar ti.",
+    "translations": {
+      "en": "‘That coffee was delicious.’"
+    },
+    "comments": [
+      "That coffee.F delicious was.F.S"
+    ],
+    "tags": "",
+    "translation": "‘That coffee was delicious.’",
+    "analysis": [
+      {
+        "token": "vo",
+        "morphemes": "vo",
+        "gloss": "1.S.DISTAL.DEM"
+      },
+      {
+        "token": "coffee",
+        "morphemes": "coffee",
+        "gloss": "coffee"
+      },
+      {
+        "token": "mazidar",
+        "morphemes": "mazidar",
+        "gloss": "delicious"
+      },
+      {
+        "token": "ti",
+        "morphemes": "ti",
+        "gloss": "to.be.3.S.F.PAST"
+      }
+    ],
+    "createdAt": 1388530675758
+  },
+  {
+    "transcription": "Bayákfas",
+    "translations": {
+      "en": "Breakfast"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "Breakfast",
+    "analysis": [
+      {
+        "token": "bayákfas",
+        "morphemes": "bayákfas",
+        "gloss": "breakfast"
+      }
+    ],
+    "createdAt": 1388530675757
+  },
+  {
+    "transcription": "Vo bayákfas mazidar ta.",
+    "translations": {
+      "en": "‘That breakfast was delicious.’"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "‘That breakfast was delicious.’",
+    "analysis": [
+      {
+        "token": "vo",
+        "morphemes": "vo",
+        "gloss": "1.S.DISTAL.DEM"
+      },
+      {
+        "token": "bayákfas",
+        "morphemes": "bayákfas",
+        "gloss": "breakfast"
+      },
+      {
+        "token": "mazidar",
+        "morphemes": "mazidar",
+        "gloss": "delicious"
+      },
+      {
+        "token": "ta",
+        "morphemes": "ta",
+        "gloss": "to.be.3.S.M.PAST"
+      }
+    ],
+    "createdAt": 1388530675757
+  },
+  {
+    "transcription": "so",
+    "translations": {
+      "en": "to.sleep"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "to.sleep",
+    "analysis": [
+      {
+        "token": "so",
+        "morphemes": "so",
+        "gloss": "sleep"
+      }
+    ],
+    "createdAt": 1388530675756
+  },
+  {
+    "transcription": "Vo abhi pancake mazzidar he.",
+    "translations": {
+      "en": "That pancake is still delicious."
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "That pancake is still delicious.",
+    "analysis": [
+      {
+        "token": "vo",
+        "morphemes": "vo",
+        "gloss": "1.DISTAL.DEM"
+      },
+      {
+        "token": "abhi",
+        "morphemes": "abhi",
+        "gloss": "still"
+      },
+      {
+        "token": "pancake",
+        "morphemes": "pancake",
+        "gloss": "pancake"
+      },
+      {
+        "token": "mazzidar",
+        "morphemes": "mazzidar",
+        "gloss": "delicious"
+      },
+      {
+        "token": "he",
+        "morphemes": "he",
+        "gloss": "1.S.to.be"
+      }
+    ],
+    "createdAt": 1388530675756
+  },
+  {
+    "transcription": "Lisa pirse so rehí he.",
+    "translations": {
+      "en": "Lisa is still sleeping."
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "Lisa is still sleeping.",
+    "analysis": [
+      {
+        "token": "Lisa",
+        "morphemes": "Lisa",
+        "gloss": "Lisa"
+      },
+      {
+        "token": "pirse",
+        "morphemes": "pirse",
+        "gloss": "sleep"
+      },
+      {
+        "token": "so",
+        "morphemes": "so",
+        "gloss": "sleep"
+      },
+      {
+        "token": "rehí",
+        "morphemes": "reh-í",
+        "gloss": "?-F"
+      },
+      {
+        "token": "he",
+        "morphemes": "he",
+        "gloss": "3.S.to.be"
+      }
+    ],
+    "createdAt": 1388530675755
+  },
+  {
+    "transcription": "Vo pancake mazzidar ta",
+    "translations": {
+      "en": "That pancake was delicious"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "That pancake was delicious",
+    "analysis": [
+      {
+        "token": "vo",
+        "morphemes": "vo",
+        "gloss": "1.DISTAL.DEM"
+      },
+      {
+        "token": "pancake",
+        "morphemes": "pancake",
+        "gloss": "pancake"
+      },
+      {
+        "token": "mazzidar",
+        "morphemes": "mazzidar",
+        "gloss": "delicous"
+      },
+      {
+        "token": "ta",
+        "morphemes": "ta",
+        "gloss": "was.3.S.M"
+      }
+    ],
+    "createdAt": 1388530675754
+  },
+  {
+    "transcription": "Vo pancake mazzidar ta",
+    "translations": {
+      "en": "That pancake was delicious"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "That pancake was delicious",
+    "analysis": [
+      {
+        "token": "vo",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "pancake",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "mazzidar",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "ta",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388530675754
+  },
+  {
+    "transcription": "Vo pancake",
+    "translations": {
+      "en": "That pancake"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "That pancake",
+    "analysis": [
+      {
+        "token": "vo",
+        "morphemes": "vo",
+        "gloss": "that"
+      },
+      {
+        "token": "pancake",
+        "morphemes": "pancake",
+        "gloss": "pancake"
+      }
+    ],
+    "createdAt": 1388530675753
+  },
+  {
+    "transcription": "Vo pancakes",
+    "translations": {
+      "en": "Those pancake"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "Those pancake",
+    "analysis": [
+      {
+        "token": "vo",
+        "morphemes": "vo",
+        "gloss": "that.DIST.DEM"
+      },
+      {
+        "token": "pancakes",
+        "morphemes": "pancakes",
+        "gloss": "pancakes"
+      }
+    ],
+    "createdAt": 1388530675753
+  },
+  {
+    "transcription": "Ye pancakes",
+    "translations": {
+      "en": "These pancake"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "The pancakes",
+    "analysis": [
+      {
+        "token": "ye",
+        "morphemes": "ye",
+        "gloss": "the.PROX.DEF"
+      },
+      {
+        "token": "pancakes",
+        "morphemes": "pancakes",
+        "gloss": "pancakes"
+      }
+    ],
+    "createdAt": 1388530675752
+  },
+  {
+    "transcription": "Ye pancake",
+    "translations": {
+      "en": "This pancake"
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "This pancake",
+    "analysis": [
+      {
+        "token": "ye",
+        "morphemes": "",
+        "gloss": ""
+      },
+      {
+        "token": "pancake",
+        "morphemes": "",
+        "gloss": ""
+      }
+    ],
+    "createdAt": 1388530675751
+  }
+]
+

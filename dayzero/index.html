@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<title>dayzero</title>
+<meta charset=utf-8>
+<script src=js/lib/jquery.js></script>
+<script src=js/lib/underscore.js></script>
+<script src=js/lib/backbone.js></script>
+<link rel="icon" type="image/png" href="img/favicon.png">
+
+<link rel=stylesheet href=css/style.css />
+<link rel=stylesheet href=css/mobile.css />
+</head>
+<body>
+
+<main>
+
+  <section id=words>
+    <a href="#words/export">export</a>
+    <button class=add>Add</button>
+    <ol id=list></ol>
+  </section>
+
+  <section id=text>
+    <header>
+    </header>
+
+    <div class=search>
+      <input type=search class=search>
+      <button class=add>Add</button>
+    </div>
+
+    <div id=sentences>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- templates -->
+<script type=text/template id=textInfoTemplate>
+        <h1 class=title>‘<%- title %>’</h1>
+        <p class=info>
+          Spoken by <strong class=speaker><%- speaker %></strong> working with 
+          <strong class=linguist><%- linguist %></strong>
+          in <strong class=language><%- language %></strong> (<code><%- code %></code>)
+          on <strong class=date><time class=recordedAt><%- date %></time>.</strong>
+        </p>
+</script>
+
+<script type=text/template id=editSentenceTemplate>
+<article>
+  <textarea spellcheck=false type=text name=transcription class=transcription><%- transcription %></textarea>
+  <div class="analysis">
+  </div>
+  <textarea spellcheck=false type=text name=translation class=translation><%- translation %></textarea>
+  <footer>
+    <button class=save>save</button>
+    <button class=destroy>delete</button>
+  </footer>
+</article>
+</script>
+
+<script type=text/template id=showSentenceTemplate>
+<nav><button>export</button></nav>
+<article>
+  <p class=transcription><%- transcription %></p>
+  <div class="analysis"></div>
+  <p class=translation><%- translation %></p>
+</article>
+<footer>
+<% if (comments && comments.length > 0) {
+    print('<ul class=comments><li>' + comments.join('</li><li>') + '</li></ul>');
+} %>
+</footer>
+</script>
+
+<script type=text/template id=editWordTemplate>
+  <li><input type=text name=token      class=token value="<%- token %>"></li>
+  <li><input type=text name=morphemes  class=morphemes value="<%- morphemes %>"></li>
+  <li><input type=text name=gloss      class=gloss value="<%- gloss %>"></li>
+</script>
+
+<script type=text/template id=showWordTemplate>
+  <li class=token><%- token %></li>
+  <li class=morphemes><%- morphemes %></li>
+  <li class=gloss><%- gloss %></li>
+</script>
+
+<script src=js/language.js></script>
+<script src=js/words.js></script>
+<script src=js/analysis.js></script>
+<script src=js/sentences.js></script>
+<script src=js/text.js></script>
+
+<script src=js/router.js></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,64 @@
+[
+  {
+    "transcription": "Mujhe tumse mohobet he.",
+    "translations": {
+      "en": "I love you."
+    },
+    "comments": [
+      "Mohobet is more formal word for love."
+    ],
+    "tags": "",
+    "translation": "I love you.",
+    "analysis": [
+      {
+        "token": "mujhe",
+        "morphemes": "mujhe",
+        "gloss": "1.S.OBL"
+      },
+      {
+        "token": "tumse",
+        "morphemes": "tumse",
+        "gloss": "2.S.OBL"
+      },
+      {
+        "token": "mohobet",
+        "morphemes": "mohobet",
+        "gloss": "love"
+      },
+      {
+        "token": "he",
+        "morphemes": "he",
+        "gloss": "3.to.be"
+      }
+    ],
+    "createdAt": 1388530675765
+  },
+  {
+    "transcription": "Tumhare lia accha.",
+    "translations": {
+      "en": "It's good for you."
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "It's good for you.",
+    "analysis": [
+      {
+        "token": "tumhare",
+        "morphemes": "tum-hare",
+        "gloss": "2.S.POSS"
+      },
+      {
+        "token": "lia",
+        "morphemes": "lia",
+        "gloss": "for.2.F"
+      },
+      {
+        "token": "accha",
+        "morphemes": "accha",
+        "gloss": "good"
+      }
+    ],
+    "createdAt": 1388530675764
+  }
+]
+

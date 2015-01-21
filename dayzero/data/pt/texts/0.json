@@ -1,0 +1,73 @@
+[
+  {
+    "transcription": "Caraleo",
+    "translations": {
+      "en": "Lionface."
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "Lionface.",
+    "analysis": [
+      {
+        "token": "caraleo",
+        "morphemes": "cara-leo",
+        "gloss": "face-lion"
+      }
+    ],
+    "createdAt": 1388973924342
+  },
+  {
+    "transcription": "Ela é ótima.",
+    "translations": {
+      "en": "She’s great."
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "She’s great.",
+    "analysis": [
+      {
+        "token": "ela",
+        "morphemes": "ela",
+        "gloss": "2.S.F"
+      },
+      {
+        "token": "é",
+        "morphemes": "é",
+        "gloss": "is.3.S"
+      },
+      {
+        "token": "ótima",
+        "morphemes": "ótim-a",
+        "gloss": "great-F.S"
+      }
+    ],
+    "createdAt": 1388973924342
+  },
+  {
+    "transcription": "Ela é fodíssima...",
+    "translations": {
+      "en": "She’s badass."
+    },
+    "comments": "",
+    "tags": "",
+    "translation": "She’s badass.",
+    "analysis": [
+      {
+        "token": "ela",
+        "morphemes": "ela",
+        "gloss": "2.S.F"
+      },
+      {
+        "token": "é",
+        "morphemes": "é",
+        "gloss": "is.3.S"
+      },
+      {
+        "token": "fodíssima",
+        "morphemes": "fod-íssim-a",
+        "gloss": "fucking.great.SUPER-F.S"
+      }
+    ],
+    "createdAt": 1388973924339
+  }
+]
