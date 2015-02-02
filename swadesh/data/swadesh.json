@@ -1,0 +1,1132 @@
+{
+  "metadata" : {
+    "title": "Apoala Mixtec with Proto-Mixtec Etyma",
+    "author": "Kathryn Josserand",
+    "source": "Mixtec Dialect History"
+  },
+
+  "words": [
+  {
+    "id": 1,
+    "protomixtec": "sawiʔ",
+    "en": "rain",
+    "es": "lluvia"
+  },
+  {
+    "id": 2,
+    "protomixtec": "yawiʔ",
+    "en": "agave",
+    "es": "maguey"
+  },
+  {
+    "id": 3,
+    "protomixtec": "yuwiʔ",
+    "en": "straw mat",
+    "es": "petate"
+  },
+  {
+    "id": 4,
+    "protomixtec": "kɨwįʔ",
+    "en": "four",
+    "es": "cuatro"
+  },
+  {
+    "id": 5,
+    "protomixtec": "towį",
+    "en": "feather",
+    "es": "pluma"
+  },
+  {
+    "id": 6,
+    "protomixtec": "luʔwęʔ",
+    "en": "tail",
+    "es": "cola"
+  },
+  {
+    "id": 7,
+    "protomixtec": "yuwęʔ",
+    "en": "wax",
+    "es": "cera"
+  },
+  {
+    "id": 8,
+    "protomixtec": "sitįʔ",
+    "en": "nose",
+    "es": "nariz"
+  },
+  {
+    "id": 9,
+    "protomixtec": "toʔǫ",
+    "en": "word",
+    "es": "palabra"
+  },
+  {
+    "id": 10,
+    "protomixtec": "yetį",
+    "en": "near",
+    "es": "(está) cerca"
+  },
+  {
+    "id": 11,
+    "protomixtec": "yutųʔ",
+    "en": "tree",
+    "es": "árbol"
+  },
+  {
+    "id": 12,
+    "protomixtec": "isu",
+    "en": "deer",
+    "es": "venado"
+  },
+  {
+    "id": 13,
+    "protomixtec": "seʔę",
+    "en": "lard",
+    "es": "manteca"
+  },
+  {
+    "id": 14,
+    "protomixtec": "siko",
+    "en": "smell",
+    "es": "olor"
+  },
+  {
+    "id": 15,
+    "protomixtec": "sitaʔ",
+    "en": "tortilla",
+    "es": "tortilla"
+  },
+  {
+    "id": 16,
+    "protomixtec": "ⁿduxęʔ",
+    "en": "vomits",
+    "es": "vomitar"
+  },
+  {
+    "es": "flojo (hombre)",
+    "id": 17,
+    "protomixtec": "suxęʔ",
+    "en": "lazy"
+  },
+  {
+    "id": 18,
+    "protomixtec": "xito",
+    "en": "bed",
+    "es": "cama"
+  },
+  {
+    "id": 19,
+    "protomixtec": "xiyoʔ",
+    "en": "griddle",
+    "es": "comal"
+  },
+  {
+    "id": 20,
+    "protomixtec": "kʷeti",
+    "en": "sin",
+    "es": "culpa"
+  },
+  {
+    "id": 21,
+    "protomixtec": "ⁿdutiʔ",
+    "en": "bean",
+    "es": "frijol"
+  },
+  {
+    "id": 22,
+    "protomixtec": "ⁿdute",
+    "en": "water",
+    "es": "agua"
+  },
+  {
+    "id": 23,
+    "protomixtec": "yute",
+    "en": "river",
+    "es": "río"
+  },
+  {
+    "id": 24,
+    "protomixtec": "ⁿdeʔyu",
+    "en": "mud",
+    "es": "lodo"
+  },
+  {
+    "id": 25,
+    "protomixtec": "yeni",
+    "en": "brother",
+    "es": "hermano"
+  },
+  {
+    "id": 26,
+    "protomixtec": "oni",
+    "en": "three",
+    "es": "tres"
+  },
+  {
+    "id": 27,
+    "protomixtec": "noʔo",
+    "en": "tooth",
+    "es": "diente"
+  },
+  {
+    "id": 28,
+    "protomixtec": "oʔǫ",
+    "en": "five",
+    "es": "cinco"
+  },
+  {
+    "id": 29,
+    "protomixtec": "owe",
+    "en": "bitter",
+    "es": "amargo"
+  },
+  {
+    "id": 30,
+    "protomixtec": "koyǫ",
+    "en": "meat",
+    "es": "carne"
+  },
+  {
+    "id": 31,
+    "protomixtec": "kʷeʔe",
+    "en": "red",
+    "es": "rojo"
+  },
+  {
+    "id": 32,
+    "protomixtec": "kʷeʔę",
+    "en": "(he) went",
+    "es": "se fue"
+  },
+  {
+    "id": 33,
+    "protomixtec": "uxe",
+    "en": "seven",
+    "es": "siete"
+  },
+  {
+    "id": 34,
+    "protomixtec": "yuʔwe",
+    "en": "thread",
+    "es": "hilo"
+  },
+  {
+    "id": 35,
+    "protomixtec": "kɨtɨʔ",
+    "en": "animal",
+    "es": "animal"
+  },
+  {
+    "id": 36,
+    "protomixtec": "ⁿdɨʔɨʔ",
+    "en": "(it) finishes",
+    "es": "se acaba"
+  },
+  {
+    "id": 37,
+    "protomixtec": "ⁿdɨwɨʔ",
+    "en": "egg",
+    "es": "blanquillo"
+  },
+  {
+    "id": 39,
+    "protomixtec": "nɨyɨʔ",
+    "en": "blood",
+    "es": "sangre"
+  },
+  {
+    "id": 40,
+    "protomixtec": "yɨɨʔ",
+    "en": "husband",
+    "es": "marido"
+  },
+  {
+    "id": 41,
+    "protomixtec": "yɨɨ̨ʔ",
+    "en": "salt",
+    "es": "sal"
+  },
+  {
+    "id": 42,
+    "protomixtec": "yonoʔ",
+    "en": "net bag",
+    "es": "red"
+  },
+  {
+    "id": 43,
+    "protomixtec": "yexįʔ",
+    "en": "gourd",
+    "es": "jícara"
+  },
+  {
+    "id": 44,
+    "protomixtec": "yɨkɨ̨ʔ",
+    "en": "squash",
+    "es": "calabaza"
+  },
+  {
+    "id": 45,
+    "protomixtec": "yɨyɨ",
+    "en": "coatí",
+    "es": "tejón"
+  },
+  {
+    "id": 46,
+    "protomixtec": "ⁿedyuʔ",
+    "en": "food",
+    "es": "comida"
+  },
+  {
+    "id": 47,
+    "protomixtec": "oʔwe",
+    "en": "salty",
+    "es": "salado"
+  },
+  {
+    "id": 48,
+    "protomixtec": "sikǫ",
+    "en": "blouse",
+    "es": "huipil"
+  },
+  {
+    "id": 49,
+    "protomixtec": "tiyǫ",
+    "en": "work",
+    "es": "trabajo"
+  },
+  {
+    "id": 50,
+    "protomixtec": "katiʔ",
+    "en": "cotton",
+    "es": "algodón"
+  },
+  {
+    "id": 51,
+    "protomixtec": "tatiʔ",
+    "en": "wind",
+    "es": "viento"
+  },
+  {
+    "id": 52,
+    "protomixtec": "teye",
+    "en": "man",
+    "es": "hombre"
+  },
+  {
+    "id": 53,
+    "protomixtec": "kute",
+    "en": "round",
+    "es": "redondo"
+  },
+  {
+    "en": "box",
+    "es": "cajón",
+    "id": 55,
+    "protomixtec": "xetųʔ"
+  },
+  {
+    "id": 54,
+    "protomixtec": "xitų",
+    "en": "oven",
+    "es": "horno"
+  },
+  {
+    "id": 56,
+    "protomixtec": "tɨ kʷeyɨ̨ʔ",
+    "en": "mosquito",
+    "es": "zancudo"
+  },
+  {
+    "id": 57,
+    "protomixtec": "ⁿdetuʔ",
+    "en": "wait for",
+    "es": "esperar"
+  },
+  {
+    "id": 58,
+    "protomixtec": "teʔyu",
+    "en": "rotten",
+    "es": "podrido"
+  },
+  {
+    "id": 59,
+    "protomixtec": "tɨɨ̨ʔ",
+    "en": "grab",
+    "es": "agarrar"
+  },
+  {
+    "id": 60,
+    "protomixtec": "tuti",
+    "en": "tendon",
+    "es": "tendón"
+  },
+  {
+    "id": 61,
+    "protomixtec": "tɨwɨ",
+    "en": "blow",
+    "es": "soplar"
+  },
+  {
+    "id": 62,
+    "protomixtec": "too",
+    "en": "handspan",
+    "es": "cuarta"
+  },
+  {
+    "id": 63,
+    "protomixtec": "xi toʔo",
+    "en": "owner",
+    "es": "dueño"
+  },
+  {
+    "id": 64,
+    "protomixtec": "xekį",
+    "en": "lay (egg)",
+    "es": "poner (huevo)"
+  },
+  {
+    "id": 65,
+    "protomixtec": "kaʔnuʔ",
+    "en": "big (sg.)",
+    "es": "grande"
+  },
+  {
+    "id": 66,
+    "protomixtec": "sukųʔ",
+    "en": "neck",
+    "es": "cuello"
+  },
+  {
+    "id": 67,
+    "protomixtec": "kixi",
+    "en": "will come",
+    "es": "va a venir"
+  },
+  {
+    "id": 68,
+    "protomixtec": "ⁿdɨkɨʔ",
+    "en": "horn",
+    "es": "cuerno"
+  },
+  {
+    "id": 69,
+    "protomixtec": "kooʔ",
+    "en": "snake",
+    "es": "culebra"
+  },
+  {
+    "id": 70,
+    "protomixtec": "kini",
+    "en": "ugly",
+    "es": "feo"
+  },
+  {
+    "id": 71,
+    "protomixtec": "yukuʔ",
+    "en": "hill",
+    "es": "cerro"
+  },
+  {
+    "id": 72,
+    "protomixtec": "yakʷįʔ",
+    "en": "armadillo",
+    "es": "armadillo"
+  },
+  {
+    "id": 73,
+    "protomixtec": "yakʷeʔ",
+    "en": "crooked",
+    "es": "chueco"
+  },
+  {
+    "id": 74,
+    "protomixtec": "kʷiya",
+    "en": "year",
+    "es": "año"
+  },
+  {
+    "id": 75,
+    "protomixtec": "sɨkʷaʔ",
+    "en": "eyebrow",
+    "es": "ceja"
+  },
+  {
+    "id": 76,
+    "protomixtec": "lakʷaʔ",
+    "en": "pus",
+    "es": "pus"
+  },
+  {
+    "id": 77,
+    "protomixtec": "kʷiʔna",
+    "en": "demon",
+    "es": "demonio"
+  },
+  {
+    "id": 78,
+    "protomixtec": "kʷaą",
+    "en": "yellow",
+    "es": "amarillo"
+  },
+  {
+    "id": 79,
+    "protomixtec": "ku ɨku",
+    "en": "sew",
+    "es": "coser"
+  },
+  {
+    "id": 80,
+    "protomixtec": "ku iso",
+    "en": "will carry",
+    "es": "va a cargar"
+  },
+  {
+    "id": 81,
+    "protomixtec": "yuku ą",
+    "en": "that (one)",
+    "es": "aquel"
+  },
+  {
+    "id": 82,
+    "protomixtec": "nino",
+    "en": "below",
+    "es": "abajo"
+  },
+  {
+    "id": 83,
+    "protomixtec": "niyų",
+    "en": "all night",
+    "es": "toda la noche"
+  },
+  {
+    "id": 84,
+    "protomixtec": "hot ",
+    "en": "caliente",
+    "es": "iʔniʔ "
+  },
+  {
+    "id": 85,
+    "protomixtec": "noniʔ",
+    "en": "corn (grain)",
+    "es": "maíz"
+  },
+  {
+    "id": 86,
+    "protomixtec": "nawą",
+    "en": "wall",
+    "es": "pared"
+  },
+  {
+    "id": 87,
+    "protomixtec": "neʔe",
+    "en": "early",
+    "es": "temprano"
+  },
+  {
+    "id": 88,
+    "protomixtec": "nuneʔ",
+    "en": "open",
+    "es": "abierto"
+  },
+  {
+    "id": 89,
+    "protomixtec": "one",
+    "en": "eight",
+    "es": "ocho"
+  },
+  {
+    "id": 90,
+    "protomixtec": "tɨ lanaʔ",
+    "en": "tomato",
+    "es": "jitomate"
+  },
+  {
+    "id": 91,
+    "protomixtec": "ⁿditi",
+    "en": "green bean",
+    "es": "ejote"
+  },
+  {
+    "id": 92,
+    "protomixtec": "sawa",
+    "en": "half",
+    "es": "mitad"
+  },
+  {
+    "id": 93,
+    "protomixtec": "ⁿdooʔ",
+    "en": "cane",
+    "es": "caña"
+  },
+  {
+    "id": 94,
+    "protomixtec": "kɨsɨ",
+    "en": "clay pot",
+    "es": "olla"
+  },
+  {
+    "id": 95,
+    "protomixtec": "ⁿdɨsɨ",
+    "en": "liquor",
+    "es": "aguardiente"
+  },
+  {
+    "id": 96,
+    "protomixtec": "ⁿdusi",
+    "en": "honey",
+    "es": "miel"
+  },
+  {
+    "id": 97,
+    "protomixtec": "leʔyi",
+    "en": "armpit",
+    "es": "sobaco"
+  },
+  {
+    "id": 98,
+    "protomixtec": "yoko",
+    "en": "tassel",
+    "es": "espiga"
+  },
+  {
+    "id": 99,
+    "protomixtec": "yɨwɨʔ",
+    "en": "people",
+    "es": "gente"
+  },
+  {
+    "id": 100,
+    "protomixtec": "yuų",
+    "en": "town",
+    "es": "pueblo"
+  },
+  {
+    "id": 101,
+    "protomixtec": "yuʔwę",
+    "en": "smoke",
+    "es": "humo"
+  },
+  {
+    "id": 102,
+    "protomixtec": "xexiʔ",
+    "en": "eat",
+    "es": "comer"
+  },
+  {
+    "id": 103,
+    "protomixtec": "tasųʔ",
+    "en": "hawk",
+    "es": "gavilán"
+  },
+  {
+    "id": 104,
+    "protomixtec": "ⁿdixe",
+    "en": "truth",
+    "es": "verdad"
+  },
+  {
+    "id": 105,
+    "protomixtec": "yuʔų",
+    "en": "fire",
+    "es": "lumbre, fuego"
+  },
+  {
+    "id": 106,
+    "protomixtec": "iyǫ",
+    "en": "six",
+    "es": "seis"
+  },
+  {
+    "id": 107,
+    "protomixtec": "tiyįʔ",
+    "en": "fingernail",
+    "es": "uña"
+  },
+  {
+    "id": 108,
+    "protomixtec": "yawąʔ",
+    "en": "cornstalk",
+    "es": "rastrajo"
+  },
+  {
+    "id": 109,
+    "protomixtec": "yuxęʔ",
+    "en": "cornmeal",
+    "es": "masa"
+  },
+  {
+    "id": 110,
+    "protomixtec": "saʔyi",
+    "en": "child",
+    "es": "hijo"
+  },
+  {
+    "id": 111,
+    "protomixtec": "sayu",
+    "en": "cold, phlegm",
+    "es": "catarro"
+  },
+  {
+    "id": 112,
+    "protomixtec": "waʔa",
+    "en": "good",
+    "es": "bueno"
+  },
+  {
+    "id": 113,
+    "protomixtec": "wati",
+    "en": "because",
+    "es": "porque"
+  },
+  {
+    "id": 114,
+    "protomixtec": "weyę",
+    "en": "this one",
+    "es": "este mismo"
+  },
+  {
+    "id": 115,
+    "protomixtec": "wexi",
+    "en": "is coming",
+    "es": "ya viene"
+  },
+  {
+    "id": 116,
+    "protomixtec": "wiʔįʔ",
+    "en": "trash",
+    "es": "basura"
+  },
+  {
+    "id": 117,
+    "protomixtec": "wiluʔ",
+    "en": "cat",
+    "es": "gato"
+  },
+  {
+    "id": 118,
+    "protomixtec": "wiʔⁿdeʔ",
+    "en": "prickly pear",
+    "es": "nopal"
+  },
+  {
+    "id": 119,
+    "protomixtec": "xeʔe",
+    "en": "foot",
+    "es": "pie"
+  },
+  {
+    "id": 120,
+    "protomixtec": "xeʔⁿde",
+    "en": "cut",
+    "es": "cortar"
+  },
+  {
+    "id": 121,
+    "protomixtec": "uxi oʔǫ/xeʔų",
+    "en": "fifteen",
+    "es": "quince"
+  },
+  {
+    "id": 122,
+    "protomixtec": "xɨtɨ",
+    "en": "guts",
+    "es": "tripas"
+  },
+  {
+    "id": 123,
+    "protomixtec": "uxi",
+    "en": "ten",
+    "es": "diez"
+  },
+  {
+    "id": 124,
+    "protomixtec": "wixį",
+    "en": "cold",
+    "es": "frío"
+  },
+  {
+    "id": 125,
+    "protomixtec": "ⁿdixęʔ",
+    "en": "sandal",
+    "es": "huarache"
+  },
+  {
+    "id": 126,
+    "protomixtec": "sɨʔɨ̨",
+    "en": "housepost",
+    "es": "horcón"
+  },
+  {
+    "id": 127,
+    "protomixtec": "sɨwɨʔ",
+    "en": "name",
+    "es": "nombre"
+  },
+  {
+    "id": 128,
+    "protomixtec": "sɨʔwa",
+    "en": "cacao",
+    "es": "cacao"
+  },
+  {
+    "id": 129,
+    "protomixtec": "loʔo",
+    "en": "ear",
+    "es": "oreja"
+  },
+  {
+    "id": 130,
+    "protomixtec": "asɨ̨ʔ",
+    "en": "tasty",
+    "es": "sabroso"
+  },
+  {
+    "id": 131,
+    "protomixtec": "ⁿdesɨ",
+    "en": "closed",
+    "es": "cerrado"
+  },
+  {
+    "id": 132,
+    "protomixtec": "isa",
+    "en": "day after tomorrow",
+    "es": "pasado mañana"
+  },
+  {
+    "id": 133,
+    "protomixtec": "wisį",
+    "en": "sweet",
+    "es": "dulce"
+  },
+  {
+    "id": 134,
+    "protomixtec": "witį",
+    "en": "now",
+    "es": "ahora"
+  },
+  {
+    "id": 135,
+    "protomixtec": "yawi",
+    "en": "hole",
+    "es": "agujero"
+  },
+  {
+    "id": 136,
+    "protomixtec": "yuʔwi",
+    "en": "afraid",
+    "es": "tiene miedo"
+  },
+  {
+    "id": 137,
+    "protomixtec": "ⁿdaʔwi",
+    "en": "poor",
+    "es": "pobre"
+  },
+  {
+    "id": 138,
+    "protomixtec": "uwi",
+    "en": "two",
+    "es": "dos"
+  },
+  {
+    "id": 139,
+    "protomixtec": "tɨ luʔwęʔ",
+    "en": "scorpion",
+    "es": "alacrán"
+  },
+  {
+    "id": 140,
+    "protomixtec": "keyiʔ",
+    "en": "go out",
+    "es": "salir"
+  },
+  {
+    "id": 141,
+    "protomixtec": "kaʔyu",
+    "en": "paint",
+    "es": "pintar"
+  },
+  {
+    "id": 142,
+    "protomixtec": "tɨyɨ̨ʔ",
+    "en": "rat",
+    "es": "rata"
+  },
+  {
+    "id": 143,
+    "protomixtec": "kʷɨyɨ̨",
+    "en": "swelling",
+    "es": "hinchazón"
+  },
+  {
+    "id": 144,
+    "protomixtec": "ⁿdɨʔyɨ",
+    "en": "pimple",
+    "es": "grano"
+  },
+  {
+    "id": 145,
+    "protomixtec": "kaʔⁿdɨ",
+    "en": "(it) thunders",
+    "es": "truena"
+  },
+  {
+    "id": 146,
+    "protomixtec": "koo yeʔⁿdiʔ",
+    "en": "rainbow",
+    "es": "arco iris"
+  },
+  {
+    "id": 147,
+    "protomixtec": "tɨ laa",
+    "en": "bird",
+    "es": "pájaro"
+  },
+  {
+    "id": 148,
+    "protomixtec": "laʔwa",
+    "en": "frog",
+    "es": "rana"
+  },
+  {
+    "id": 149,
+    "protomixtec": "leⁿdu",
+    "en": "navel",
+    "es": "ombligo"
+  },
+  {
+    "id": 150,
+    "protomixtec": "lele",
+    "en": "urine",
+    "es": "orina"
+  },
+  {
+    "id": 151,
+    "protomixtec": "laxęʔ",
+    "en": "chachalaca",
+    "es": "chachalaca"
+  },
+  {
+    "id": 152,
+    "protomixtec": "lɨʔwɨʔ",
+    "en": "smooth",
+    "es": "liso"
+  },
+  {
+    "id": 153,
+    "protomixtec": "luʔu",
+    "en": "little",
+    "es": "chico"
+  },
+  {
+    "id": 154,
+    "protomixtec": "kɨwɨʔ",
+    "en": "day",
+    "es": "día"
+  },
+  {
+    "id": 155,
+    "protomixtec": "awą",
+    "en": "when",
+    "es": "cuándo"
+  },
+  {
+    "id": 156,
+    "protomixtec": "yosoʔ",
+    "en": "plain",
+    "es": "llano"
+  },
+  {
+    "id": 157,
+    "protomixtec": "ⁿdese",
+    "en": "how",
+    "es": "cómo"
+  },
+  {
+    "id": 158,
+    "protomixtec": "ⁿdisoʔ",
+    "en": "carry",
+    "es": "cargar"
+  },
+  {
+    "id": 159,
+    "protomixtec": "tɨ teʔyaʔ",
+    "en": "cockroach",
+    "es": "cucaracha"
+  },
+  {
+    "id": 160,
+    "protomixtec": "ⁿdeka",
+    "en": "glue",
+    "es": "pegamento"
+  },
+  {
+    "id": 161,
+    "protomixtec": "kʷeʔyi",
+    "en": "sickness",
+    "es": "enfermedad"
+  },
+  {
+    "id": 162,
+    "protomixtec": "ⁿdeʔya",
+    "en": "see",
+    "es": "está viendo"
+  },
+  {
+    "id": 163,
+    "protomixtec": "kʷeye",
+    "en": "slow",
+    "es": "despacio"
+  },
+  {
+    "id": 164,
+    "protomixtec": "weʔyi",
+    "en": "house",
+    "es": "casa"
+  },
+  {
+    "id": 165,
+    "protomixtec": "ⁿdikaʔ",
+    "en": "mamey",
+    "es": "mamey"
+  },
+  {
+    "id": 166,
+    "protomixtec": "ⁿdikoʔ",
+    "en": "grind",
+    "es": "moler"
+  },
+  {
+    "id": 167,
+    "protomixtec": "ⁿdixį",
+    "en": "wing",
+    "es": "ala"
+  },
+  {
+    "id": 168,
+    "protomixtec": "teyu",
+    "en": "stool",
+    "es": "banquito"
+  },
+  {
+    "id": 169,
+    "protomixtec": "itu",
+    "en": "cornfield",
+    "es": "milpa"
+  },
+  {
+    "id": 170,
+    "protomixtec": "iku",
+    "en": "yesterday",
+    "es": "ayer"
+  },
+  {
+    "id": 171,
+    "protomixtec": "tuku",
+    "en": "other",
+    "es": "otro"
+  },
+  {
+    "id": 172,
+    "protomixtec": "kuka",
+    "en": "comb",
+    "es": "peine"
+  },
+  {
+    "id": 173,
+    "protomixtec": "ni kaku",
+    "en": "be born",
+    "es": "se nació"
+  },
+  {
+    "id": 174,
+    "protomixtec": "tuʔwe",
+    "en": "smart",
+    "es": "sabio, listo"
+  },
+  {
+    "id": 175,
+    "protomixtec": "yuuʔ",
+    "en": "stone",
+    "es": "piedrea"
+  },
+  {
+    "id": 176,
+    "protomixtec": "yuʔuʔ",
+    "en": "mouth",
+    "es": "boca"
+  },
+  {
+    "id": 177,
+    "protomixtec": "yuʔu",
+    "en": "I (independent)",
+    "es": "yo"
+  },
+  {
+    "id": 178,
+    "protomixtec": "yuyuʔ",
+    "en": "dew",
+    "es": "rocío"
+  },
+  {
+    "id": 179,
+    "protomixtec": "yuku",
+    "en": "brush",
+    "es": "hierba"
+  },
+  {
+    "id": 180,
+    "protomixtec": "yukų",
+    "en": "furrow",
+    "es": "surco"
+  },
+  {
+    "id": 181,
+    "protomixtec": "xetu",
+    "en": "trousers",
+    "es": "calzón"
+  },
+  {
+    "id": 182,
+    "protomixtec": "sutu",
+    "en": "priest",
+    "es": "sacerdote"
+  },
+  {
+    "id": 183,
+    "protomixtec": "tuni",
+    "en": "brand",
+    "es": "fierro, marca"
+  },
+  {
+    "id": 184,
+    "protomixtec": "kuni",
+    "en": "will know",
+    "es": "sabrá"
+  },
+  {
+    "id": 185,
+    "protomixtec": "kʷeyųʔ",
+    "en": "squirrel",
+    "es": "ardilla"
+  },
+  {
+    "id": 186,
+    "protomixtec": "taya",
+    "en": "loose",
+    "es": "floja (silla)"
+  },
+  {
+    "id": 187,
+    "protomixtec": "weyi",
+    "en": "heavy",
+    "es": "pesado"
+  },
+  {
+    "id": 188,
+    "protomixtec": "inoʔ",
+    "en": "tobacco",
+    "es": "tobaco"
+  }
+]
+}

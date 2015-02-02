@@ -1,0 +1,136 @@
+[
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "avión",
+    "phonetic": "avion",
+    "gloss": "plane",
+    "comment": "it's an airplane"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "bicicleta",
+    "phonetic": "bisikleta",
+    "gloss": "bike",
+    "comment": "ok"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "libro",
+    "phonetic": "livro",
+    "gloss": "book",
+    "comment": "para leer"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "el café",
+    "phonetic": "el-kafé",
+    "gloss": "the.M-coffee",
+    "comment": "a think you drink"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "computadora",
+    "phonetic": "komputadora",
+    "gloss": "computer",
+    "comment": "for nerds"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "lentes",
+    "phonetic": "lentes",
+    "gloss": "glasses",
+    "comment": "to see!"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "caballo",
+    "phonetic": "kabayo",
+    "gloss": "horsie",
+    "comment": "every child wants a pony"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "biblioteca",
+    "phonetic": "biblioteka",
+    "gloss": "library",
+    "comment": "books & whatnot"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "radio",
+    "phonetic": "radhio",
+    "gloss": "radio",
+    "comment": "lala"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "escuela",
+    "phonetic": "eskwela",
+    "gloss": "school",
+    "comment": "school"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "te",
+    "phonetic": "te",
+    "gloss": "tea",
+    "comment": "coffee is better"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "telefono",
+    "phonetic": "telefono",
+    "gloss": "phone",
+    "comment": "call your mother"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "televisión",
+    "phonetic": "televisión",
+    "gloss": "television",
+    "comment": "don't watch too much of this"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "tren",
+    "phonetic": "tren",
+    "gloss": "train",
+    "comment": "take this to LA"
+  },
+
+  {
+    "language": "Blackfoot",
+    "languageCode": "bla",
+    "orthographic": "escribir",
+    "phonetic": "eskribir",
+    "gloss": "to write",
+    "comment": "writing requires a pen. or pencil."
+  }
+]

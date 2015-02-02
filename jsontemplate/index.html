@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<title>
+</title>
+<meta charset=utf-8>
+<script src=js/jquery.js></script>
+<script src=js/mustache.js></script>
+
+
+
+</head>
+<body>
+
+<input placeholder="json url" style="width:100%;"/>
+<textarea placeholder=template style="width:100%; min-height: 200px; border: 1px solid black"></textarea>
+<p><button>go</button></p>
+
+<div style="display:flex;flex-flow:row wrap";>
+<div style="flex:1; width:45%; min-height: 200px; border: 1px solid black" id=output></div>
+<textarea style="flex:1; width:45%; min-height: 200px; border: 1px solid black" id=markup></textarea>
+</div>
+
+<script>
+
+var button = document.querySelector('button'),
+    input = document.querySelector('input'),
+    markup = document.querySelector('textarea#markup'),
+    output = document.querySelector('#output');
+
+button.addEventListener('click', function(ev){
+
+  output.innerHTML = '';
+  var url = input.value;
+
+  $.getJSON(url, function(data){ 
+    data.forEach(function(item){
+      var html = Mustache.to_html($('textarea').val(), item) ;
+      output.innerHTML += html;
+    })
+
+  }).done(function(){
+    markup.value =  output.innerHTML;
+  })
+
+})
+
+
+/*
+$(function(){
+
+  $('button').on('click', function(ev){
+  
+    $('#output').empty();
+    var url = $('input').val();
+    $.getJSON(url, function(data){ 
+      data.forEach(function(item){
+        var html = Mustache.to_html($('textarea').val(), item) ;
+        $('#output')[0].innerHTML += html;
+      })
+    })
+  
+  })
+
+})
+*/
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <title>scription</title>
+  <meta charset=utf-8>
+</head>
+
+<style>
+/* 
+
+  These CSS (Cascading Style Sheets) rules define the appearance
+  of the elements on the page.
+
+*/
+
+main { 
+  text-align:center;
+}
+
+h1 { 
+  position: fixed;
+  font-size:small;
+  right: 1em;
+  color:#ccc;
+  font-family: sans-serif;
+
+}
+
+textarea { 
+  width: 90%;  
+  font-size: 1.5em;
+  padding: .5em;
+  min-height: 300px;
+}
+
+#plain { 
+  font-family: "Gentium Plus";
+}
+
+#json { 
+  font-family: "Courier New";
+}
+
+button { 
+  font-size: 2em;
+}
+</style>
+
+<body>
+
+<header>
+  <h1>scription</h1>
+</header>
+
+<main>
+  <button id=convert>Convert</button>
+  <br>
+  <textarea id=scription></textarea>
+  <textarea id=json></textarea>
+</main>
+
+
+
+<script>
+/* 
+
+   This is the Javascript that adds behavior to the application
+   and handles format conversion. 
+
+*/
+
+
+/*
+  Just a useful way to view data structures as a string
+  in the console. Do not use at home.
+*/
+function show(obj){
+  console.log(JSON.stringify(obj, null, 2));
+}
+
+var scriptionBox = document.querySelector('#scription'),
+    jsonBox = document.querySelector('#json'),
+    convertButton = document.querySelector('#convert');
+
+function parse(text){
+  var content = scriptionBox.value.trim();
+
+  var chunks = content.split(/\n\n+/);
+ 
+  return chunks;
+}
+
+function parseChunk(chunk){
+  return chunk.split(/\n/);
+}
+
+function pair2sentence(pairs){
+
+   var sentence = {};
+
+   sentence['transcription'] = pairs[0];
+   sentence['translation'] = pairs[1];
+
+   return sentence;
+
+}
+
+/*
+
+  Listen for user to click convert button, then run conversion.
+
+*/
+convertButton.addEventListener('click', function(event){
+
+   var chunks = parse(scriptionBox.value),
+       pairs = chunks.map(parseChunk),
+       sentences = pairs.map(pair2sentence);
+
+   jsonBox.value = JSON.stringify(sentences, null, 2);
+
+}, false)
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>barchart</title>
+
+
+<p>type a few words in the box on the right and press escape.
+<p>MIND. BLOWN.
+
+<main>
+<div id=chart></div>
+
+<textarea>
+</textarea>
+</main>
+
+<style>
+main { 
+  display:flex;
+  flex-flow: row wrap;
+}
+
+textarea{
+  flex: 1;
+}
+
+#chart {
+  flex: 1;
+  display:flex;
+  flex-direction: row;
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  align-items: flex-end; 
+  justify-content: space-around;
+}
+
+.bar {
+  flex: 1;
+  background-color:maroon;
+  text-align:center;
+  border-right: 1px solid white;
+  color:gray;
+}
+</style>
+
+
+
+<script>
+var data = { 
+  a: 10,
+  b: 50,
+  c: 90,
+  d: 0,
+  e: 25,
+  f: 25,
+  q: 25,
+  x: 25
+}
+
+var Barchart = function(data, el){
+   var self = this;
+
+   this.el = el;
+   this.data = data;
+   this.keys = Object.keys(this.data);
+   this.values = this.keys.map(function(d){ return data[d] });
+   this.max = Math.max.apply(Math, this.values);
+   this.bars = Object.keys(this.data).length;
+
+}
+
+Barchart.prototype.render = function(){
+   var self = this;
+   self.el.innerHTML = '';
+   Object.keys(self.data).forEach(function(datum){
+     var bar = self.drawBar(self.data[datum]);
+     bar.textContent = datum ;
+     self.el.appendChild(bar)
+   })
+}
+
+Barchart.prototype.drawBar = function(value){
+  var bar = document.createElement('div');
+  bar.classList.add('bar');
+  var percentage = (value / (this.max + 10)) * 100;
+  bar.style.height = percentage + '%'  ; 
+  return bar;
+}
+
+//var barchart = new Barchart(data, document.querySelector('#chart'))
+//barchart.render();
+
+var tokenize = function (text) {
+  return text.trim().split(/[ ]+/);
+}
+
+var count = function (sequence) {
+  return sequence.reduce(function (tally, item) {
+    if (!(item in tally)) {
+      tally[item] = 0
+    }
+    tally[item] += 1;
+    return tally 
+  }, {})
+}
+
+document.querySelector('textarea').addEventListener('keyup', function(ev){
+
+  if(ev.which == 27){
+    var tally = count(tokenize(this.value)); 
+    var barchart = new Barchart(tally, document.querySelector('#chart'));
+    barchart.render();
+  }
+
+})
+</script>

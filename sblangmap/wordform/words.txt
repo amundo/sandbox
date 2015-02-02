@@ -1,0 +1,15 @@
+airplane
+bicycle
+book
+coffee
+computer
+glasses
+horse
+library
+radio
+school
+tea
+telephone
+television
+train
+write

@@ -1,0 +1,137 @@
+[
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "airplane",
+    "orthographic": "qali·cátʰmuʔ",
+    "phonetic": "qaliː-ˈdʒá-tʰ-muʔ",
+    "gloss": "high-fly-INCREMENT-here.and.there",
+    "comment": "Oswalt’s definition: 0hca-Xt-muc'-0  cátʰmuʔ to fly here and there several times. qalicátʰmuʔ N. airplane. \"flying high here and there several times\"."
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "bicycle",
+    "orthographic": "mahwenmuʔ",
+    "phonetic": "ma-hwen-muʔ",
+    "gloss": "INSTR.foot-shake-back.and.forth",
+    "comment": "Oswalt: “mahwenmuʔ old name for bicycle (English now used) (\"bicycle and legs both going back and forth\"; \"moving feet back and forth, shaking limb with foot\") (11/65) [PSD mawhenyaw] [EA mawhen] [SA X]”"
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "book",
+    "orthographic": "kalikakʰ",
+    "phonetic": "kalikakʰ",
+    "gloss": "book",
+    "comment": "Oswalt ‘Russian Loandwords in Southwest Pomo’: “kalikak letter, book < kalikaq. This is perhaps ultimately from Russian kniga book with the addition of the Aleut nominative suffix -q.” It’s a bit strange that the Aleut [q] should have changed into a velar — Kashaya has a uvular/velar opposition too."
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "coffee",
+    "orthographic": "kaféy",
+    "phonetic": "kaːféy",
+    "gloss": "coffee",
+    "comment": "Ibid: “kafey ‘coffee’ could be from colloquial Russian kófey, in which case the quality of the first vowel is unexplained, or from Spanish café, with the presence of the final /y/ unaccounted for; or perhaps it is a blend of the two. This borrowing contains /f/ which occurs in SW Pomo only in loanwords from European languages.”"
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "computer",
+    "orthographic": "?",
+    "phonetic": "?",
+    "gloss": "?",
+    "comment": "Presumably this would be a borrowing from English, but I don’t know."
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "glasses",
+    "orthographic": "huʔú· dut̓etiʔ",
+    "phonetic": "huʔúː du-tʼetiʔ",
+    "gloss": "eyes INSTR.finger-to.set",
+    "comment": "Oswalt: “huʔú· dut̓etiʔ eye-glasses” \n\nThe instrumental prefix here refers to an action carried out with the finger, it suggests that the glasses are carefully set in place."
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "horse",
+    "orthographic": "kawa·yu",
+    "phonetic": "kawaːju",
+    "gloss": "horse",
+    "comment": "from Spanish ‘caballo’"
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "library",
+    "orthographic": "kalikákʰca",
+    "phonetic": "kaliˈkakʰ-dʒa",
+    "gloss": "book-house",
+    "comment": "see ‘book’"
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "radio",
+    "orthographic": "radio",
+    "phonetic": "rejdio",
+    "gloss": "radio",
+    "comment": "English borrowing"
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "school",
+    "orthographic": "kalikákʰca",
+    "phonetic": "kaliˈkakʰ-dʒa",
+    "gloss": "book-house",
+    "comment": "Word also used for ‘library’."
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "tea",
+    "orthographic": "čáyu",
+    "phonetic": "ˈtʃaju",
+    "gloss": "tea",
+    "comment": "Borrowing from Russian. \n\nOswalt: “čáyu tea < cayu is noteworthy in that it is the partitive form of the Russian word that is borrowed. The stress on the first syllable of the Russian form is reinterpreted in this case and in several of the following citations as a long vowel.”"
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "telephone",
+    "orthographic": "cahno lówac̓muʔli",
+    "phonetic": "dʒahno ˈlowatʃ’-muʔ-li",
+    "gloss": "speech convert-RECIP-with",
+    "comment": "Means something like “you converse with it,” or perhaps “you exchange speech with it.”\n\nThis word is now obsolete, according to Oswalt’s dictionary (presumably replaced by the English term). Essie Parrish, who worked with Oswalt on a never-published dictionary of Kashaya, stated that her grandmother used this more elaborate form.\n\nOswalt: “cahno lówac̓muʔli a telephone (by Essie Parrish’s grandmother — now obsolete)”"
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "television",
+    "orthographic": "?",
+    "phonetic": "?",
+    "gloss": "?",
+    "comment": "Probably the English word is used."
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "train",
+    "orthographic": "ʔoho káre·ta",
+    "phonetic": "ʔoho ˈkareːta",
+    "gloss": "train",
+    "comment": "literally “fire wagon.” also hoˈkareːta"
+  },
+  {
+    "language": "Kashaya",
+    "languageCode": "kju",
+    "keyword": "write",
+    "orthographic": "",
+    "phonetic": "",
+    "gloss": "",
+    "comment": ""
+  }
+]

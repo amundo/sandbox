@@ -1,0 +1,24 @@
+{
+    "type": "Feature",
+
+    "id": 11, 
+
+    "geometry": {
+        "type": "Point",
+
+        "coordinates": [
+            -73.805579, 
+            40.871779
+        ]
+    }, 
+
+    "properties": {
+        "ADDRESS2": "Pelham Bay Park", 
+        "ADRESS1": "895 Shore Road", 
+        "CITY": "Bronx", 
+        "NAME": "Bartow-Pell Mansion", 
+        "TEL": "(718) 885-1461", 
+        "URL": "http://bartowpellmansionmuseum.org/index.php", 
+        "ZIP": 10464.0
+    } 
+}

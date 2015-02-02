@@ -1,0 +1,87 @@
+[
+  {
+    "Latitude": "-113.11", 
+    "Longitude": "49.07", 
+    "Language": "Blackfoot"
+  }, 
+  {
+    "Latitude": "-83.05", 
+    "Longitude": "9.4", 
+    "Language": "Bribri"
+  }, 
+  {
+    "Latitude": "-83.16", 
+    "Longitude": "35.47", 
+    "Language": "Cherokee"
+  }, 
+  {
+    "Latitude": "-90.91", 
+    "Longitude": "30.34", 
+    "Language": "Chitimacha"
+  }, 
+  {
+    "Latitude": "-122.03", 
+    "Longitude": "48.08", 
+    "Language": "Halkomelem"
+  }, 
+  {
+    "Latitude": "-73.97", 
+    "Longitude": "-3.31", 
+    "Language": "Iquito"
+  }, 
+  {
+    "Latitude": "-122.03", 
+    "Longitude": "48.08", 
+    "Language": "Island Halkomelem"
+  }, 
+  {
+    "Latitude": "-89.25", 
+    "Longitude": "15.38", 
+    "Language": "Ixhil Mayan"
+  }, 
+  {
+    "Latitude": "-50.35", 
+    "Longitude": "-11.19", 
+    "Language": "Karaja"
+  }, 
+  {
+    "Latitude": "-122.53", 
+    "Longitude": "48.42", 
+    "Language": "Lushootseed"
+  }, 
+  {
+    "Latitude": "-65.58", 
+    "Longitude": "45.99", 
+    "Language": "Mi\u2019gmaq"
+  }, 
+  {
+    "Latitude": "-91.3", 
+    "Longitude": "15.68", 
+    "Language": "Q\u2019anjobal"
+  }, 
+  {
+    "Latitude": "-62.18", 
+    "Longitude": "-23.16", 
+    "Language": "Wichi"
+  }, 
+  {
+    "Latitude": "-122.5", 
+    "Longitude": "38.25", 
+    "Language": "Wappo"
+  }, 
+  {
+    "Latitude": "-97.95", 
+    "Longitude": "20.46", 
+    "Language": "Totonacan"
+  }, 
+  {
+    "Latitude": "-91.78", 
+    "Longitude": "16.26", 
+    "Language": "Tojolabal"
+  }, 
+  {
+    "Latitude": "-91.3", 
+    "Longitude": "15.68", 
+    "Language": "Q'anjob'al"
+  }
+]

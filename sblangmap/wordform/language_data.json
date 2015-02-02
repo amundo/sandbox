@@ -1,0 +1,104 @@
+[
+    {
+        "code": "bla", 
+        "language": "Blackfoot", 
+        "latitude": -113.11, 
+        "longitude": 49.07
+    }, 
+    {
+        "code": "bzd", 
+        "language": "Bribri", 
+        "latitude": -83.05, 
+        "longitude": 9.4
+    }, 
+    {
+        "code": "chr", 
+        "language": "Cherokee", 
+        "latitude": -83.16, 
+        "longitude": 35.47
+    }, 
+    {
+        "code": "cent2139", 
+        "language": "Central Chumashan", 
+        "latitude": 34.46, 
+        "longitude": -119.7
+    }, 
+    {
+        "code": "ctm", 
+        "language": "Chitimacha", 
+        "latitude": -90.91, 
+        "longitude": 30.34
+    }, 
+    {
+        "code": "hur", 
+        "language": "Halkomelem", 
+        "latitude": -122.03, 
+        "longitude": 48.08
+    }, 
+    {
+        "code": "iqu", 
+        "language": "Iquito", 
+        "latitude": -73.97, 
+        "longitude": -3.31
+    }, 
+    {
+        "code": "hur-isl", 
+        "language": "Island Halkomelem", 
+        "latitude": -122.03, 
+        "longitude": 48.08
+    }, 
+    {
+        "code": "ixh", 
+        "language": "Ixhil Mayan", 
+        "latitude": -89.25, 
+        "longitude": 15.38
+    }, 
+    {
+        "code": "kpj", 
+        "language": "Karaja", 
+        "latitude": -50.35, 
+        "longitude": -11.19
+    }, 
+    {
+        "code": "lut", 
+        "language": "Lushootseed", 
+        "latitude": -122.53, 
+        "longitude": 48.42
+    }, 
+    {
+        "code": "kjp", 
+        "language": "Q\u2019anjobal", 
+        "latitude": -91.3, 
+        "longitude": 15.68
+    }, 
+    {
+        "code": "mata1289", 
+        "language": "Matacoan", 
+        "latitude": -62.18, 
+        "longitude": -23.16
+    }, 
+    {
+        "code": "wao", 
+        "language": "Wappo", 
+        "latitude": -122.5, 
+        "longitude": 38.25
+    }, 
+    {
+        "code": "toto1251", 
+        "language": "Totonacan", 
+        "latitude": -97.95, 
+        "longitude": 20.46
+    }, 
+    {
+        "code": "toj", 
+        "language": "Tojolabal", 
+        "latitude": -91.78, 
+        "longitude": 16.26
+    }, 
+    {
+        "code": "kjb", 
+        "language": "Q'anjob'al", 
+        "latitude": -91.3, 
+        "longitude": 15.68
+    }
+]

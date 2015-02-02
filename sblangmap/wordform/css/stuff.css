@@ -1,0 +1,40 @@
+body { 
+  font-size: large;
+}
+
+.word >  input, .word > textarea { 
+  font-size: large;
+  display:block;
+  padding: 8px;
+  width: 80%;
+  margin: 8px 0;
+}
+
+#wordlist { 
+  width: 400px;
+  height: 500px;
+  float:right;
+}
+
+.word { 
+  width: 500px;
+  overflow:auto;
+}
+
+.translation:before { content: "‘"; }
+.translation:after { content: "’"; }
+
+form { 
+  float:left;
+}
+
+label { 
+  margin: 2px 0; 
+  font-style:italic;
+  font-family: sans-serif;
+  color:#333;
+}
+
+#wordlist ul { 
+  list-style-type:  none;
+}

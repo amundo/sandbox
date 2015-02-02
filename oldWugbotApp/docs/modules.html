@@ -1,0 +1,153 @@
+<meta charset=utf-8>
+<style>
+main { 
+  display:flex;
+  flex-direction: column wrap;
+}
+
+section { 
+  flex: 1;
+  text-align:left;
+}
+</style>
+<h1>Wugbot App Modules</h1>
+
+<main>
+<section>
+
+<h2>Topics</h2>
+<ol id=topics>
+  <li>
+    Sentences
+  </li>
+    
+  <li>
+    Words
+  </li>
+    
+  <li>
+    Morphemes
+  </li>
+    
+  <li>
+    Translations
+  </li>
+    
+  <li>
+    Speaker info
+  </li>
+    
+  <li>
+    Metadata
+  </li>
+    
+  <li>
+    Gloss
+  </li>
+    
+  <li>
+    Token
+  </li>
+    
+  <li>
+    Lexicon
+  </li>
+    
+  <li>
+    Search
+  </li>
+    
+  <li>
+    Tokenizer
+  </li>
+    
+  <li>
+    Autoglosser
+  </li>
+    
+  <li>
+    Timestamp
+  </li>
+    
+  <li>
+    Media
+  </li>
+    
+  <li>
+    Transliteration
+  </li>
+    
+  <li>
+    Language
+  </li>
+    
+  <li>
+    Text persistence
+  </li>
+    
+</ol>
+</section>
+
+<section>
+<h2>Modules</h2>
+
+<ol id=modules>
+
+<li data-matches='[1, 4, 2, 13, 15]'>Sentence
+  <ol></ol>
+</li>
+
+<li data-matches='[2, 3, 7, 8]'> Word
+  <ol></ol>
+</li>
+
+<li data-matches='[5, 6, 16]'>About
+  <ol></ol>
+</li>
+
+<li data-matches='[9, 10, 11, 12]'>Lexicon
+  <ol></ol>
+</li>
+
+<li data-matches='[17, 16, 14, 6]'>Text
+  <ol></ol>
+</li>
+
+</ol>
+
+</section>
+<section>
+<img src=img/module_notes.jpg>
+</section>
+</main>
+
+<script>
+var 
+  numberedTopics = {},
+  topics = document.querySelectorAll('#topics li'),
+  topics = [].slice.call(topics),
+
+  modules = document.querySelectorAll('#modules li'),
+  modules = [].slice.call(modules);
+
+
+topics.forEach(function(topic, i){
+  var topic = topic.textContent.trim();
+  numberedTopics[i+1] = topic;
+})
+
+console.log(numberedTopics);
+
+modules.forEach(function(module){
+  var matches = eval(module.dataset.matches);
+  matches.forEach(function(match){
+    var 
+      li = document.createElement('li');
+      ol = module.querySelector('ol');
+    li.textContent = numberedTopics[match];
+    ol.appendChild(li);
+  })
+})
+
+
+</script>

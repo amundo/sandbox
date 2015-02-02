@@ -1,0 +1,81 @@
+<!doctype html>
+<title>my page</title>
+<meta charset=utf-8> <!--  oh hey i'm a comment. this means now i am unicode --> 
+<style>
+
+h1 {
+  color:  #009999;
+}
+
+p { 
+   color: goldenrod;
+   font-family: sans-serif;
+   font-size: 2em;
+   font-variant: italic;
+   text-shadow: -1px -1px 2px #333;
+}
+
+p[ lang="es" ] { 
+  color: red;
+}
+
+div { 
+   margin: 1em;
+}
+
+section { 
+  background: wheat;
+}
+</style>
+
+
+<h1>wugbot there are some wugbots</h1>
+
+<h2>o wugbot my wugbot</h2>
+
+<h3>i am but a wee-er wugbot</h3>
+
+<p> hey you, <a href=http://en.wikipedia.org/wiki/Haiku>click me</a> </p>
+
+<p> hey you,  <button>tibetan haiku</button> </p>
+
+
+<section> 
+<h2>spanish haiku</h2>
+
+<div>
+<p lang=en>oh i like wugbots</p>
+<p lang=es>los uagbots los amo</p>
+</div>
+
+<div>
+<p lang=en>wugbots multiply a lot</p>
+<p lang=es>amo mucho a los uagbots</p>
+</div>
+
+<div>
+<p lang=en>haiku is hard</p>
+<p lang=es>son mis amigos señores</p>
+</div>
+
+
+
+
+</section>
+
+
+<script>
+function goToTibetanHaiku(){ 
+   document.location = 'http://bo.wikipedia.org/wiki/%E0%BD%A7%E0%BD%A0%E0%BD%B2%E0%BC%8B%E0%BD%82%E0%BD%B4%E0%BC%8D';
+}
+
+var button = document.querySelector('button');
+
+button.addEventListener('click', function(){
+   goToTibetanHaiku()
+}, false);
+
+
+</script>
+
+

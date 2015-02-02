@@ -1,0 +1,613 @@
+<!doctype html>
+<html>
+<head>
+<title>word form</title>
+<meta charset=utf-8>
+<script src=js/lib/jquery.js></script>
+<script src=js/lib/underscore.js></script>
+
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+
+</head>
+
+<div class="navbar navbar-inverse">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse navbar-inverse-collapse">
+    <ul class="nav navbar-nav">
+      <li class="brand"><a href="http://www.linguistics.ucsb.edu/wail/"><strong>WAIL</strong></a></li>
+      <li class="active"><a href="index.html">Word Entry</a></li>
+      <li><a href="#">Map</a></li>
+    </ul>
+    <ul class = "nav navbar-nav navbar-right">
+      <li><a href="http://www.linguistics.ucsb.edu/">UCSB Linguistics</a></li>
+      <li><a href="https://complingftw.github.io">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>WAIL Word Project</h1>
+    <p>This project involves getting word details for (relatively) modern words in indigenous languages. We're asking for orthographic and phonetic information in addition to a translation and (optional) comments.</p>
+  </div>
+</div>
+
+<div class="col-sm-3 blog-sidebar">
+  <div class="sidebar-module sidebar-module-inset">
+	<h3>About</h3>
+	<p>We chose this list of words because we thought they would be interesting to compare.</p>
+  </div>
+  <div class="sidebar-module">
+  </div>
+  	<div class="sidebar-module">
+	  <h3>Finished?</h3>
+	  <p>When you’ve finished filling out 
+	  your wordlist, don’t forget to export your
+	  data and save the file.</p>
+	  <button id=export class="btn btn-primary">Export</button>
+  <p><small>or ask a helpful gnome!</small></p>
+	</div>
+</div>
+
+<div id=main style="overflow:auto;">
+
+
+
+
+
+
+<div class=wordform id="airplane">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>airplane</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="bicycle">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>bicycle</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="book">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>book</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="coffee">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>coffee</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="computer">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>computer</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="glasses">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>glasses</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="horse">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>horse</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="library">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>library</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="radio">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>radio</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="school">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>school</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="tea">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>tea</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="telephone">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>telephone</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="television">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>television</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="train">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>train</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+
+<div class=wordform id="write">
+	<form class="col-md-8 form-horizontal">
+	  <fieldset>
+	    <div class="form-group">
+              <h2>write</h2>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputOrthographic" class="col-lg-2 control-label">Orthographic</label>
+	      <div class="col-lg-10">
+	        <input class="inputOrthographic form-control" placeholder="Orthographic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPhonetic" class="col-lg-2 control-label">Phonetic</label>
+	      <div class="col-lg-10">
+	        <input class="inputPhonetic form-control" placeholder="Phonetic">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputGloss" class="col-lg-2 control-label">Gloss</label>
+	      <div class="col-lg-10">
+	        <input class="inputGloss form-control" placeholder="Gloss">
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-lg-2 control-label">Comment</label>
+	      <div class="col-lg-10">
+	        <textarea class="comment form-control" rows="3"></textarea>
+	        <span class="help-block">Anything else you’d like to share about this word?</span>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+
+</div><!-- #main -->
+
+
+<script src=js/FileSaver.js></script>
+<script src=js/wailword.js></script>
+</body>
+</html>
+
+
