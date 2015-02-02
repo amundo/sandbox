@@ -1,0 +1,905 @@
+/* CSS reset */
+/* General elements */
+html, body, div, span, applet, object, iframe,
+/* Headers */
+h1, h2, h3, h4, h5, h6,
+/* Text elements */
+p, blockquote, pre,
+/* Inline elements */
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+/* Styling elements */
+b, u, i, center,
+/* Lists */
+dl, dt, dd, ol, ul, li,
+/* Forms & Tables */
+button, caption, input, fieldset, form, label, legend, table, textarea, tbody, tfoot, thead, tr, th, td,
+/* Semantic elements */
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	border: none;
+	box-sizing: border-box;
+	display: flex;
+	height: auto;
+	flex-direction: row;
+	font-size: 100%;
+	font: inherit;
+	line-height: 150%;
+	margin: 0;
+	outline: none;
+	padding: 0;
+	text-decoration: none;
+	vertical-align: baseline;
+	font-family: "CharisSIL", "Charis SIL", "Gentium Plus", "Doulos SIL", "Lucida Sans Unicode", "Times New Roman", serif, sans-serif; }
+
+/* Styling by element type */
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var {
+	display: inline; }
+
+a, a:active, a:link, a:visited {
+	color: #83ADE1;
+	outline: none; }
+
+a:hover {
+	color: #83ADE1;
+	text-shadow: 0px 0px 1px; }
+
+blockquote, pre {
+	display: block; }
+
+blockquote, q {
+	quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none; }
+
+button {
+	margin: 0.25rem; }
+
+code {
+	background-color: #232C31;
+	border-radius: 5px;
+	color: white;
+	display: inline-block;
+	font-family: "Monaco", "Menlo", "Ubuntu Mono", "Consolas", monospace;
+	margin: 0 0.5rem;
+	padding: 0 0.25rem;
+	white-space: pre; }
+
+.closeIcon {
+	background-color: white;
+	border-radius: 20px;
+	height: 2rem;
+	position: absolute;
+	right: -1rem;
+	top: -1rem;
+	width: 2rem; }
+
+.cornerIcon {
+	height: 1.5rem;
+	position: absolute;
+	top: 0;
+	width: 1.5rem;
+	z-index: 100; }
+
+.cornerIcon:first-child {
+	right: 0rem; }
+
+.cornerIcon:nth-child(2) {
+	right: 1.5rem; }
+
+.expandCollapse {
+	height: 2rem;
+	margin: -0.5rem -0.25rem;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -25%);
+	width: 2rem; }
+
+.displayInput {
+	background-color: #D3D3D3;
+	border: none;
+	box-shadow: none; }
+
+.gloss {
+	font-size: 80%; }
+
+#headerResult {
+	font-weight: bold; }
+
+h1 {
+	align-self: center;
+	font-weight: bold;
+	padding: 0.5rem; }
+
+input {
+	margin: 0.25rem; }
+
+input[type="button"], input[type="submit"], button {
+	background: linear-gradient(to bottom, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
+  border: 1px solid gray;
+  border-radius: 5px;
+	justify-content: center;
+  min-width: min-content;
+  padding: 0 0.5rem; }
+        
+input[type="button"]:hover, input[type="submit"]:hover, button:hover {
+  background: linear-gradient(to bottom, rgba(204,204,204,1) 0%,rgba(238,238,238,1) 100%); }
+          
+input[type="button"]:active, input[type="submit"]:active, button:active {
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 0px 6px rgba(0, 0, 0, 0.2) inset; }
+
+input[type="checkbox"] {
+	min-width: 15px;
+	min-height: 15px; }
+
+input[type="search"], input[type="text"] {
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	padding: 0 0.5rem; }
+
+input[type="search"]:focus, input[type="text"]:focus {
+	border-color: black; }
+
+.insetPopup {
+	border: 1px solid gray;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px gray;
+	margin: 0.5rem;
+	padding: 0.5rem; }
+
+kbd {
+	background-color: #f7f7f7;
+	border: 1px solid #CCC;
+	border-radius: 3px;
+	box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+	color: #333;
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	height: 1.5rem;
+	line-height: 1.5;
+	margin: 0 0.1rem;
+	padding: 0.1rem 0.6rem;
+	text-shadow: 0 1px 0 #fff;
+	white-space: pre; }
+
+label input[type="checkbox"]+p, label input[type="radio"]+p {
+	margin-left: 0.25rem; }
+
+legend {
+	border-bottom: 1px solid black; }
+
+.location {
+	padding: 0 0.25rem;
+	width: 10%; }
+
+.menu {
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #999;
+	padding: 0.5rem;
+	position: fixed;
+	transform: translate(-100%, 0);
+	z-index: 200; }
+
+.menu li+li {
+	border-top: 1px solid gray; }
+
+.menu li:hover {
+	background-color: black;
+	color: white; }
+
+.morpheme {
+	font-size: 80%; }
+	
+	.morphemesWrapper {
+		flex-direction: row; }
+
+	.morpheme + .morpheme {
+		margin-left: 0.25rem; }
+
+ol, ul {
+	list-style: none; }
+
+.phrase {
+	flex-grow: 1;
+	padding: 0 1rem;
+	width: 80%; }
+
+.phraseWrapper + .phraseWrapper {
+	border-top: 1px solid gray; }
+
+	.phraseWrapper .phraseTools {
+		display: none; }
+	
+	.phraseWrapper .svgButton {
+		height: 30px;
+		width: 30px; }
+	
+	.phraseWrapper:hover .phraseTools {
+		background-color: white;
+		display: flex;
+		position: absolute;
+		right: 0;
+		top: 0; }
+		
+  	#textsDetailModule .phraseWrapper:hover .svgButton:first-child,		
+		#textsDetailModule .phraseWrapper:hover .svgButton:nth-child(2),
+		#textsDetailModule .phraseWrapper:hover .svgButton:nth-child(3),
+		#textsDetailModule .phraseWrapper:hover .svgButton:nth-child(4),
+		#textsDetailModule .phraseWrapper:hover .svgButton:nth-child(5) {
+  		display: flex; }
+		
+		.searchResult .phraseWrapper:hover .svgButton:nth-child(2),
+		.searchResult .phraseWrapper:hover .svgButton:nth-child(3),
+		.searchResult .phraseWrapper:hover .svgButton:nth-child(4),
+		.searchResult .phraseWrapper:hover .svgButton:nth-child(5) {
+			display: none; }
+			
+		.searchResult .phraseWrapper,
+		.searchResult > .resultWrapper {
+			flex-grow: 1; }
+	
+	.phraseWrapper:hover .svgButton:first-child { /* Add tag */
+		background-color: rgba(255, 255, 0, 0.25); /* Yellow */ }
+		
+		.phraseWrapper:hover .svgButton:first-child:hover {
+			box-shadow: 0 0 10px yellow; }
+	
+	.phraseWrapper:hover .svgButton:nth-child(2) {
+		background-color: rgba(0, 255, 0, 0.25); /* Green */ }
+		
+		.phraseWrapper:hover .svgButton:nth-child(2):hover {
+			box-shadow: 0 0 10px green; }
+	
+	.phraseWrapper:hover .svgButton:nth-child(3) { /* Move phrase up */
+		background-color: rgba(0, 0, 255, 0.25); /* Blue */ }
+	
+	.phraseWrapper:hover .svgButton:nth-child(4) { /* Move phrase down */
+		background-color: rgba(0, 0, 255, 0.25); /* Blue */ }
+		
+		.phraseWrapper:hover .svgButton:nth-child(3):hover,
+		.phraseWrapper:hover .svgButton:nth-child(4):hover {
+			box-shadow: 0 0 10px blue; }
+			
+	.phraseWrapper:hover .svgButton:nth-child(5) { /* Delete phrase */
+		background-color: rgba(255, 0, 0, 0.25); /* Red */ }
+	
+  	.phraseWrapper:hover .svgButton:nth-child(5):hover {
+  		box-shadow: 0 0 10px red; }
+
+.phrase > li:before {
+	display: inline-block;
+  flex-basis: 4rem;
+  min-width: 4rem; }
+
+.phrase .transcription:before {
+	content: "Phrase";
+	font-style: italic; }
+
+.phrase	.translation:before {
+	content: "Free"; }
+
+.phrase .words:before {
+	content: "Words"; }
+
+.phraseTools {
+	flex-direction: row; }
+
+.phraseWrapper {
+	align-items: center;
+	position: relative; }
+
+option:disabled {
+	color: black;
+	background-color: gray; }
+
+.shiftLeft, .shiftRight {
+	background-color: white;
+	border: 1px solid gray;
+	height: 2rem;
+	position: absolute;
+	top: 50vh;
+	width: 0.75rem;
+	transform: translate(0, -50%);
+	z-index: 2; }
+
+.shiftLeft {
+	border-right: none;
+	border-radius: 10px 0 0 10px;
+	right: 0; }
+
+.shiftRight {
+	border-left: none;
+	border-radius: 0 10px 10px 0;
+	left: 0; }
+
+.searchHighlight {
+	color: #E131D8;
+	font-weight: bold; }
+
+.svgButton {
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 50px;
+	margin: 5px;
+	width: 50px; }
+
+.svgButton:hover {
+	box-shadow: 0 0 10px #83ADE1; }
+
+strong {
+	color: #E131D8;
+	font-weight: bold;
+	white-space: nowrap; }
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0; }
+
+.textTitle {
+  align-self: center;
+  font-weight: bold; }
+
+.text {
+  counter-reset: phraseCounter; }
+
+.text .phraseWrapper {
+  counter-increment: phraseCounter;
+  padding: 0.5rem 0; }
+
+.text .phraseWrapper:before {
+  content: counter(phraseCounter);
+  padding: 0 0.5rem; }
+
+.tokenWrapper {
+	display: inline-block; }
+
+.tooltip {
+	position: relative; }
+
+.tooltip:hover:before {
+	background-color: #83ADE1;
+	border-radius: 5px;
+	bottom: 2rem;
+	color: white;
+	content: attr(name);
+	left: 50%;
+	overflow: visible;
+	padding: 0.25rem 0.5rem;
+	position: absolute;
+	transform: translate(-50%, 0);
+	z-index: 100; }
+
+.transcription, .translation {
+	display: flex;
+	font-size: 120%; }
+	
+.transcriptionWrapper {
+	display: inline-block;
+	font-style: italic; }
+
+.transcriptionWrapper[contentEditable="true"]:focus,
+.translationWrapper[contentEditable="true"]:focus {
+	background-color: white;
+	border: 1px solid #83ADE1;
+	border-radius: 5px;
+	box-shadow: 0 0 3px #83ADE1;
+	padding: 0.1rem 0.25rem; }
+
+.translationWrapper {
+	display: inline-block; }
+
+.viewButton {
+	height: 30px;
+	min-width: 30px; }
+  			
+.words {
+	 }
+
+.wordsWrapper {
+	flex-wrap: wrap; }
+
+.word {
+	margin-right: 0.75rem; }
+	
+/* Styling by class (or equivalent) */
+	
+	/* align-items: center; */
+	#orthographiesOverviewModule li {
+		align-items: center; }
+	
+	/* align-items: stretch;
+	flex-direction: column; */
+		#addCharacterOptions > div,
+		#advancedSearchTools > div,
+		#advancedSearchToolsDetails > fieldset > div,
+		#characterPalette,
+		#dynamicPopupContentArea,
+		#exportForm,
+		#glossActionPopup,
+		.menu,
+		#morphemeAnalysisActionPopup,
+		ol,
+		#orthographiesOverviewModule,
+		.pane,
+		.pane > div,
+		.pane > form,
+		.phrase,
+		.popup,
+		#resultsArea,
+		#searchForm,
+		#searchResultsList,
+		#tagActionPopup label,
+		.text,
+		#textsList,
+		#textsToExportList,
+		ul {
+			align-items: stretch;
+			flex-direction: column; }
+
+	/* align-self: center; */
+		#addGraphemeButton,
+		#addOrthographyButton,
+		#graphemesList,
+		#orthographiesDropdown,
+		#orthographyButtons,
+		#orthographySummary {
+			align-self: center; }
+	
+	/* cursor: pointer; */
+		#advancedSearchToolsSummary,
+		button,
+		img,
+		input[type="button"],
+		input[type="checkbox"],
+		input[type="radio"],
+		input[type="submit"],
+		label,
+		.lexiconListItem,
+		.menu,
+		#overviewPaneNav,
+		#tagsList {
+			cursor: pointer; }
+		
+	/* display: none; */
+		.insetPopup,
+		.menu,
+		#overviewPane > div,
+		.popup,
+		#replaceGlossesCheckboxLabel > div,
+		#resultsArea,
+		#selectTextsToExport,
+		#detailPane > div,
+		#detailPane > form {
+			display: none; }
+	
+	/* flex-direction: column; */
+		#orthographySummary label {
+			flex-direction: column; }
+	
+	/* font-weight: bold; */
+		#orthographySummary > label > p {
+			font-weight: bold; }
+	
+	/* justify-content: center; */
+		#graphemesListHeader > p,
+		#orthographySummary > label > p	{
+			justify-content: center; }
+	
+	/* margin: 0.25rem; */
+		#orthographiesDropdown {
+			margin: 0.25rem; }
+	
+	/* padding: 0 0.25rem; */
+		#graphemesListHeader > p,
+		#orthographySummary > label > p {
+			padding: 0.25rem; }
+	
+	/* text-align: center; */
+		#graphemesList input {
+			text-align: center; }
+	
+	/* width: 50%; */
+		#graphemesListHeader > p {
+			width: 50%; }
+	
+	.navSelected {
+		background-color: #3180E1 !important;
+		z-index: 10 !important; }
+
+	#overviewPaneNav > ul > li,
+	.pane > h1 {
+		border-radius: 0 0 5px 5px;
+		color: white;
+		font-weight: bold;
+		justify-content: center;
+		padding: 0.5rem 0.75rem; }
+
+	.pane {
+		border-color: gray;
+		border-style: solid;
+		border-width: 0 1px;
+		flex-grow: 1;
+		max-width: 33.33%;
+		overflow: hidden;
+		position: relative;
+		transition: 0.3s; }
+
+	.pane > h1 {
+		align-self: flex-start; }
+
+/* Styling by DOM elements */
+html, body {
+	background-color: white;
+	flex-grow: 1;
+	min-height: 100vh; }
+  	
+#overviewPane {}
+		
+  #overviewPaneNav {
+		margin-bottom: 0.25rem; }
+  
+    #overviewPaneNav > ul {
+    	flex-direction: row;
+    	flex-wrap: wrap; }
+    
+    #overviewPaneNav > ul > li {
+    	background-color: #83ADE1;
+			box-shadow: 0 -3px 3px 3px gray;
+			margin-bottom: -3px;
+    	margin-left: -3px; }
+			
+			#overviewPaneNav > ul > li:first-child {
+				z-index: 7; }
+				
+			#overviewPaneNav > ul > li:nth-child(2) {
+				z-index: 6; }
+			
+			#overviewPaneNav > ul > li:nth-child(3) {
+				z-index: 5; }
+			
+			#overviewPaneNav > ul > li:nth-child(4) {
+				z-index: 4; }
+			
+			#overviewPaneNav > ul > li:nth-child(5) {
+				z-index: 3; }
+			
+			#overviewPaneNav > ul > li:nth-child(6) {
+				z-index: 2; }
+			
+			#overviewPaneNav > ul > li:nth-child(7) {
+				z-index: 1;
+			}
+		
+		#overviewPaneNav > ul > li:hover {
+    	background-color: #3180E1;
+			z-index: 10; }
+
+	#orthographiesOverviewModule img {
+		height: 30px; }
+		
+		#graphemesListHeader {
+			margin-right: 30px; }
+	
+	#textsOverviewModule {}
+			
+		#textsOverviewModule p {
+			padding: 0.5rem; }
+    		
+		#textsOverviewModule select {
+			align-self: flex-start;
+			border-radius: 6px;
+			margin: 0 0.5rem; }
+  				
+		#textsList {
+			padding: 0.5rem; }
+  				
+		#textsList a {
+			border-bottom: 1px solid gray; }
+  				
+  	#textsList a, #textsList a:active, #textsList a:link, #textsList a:visited {
+			color: black; }
+  
+		#textsList a:hover {
+			color: #83ADE1;
+			text-shadow: none; }
+		
+		#lexiconOverviewModule .lexiconListItem {
+			align-items: baseline;
+			padding: 0.25rem; }
+			
+			#lexiconOverviewModule .lexiconListItem > div {
+				width: 50%; }
+	
+	#tagsOverviewModule h2 {
+		align-self: center;
+		font-weight: bold;
+		padding: 0.5rem; }
+	
+		#tagsList {
+			padding: 0.5rem; }
+							
+		#detailPane {
+  		 }		
+
+			#lexiconDetailModule {
+				padding: 0.5rem; }
+				
+				#lexiconDetailModule > label > p {
+					width: 20%; }
+				
+				#lexiconDetailModule > label > input {
+					width: 80%; }
+				
+				#lexiconDetailModule select {
+					margin: 0.25rem; }
+				
+				#addNewLexEntryButton {
+					align-self: flex-end; }
+  	
+  	#toolbarPane {
+			 }
+			
+			#tools {
+				align-self: flex-end;
+				flex-direction: row;
+				justify-content: center;
+				width: 100%; }
+				
+				#tools > input {
+					white-space: normal; }
+			
+			#characterPalette {
+				align-self: stretch;
+				flex-wrap: wrap;
+				justify-content: flex-end;
+				position: relative; }
+				
+				#characterPalette h2 {
+					align-self: center;
+					font-weight: bold; }
+				
+				#characterGallery {
+					align-items: flex-start;
+					background-color: lightgray;
+					border-radius: 5px;
+					box-shadow: 0 0 5px #000000 inset;
+					flex-grow: 1;
+					flex-wrap: wrap;
+					margin: 0.5rem;
+					min-height: 2.5rem;
+					padding: 0.25rem; }
+					
+					#charButton {
+						margin: 0.5rem; }
+					
+					.charButton.tooltip:hover:before {
+						white-space: nowrap; }
+				
+				#addCharacterForm {
+					flex-grow: 1; }
+					
+				#addCharacterOptions label {
+					flex-direction: row;
+					justify-content: space-between; }
+					
+					#characterBox, #shortcutBox {
+						margin: 0.25rem 0;
+						text-align: center;
+						width: 50%; }
+					
+					#addCharacterOptions label.tooltip:hover:before {
+						height: 1.5rem;
+						position: fixed;
+						right: 2rem;
+						text-align: center;
+						top: 2rem;
+						transform: none; }
+					
+				#addCharacterButton {
+					align-self: flex-end; }
+    
+      #searchForm {
+				border-top: 1px solid gray; }
+        
+        #searchBox {
+					width: 80% }
+				
+				#searchButton {
+					margin-left: 0.5rem;
+					width: 20%; }
+				
+				#simpleSearchTools {
+					flex-wrap: nowrap;
+					padding: 0.25rem; }
+				
+				#advancedSearchToolsDetails {
+					flex-wrap: wrap; }
+											
+					#advancedSearchTools > div {
+						align-items: flex-start; }
+					
+					#advancedSearchTools > div > p {
+						padding: 0 0.5rem;
+						position: relative; }
+						
+					#advancedSearchTools legend {
+						align-self: center;
+						border: none;
+						font-weight: bold;
+						margin: 0;
+						padding: 0; }
+					
+					#advancedSearchTools label input[type="radio"] {
+						align-self: center;
+						min-width: 13px; }
+					
+					#searchBox {
+						align-self: center; }
+  		
+    		#resultsSummary {
+					justify-content: space-between; }
+				
+				#resultsCounter {
+  				padding: 0 0.5rem; }
+				
+				#selectedAction {
+					height: 1.5rem;
+					margin: 0 0.5rem; }
+							
+							#glossActionPopup > label > p {
+								width: 20%; }
+							
+							#glossActionPopup > input {
+								align-self: center; }
+							
+							#replaceGlossesCheckboxLabel {
+								padding: 0.5rem 0; }
+							
+							#replaceGlossesCheckboxLabel input {
+								align-self: center;
+								margin: 0;
+								width: 20%; }
+							
+							#replaceGlossesCheckboxLabel > div {
+								padding: 0 0.25rem;
+								width: 80%; }
+							
+							#replaceGlossesCheckboxLabel div p:first-child {
+								font-weight: bold; }
+							
+							#replaceGlossesCheckboxLabel div p:nth-child(2) {
+								font-style: italic; }
+							
+							#morphemeAnalysisButton, #addMorphemeToLexiconButton, #removeMorphemeAnalysisButton { 
+								align-self: flex-start;
+								margin: 0.25rem 0; }
+							
+							#morphemeAnalysisActionPopup > label > p {
+								align-self: center;
+								width: 10rem; }
+						
+						#tagActionPopup label p {
+							font-weight: bold;
+							padding: 0 0.5rem; }
+							
+						#addTagButton {
+							align-self: flex-end; }
+
+					#searchResultsList {
+						padding: 0.5rem; }
+			
+     			.searchResult {
+						align-items: center;
+     				border-top: 1px solid gray;
+						padding: 0.5rem 0; }
+							
+							.searchResult > .phraseWrapper {
+								width: 95%; }
+  							
+  							.phraseWrapper p+p {
+  								padding: 0.25rem 0 0 0; }
+		
+		.popup {
+			background-color: white;
+			border: 3px solid black;
+			border-radius: 3px;
+			box-shadow: 3px 3px 3px gray;
+			left: 50%;
+			max-width: 90vw;
+			padding: 0.5rem;
+			position: absolute;
+			top: 15%;
+			transform: translate(-50%, 0);
+			z-index: 100; }
+			
+			.popup fieldset {
+				padding: 0.5rem; }
+			
+			#addTagPopup {
+				position: fixed; }
+			
+			#dynamicPopup {
+				align-items: center; }
+			
+			#importExportOptionsPopup {}
+				
+				#importOptions > legend, #exportOptions > legend {
+					border: none;
+					font-weight: bold; }
+				
+				#importForm {
+					 }
+					
+					#importOptions {
+						display: flex;
+						flex-grow: 1; }
+				
+					#importContentOptionsWrapper {
+						justify-content: space-between; }
+					
+					#importButton {
+						align-self: center; }
+				
+				#exportForm {}
+					
+					#exportContentOptionsWrapper {
+						justify-content: space-between; }
+					
+					#exportOptions {
+						display: flex; }
+						 
+						 #exportButton {
+						 	align-self: center; }
+						
+					#selectTextsToExport {
+						 }
+					
+							#textsToExportList label:first-child {
+								font-weight: bold; }
+			
+			#newDatabasePopup {
+				align-items: center;
+			 }
+			
+				#newDatabasePopup p:nth-child(2),
+				#newDatabasePopup p:nth-child(3),
+				#databaseFilePrompt,
+				#importDatabaseButton {
+					display: none; }
+			
+			#notificationPopup {
+				position: fixed;
+				margin-right: 1rem;
+				margin-top: 1rem;
+				right: 0;
+				top: 0;
+				transform: none; }
+			
+			#settingsPopup {
+				 }
+			
+				#settingsPopup > label, #settingsPopup > input {
+					margin: 0.25rem 0; }
+			
+			#shortcutsPopup {
+				position: absolute;
+				left: 1.5rem;
+				margin-right: 50%;
+				top: 1.5rem;
+				transform: none; }
+				
+				#shortcutsPopup li {
+					align-items: center;
+					border: 1px solid gray;
+					padding: 0.5rem 0; }
+				 
+				#shortcutsPopup ul li code {
+					text-align: center;
+					width: 20%; }
+				
+				#shortcutsPopup ul li div {
+					width: 80%; }
