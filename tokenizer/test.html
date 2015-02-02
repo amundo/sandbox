@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset=utf-8>
+<title></title>
+<style>
+.fail { color: red; }
+li:after {
+  content: '[' attr(data-tokens) ']';
+  color:gray;
+  font-size:small;
+}
+</style>
+</head>
+<body>
+<script src=tokenize.js> </script>
+
+<ol>
+  <li data-tokens=1>dog
+  <li data-tokens=2>big dog
+  <li data-tokens=2>            big                   dog
+  <li data-tokens=3>A big dog.
+  <li data-tokens=2>What? Really?
+  <li data-tokens=1>hard-core
+  <li data-tokens=4>“No way,” he said.
+  <li data-tokens=1>This one should be red.
+  <li data-tokens=8>a yò’ò kúu Carmen Hernandez naní yi’i ni
+  <li data-tokens=7>á ñoo San Martín Durazno kúu yí’i
+  <li data-tokens=7>á xini-i saconocer cha kú Patrick yo’o
+  <li data-tokens=6>deto’on ndi sá’à ndi ña um…
+  <li data-tokens=10>in programa ña ka’ man iin proyecto kúu miira ni
+  <li data-tokens=15>m… Yi̠’i̠ káchiñu-i ña̠ kíí programa ña̠ ká’a na kii CalFresh, estampilla comida na̠ní ña
+  <li data-tokens=5>a káchiñu-i xí’ín Proyecto Mixteco
+  <li data-tokens=15>a sa’i kuu ña chindee in ndi kuií na ka mií-yo na̠ ka’a̠n to’on dá’vì
+  <li data-tokens=5>í’in na̠ ká’a̠n to̱’on sá’án
+  <li data-tokens=14>dukutu pakéte na ta chi ku nde chon ndeña kuá’ na mi oficina MediCal
+  <li data-tokens=15>a iká ku sa decidi na ndjá na ko na sa califica xa̠’á mií programa
+  <li data-tokens=12>indjá do na xí ña ondo ña kuíin dondo koto ña aplicación
+  <li data-tokens=6>xa’a-ndo xi’in ta kivi chindeé ndo’o
+  <li data-tokens=2>ka’vi ndo
+</ol>
+
+<script>
+
+NodeList.prototype.forEach = [].forEach;
+var lis = document.body.querySelectorAll('li');
+
+lis.forEach(function(li){  
+  var n = parseInt(li.dataset.tokens); 
+  if(tokenize(li.textContent).length != n){
+    li.classList.add('fail') 
+  } 
+})
+
+</script>
+
+</body>
+</html>

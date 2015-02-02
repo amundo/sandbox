@@ -1,0 +1,104 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>Tokenization Tester</title>
+<head>
+<style>
+body { 
+  background-image: linear-gradient(white, #eee);
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+main { 
+  flex-flow:row wrap;
+  display:flex;
+}
+
+ol { 
+  display:flex;
+  justify-content:flex-start;
+  list-style:none;
+}
+
+ol li { 
+  margin: .5em 0;
+}
+
+
+textarea { 
+  min-height: 25vh;
+  padding: 2vh;
+}
+
+input, textarea { 
+  width: 100%;
+  font-family: monospace;
+  margin: 2vh;
+}
+
+input { 
+  line-height: 5vh;
+  font-size: 3vh;
+}
+
+.word { 
+  display: inline-block;
+  margin-left: 4px;
+  padding: 4px;
+  background: lightgray;
+  border-radius: 4px;
+}
+
+</style>
+
+</head>
+
+<body>
+<header>
+<h1>Tokenization Tester</h1>
+</header>
+<main>
+
+
+<textarea spellcheck=false>
+function tokenize(text){
+  return text.split(' ');
+}
+</textarea>
+
+<input placeholder="type the text to tokenize here">
+
+<ol></ol>
+
+</main>
+
+<script>
+var tokenize = function(text){
+  return text.split(' ');
+}
+
+var input = document.querySelector('input'),
+    textarea = document.querySelector('textarea'),
+    ol = document.querySelector('ol');
+
+function runTokenize(){
+  ol.innerHTML = ''; 
+  var text = input.value;
+
+  eval(textarea.value);
+
+  var words = tokenize(text);
+
+  words.forEach(function(word, i){
+    var nth = i + 1;
+    ol.innerHTML += '<li><span class=word data-nth=' + nth + '>' + word + '</span></li>'; 
+  })
+
+}
+
+textarea.addEventListener('keyup', runTokenize, false)
+input.addEventListener('keyup', runTokenize, false)
+
+
+</script>
+</body>
