@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+  
+  </title>
+  <link rel=stylesheet href=style.css>
+  <style>
+/* some colors */
+main { background:green; }
+#center { background:red; }
+aside { background:yellow; }
+header, footer { background: purple }
+
+@media (max-width: 440px) {
+  main {
+    display:flex;
+    flex-flow: column wrap;
+  }
+  #center  { 
+    flex: 1; 
+    order: 1;
+  }
+  aside { 
+    flex: 1;
+    order: 4;
+  }
+}
+
+
+@media (min-width: 440px) {
+  body { 
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+  } 
+  
+  main { 
+    display:flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+  }
+  
+  header, footer { 
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    flex: 0 0 10vh;
+  }
+  
+  #center  {
+    flex: 1 1 auto;
+  }
+  
+  aside { 
+    flex: 0 1  10vw;
+  
+    text-align:center;
+    padding: 1em;
+  }
+}
+ 
+  
+  </style>
+</head>
+<body>
+
+<header>
+<h1>header</h1>
+</header>
+
+<main>
+  <aside id=left>
+    <h2>aside</h2>
+  </aside>
+  <section id=center>
+    <h1>center</h1>
+  </section>
+  <aside id=right>
+    <h2>aside</h2>
+  </aside>
+</main>
+
+<footer>
+<p>a wugbot production</p>
+</footer>
+
+</body>
+</html>
