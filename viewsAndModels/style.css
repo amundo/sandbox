@@ -1,0 +1,45 @@
+body {
+  padding-right: 2em;
+}
+
+h1, h2, h3 { 
+  font-family:sans-serif;
+}
+
+p {
+  margin-right:200px;
+  line-height: 1.5;
+}
+
+main {
+}
+
+aside {
+  font-size: small;
+  right: 10px;
+  position: absolute;
+  width: 180px;
+}
+
+ul, dl, pre, blockquote, table {
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 50px;
+  margin-right:250px;
+}
+pre {
+  font-size: large;
+  background:#333;
+  color: hsl(120, 60%, 65%);
+}
+
+code {
+  padding: 3px;
+  border-radius: 2px;
+}
+
+pre, code { 
+  font-family:monospace;
+  letter-spacing: 1px;
+}
