@@ -6,20 +6,32 @@
 fern  
   </title>
   <style>
+main {
+  display:flex;
+  flex-direction: row;
+}
+
 section {
-  border: 1px solid lightgray;
   margin: 1em 0;
+  flex: 1;
 }
   </style>
+
 </head>
 <body>
+<header>
 <h1>fern</h1>
+</header>
+<main>
+
+<section id=editor>
 <form>
 <fieldset>
 <legend>add a word</legend>
 <input>
 </fieldset>
 </form>
+</section>
 
 <section id=words>
 <h2>Words</h2>
@@ -29,16 +41,19 @@ of words:
 <ul></ul>
 </section>
 
-<section id=status>
+<section id=wordCount>
 <h2>Word Count:</h2>
-<blockquote>This is the section handled by the <code>StatusView</code>. It contains a <code>p</code>
+<blockquote>This is the section handled by the <code>WordCountView</code>. It contains a <code>p</code>
 which is updated with the number of words.
 </blockquote>
 <p id=wordCount>
 </section>
 
+</main>
+
 <script>
 app = {};
+
 app.nodes = {
   addWord: document.querySelector('#addWord'),
   words: document.querySelector('#words'),
@@ -66,27 +81,27 @@ app.WordCountView = function(el, collection){
   }.bind(this);
 }
   
-
 app.WordsView = function(el, collection){
   this.collection = collection;
   this.el = el; // a DOM node reference
+  var ul = this.el.querySelector('ul');
 
   this.render = function(){
+    ul.innerHTML = '';
     this.collection.forEach(function(word){
-      console.log('we need to render this'); 
-    })
+      var li = document.createElement('li');
+      li.textContent = word;
+      ul.appendChild(li);
+    }, this)
   }
 }
   
-
 app.words = ['ichi', 'ni', 'san'];
 app.wordsView = new app.WordsView(app.nodes.words, app.words);
 app.wordCountView = new app.WordCountView(app.nodes.wordCount, app.words);
 
 app.wordsView.render();
 app.wordCountView.render();
-
-
 
 </script>
 </body>
