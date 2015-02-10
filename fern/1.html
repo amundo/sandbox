@@ -7,6 +7,10 @@ fern
   </title>
   <link rel=stylesheet href=style.css>
   <style>
+section {
+  border: 1px solid lightgray;
+  margin: 1em 0;
+}
   </style>
 </head>
 <body>
@@ -17,10 +21,22 @@ fern
 <input>
 </fieldset>
 </form>
+
+<section id=words>
 <h2>Words</h2>
+<blockquote>This is the section handled by the <code>WordsView</code>. It contains a <code>ul</code>
+of words:
+</blockquote>
 <ul></ul>
+</section>
+
+<section id=status>
 <h2>Word Count:</h2>
+<blockquote>This is the section handled by the <code>StatusView</code>. It contains a <code>p</code>
+which is updated with the number of words.
+</blockquote>
 <p id=wordCount>
+</section>
 
 <script>
 app = {};
