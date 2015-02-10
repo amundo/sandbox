@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+fern  
+  </title>
+<script src=eventEmitter.js></script>
+  <style>
+main {
+  display:flex;
+  flex-direction: row;
+}
+
+section {
+  margin: 1em 0;
+  flex: 1;
+}
+  </style>
+
+</head>
+<body>
+<header>
+<h1>fern</h1>
+</header>
+<main>
+
+<section id=editor>
+<h2>Edit</h2>
+<form>
+<legend>add a word</legend>
+<input>
+</form>
+</section>
+
+<section id=wordList>
+<h2>Dictionary</h2>
+<blockquote>This is the section handled by the <code>WordListView</code>. It contains a <code>ul</code>
+of words:
+</blockquote>
+<ul></ul>
+</section>
+
+<section id=wordCount>
+<h2>Statistics</h2>
+<blockquote>This is the section handled by the <code>WordCountView</code>. It contains a <code>p</code>
+which is updated with the number of words.
+</blockquote>
+<p id=wordCount>
+</section>
+
+</main>
+
+<script>
+app = {};
+
+app.Words = function(data){
+  this.data = data; // this is the actual array of strings: words
+
+  this.add = function(word){
+    this.data.push(word);
+    app.events.publish('wordAdded', this.render);
+  }.bind(this); // tell our function not to reset `this`
+
+  this.count = function(){
+    return this.data.length;
+  }.bind(this);
+}
+
+app.EditorView = function(el, collection){
+  this.collection = collection;
+  this.el = el; // a DOM node reference
+
+  var input = el.querySelector('input');
+  var form = el.querySelector('form');
+
+  this.addWord = function(){
+    this.collection.add(input.value.trim());
+  }.bind(this)
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    this.addWord(input.value);
+    input.value = '';
+    input.focus();
+  }.bind(this))
+}
+  
+app.WordCountView = function(el, collection){
+  this.collection = collection;
+  this.el = el; // a DOM node reference
+  var wordCount = this.el.querySelector('p#wordCount');
+
+  this.render = function(){
+    wordCount.textContent = collection.count();
+  };
+
+  app.events.subscribe('wordAdded', this.render);
+}
+  
+app.WordListView = function(el, collection){
+  this.collection = collection;
+  this.el = el; // a DOM node reference
+  var ul = this.el.querySelector('ul');
+
+  this.render = function(){
+    ul.innerHTML = '';
+    this.collection.data.forEach(function(word){
+      var li = document.createElement('li');
+      li.textContent = word;
+      ul.appendChild(li);
+    }, this)
+  }.bind(this);
+
+  app.events.subscribe('wordAdded', this.render);
+}
+
+function PubSub() {
+    this.subs = {};
+    this.subscribe = function(channel, sub) {
+        this.subs[channel] = this.subs[channel] || [ ];
+        this.subs[channel].push(sub);
+    };
+    this.publish = function(channel) {
+        var args = [].slice.call(arguments, 1);
+        this.subs[channel].forEach(function(sub) {
+            sub.apply(void 0, args);
+        });
+    };
+}
+
+app.events = new PubSub();
+  
+app.words = new app.Words(['ichi', 'ni', 'san']);
+app.wordListView = new app.WordListView(document.querySelector('#wordList'), app.words);
+app.wordCountView = new app.WordCountView(document.querySelector('#wordCount'), app.words);
+app.editorView = new app.EditorView(document.querySelector('#editor'), app.words);
+
+app.wordListView.render();
+app.wordCountView.render();
+
+</script>
+</body>
+</html>
