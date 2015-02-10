@@ -5,7 +5,6 @@
   <title>
 fern  
   </title>
-  <link rel=stylesheet href=style.css>
   <style>
 section {
   border: 1px solid lightgray;
@@ -45,6 +44,47 @@ app.nodes = {
   words: document.querySelector('#words'),
   wordCount: document.querySelector('#wordCount')
 };
+
+app.Words = function(){
+  this.data = []; // this is the actual array of strings: words
+
+  this.add = function(word){
+    this.data.push(word);
+  }.bind(this); // tell our function not to reset `this`
+
+  this.count = function(){
+    return this.data.length;
+  }
+}
+
+app.WordCountView = function(el, collection){
+  this.collection = collection;
+  this.el = el; // a DOM node reference
+
+  this.render = function(){
+    this.el.textContent = this.collection.count();
+  }.bind(this);
+}
+  
+
+app.WordsView = function(el, collection){
+  this.collection = collection;
+  this.el = el; // a DOM node reference
+
+  this.render = function(){
+    this.collection.forEach(function(word){
+      console.log('we need to render this'); 
+    })
+  }
+}
+  
+
+app.words = ['ichi', 'ni', 'san'];
+app.wordsView = new app.WordsView(app.nodes.words, app.words);
+app.wordCountView = new app.WordCountView(app.nodes.wordCount, app.words);
+
+app.wordsView.render();
+app.wordCountView.render();
 
 
 
