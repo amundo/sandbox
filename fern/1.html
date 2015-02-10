@@ -60,8 +60,8 @@ app.nodes = {
   wordCount: document.querySelector('#wordCount')
 };
 
-app.Words = function(){
-  this.data = []; // this is the actual array of strings: words
+app.Words = function(data){
+  this.data = data; // this is the actual array of strings: words
 
   this.add = function(word){
     this.data.push(word);
@@ -69,16 +69,17 @@ app.Words = function(){
 
   this.count = function(){
     return this.data.length;
-  }
+  }.bind(this);
 }
 
 app.WordCountView = function(el, collection){
   this.collection = collection;
   this.el = el; // a DOM node reference
+  var wordCount = this.el.querySelector('p#wordCount');
 
   this.render = function(){
-    this.el.textContent = this.collection.count();
-  }.bind(this);
+    wordCount.textContent = collection.count();
+  };
 }
   
 app.WordsView = function(el, collection){
@@ -88,7 +89,7 @@ app.WordsView = function(el, collection){
 
   this.render = function(){
     ul.innerHTML = '';
-    this.collection.forEach(function(word){
+    this.collection.data.forEach(function(word){
       var li = document.createElement('li');
       li.textContent = word;
       ul.appendChild(li);
@@ -96,7 +97,7 @@ app.WordsView = function(el, collection){
   }
 }
   
-app.words = ['ichi', 'ni', 'san'];
+app.words = new app.Words(['ichi', 'ni', 'san']);
 app.wordsView = new app.WordsView(app.nodes.words, app.words);
 app.wordCountView = new app.WordCountView(app.nodes.wordCount, app.words);
 
