@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+fern  
+  </title>
+  <link rel=stylesheet href=style.css>
+  <style>
+  </style>
+</head>
+<body>
+<h1>fern</h1>
+<form>
+<fieldset>
+<legend>add a word</legend>
+<input>
+</fieldset>
+</form>
+<h2>Words</h2>
+<ul></ul>
+<h2>Word Count:</h2>
+<p id=wordCount>
+
+<script>
+app = {};
+app.nodes = {
+  addWord: document.querySelector('#addWord'),
+  words: document.querySelector('#words'),
+  wordCount: document.querySelector('#wordCount')
+};
+
+app.nodes.addWord.addEventListener('submit', function(ev){
+  ev.preventDefault();
+  /*
+
+   in here we need to:
+  
+
+  */
+  if(ev.which == 13){ // ENTER
+    
+  }
+})
+
+</script>
+</body>
+</html>
