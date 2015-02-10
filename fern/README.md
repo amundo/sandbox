@@ -1,7 +1,7 @@
 FERN
 ====
 
-![fern](/https://openclipart.org/image/300px/svg_to_png/171185/farn.png)
+![fern](https://openclipart.org/image/300px/svg_to_png/171185/farn.png)
 
 i named this directory fern because i looked up and saw a fern.
 
