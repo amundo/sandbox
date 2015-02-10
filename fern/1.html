@@ -54,7 +54,7 @@ which is updated with the number of words.
 app = {};
 
 app.nodes = {
-  addWord: document.querySelector('#addWord'),
+  editor: document.querySelector('#editor'),
   words: document.querySelector('#words'),
   wordCount: document.querySelector('#wordCount')
 };
@@ -70,6 +70,24 @@ app.Words = function(data){
     return this.data.length;
   }.bind(this);
 }
+
+app.EditorView = function(el, collection){
+  this.collection = collection;
+  this.el = el; // a DOM node reference
+
+  var input = el.querySelector('input');
+  var form = el.querySelector('form');
+
+  this.addWord = function(){
+    this.collection.add(input.value.trim());
+  }.bind(this)
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    this.addWord(input.value);
+  }.bind(this))
+}
+  
 
 app.WordCountView = function(el, collection){
   this.collection = collection;
@@ -99,6 +117,7 @@ app.WordsView = function(el, collection){
 app.words = new app.Words(['ichi', 'ni', 'san']);
 app.wordsView = new app.WordsView(app.nodes.words, app.words);
 app.wordCountView = new app.WordCountView(app.nodes.wordCount, app.words);
+app.editorView = new app.EditorView(app.nodes.editor, app.words);
 
 app.wordsView.render();
 app.wordCountView.render();
