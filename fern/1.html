@@ -53,11 +53,6 @@ which is updated with the number of words.
 <script>
 app = {};
 
-app.nodes = {
-  editor: document.querySelector('#editor'),
-  words: document.querySelector('#words'),
-  wordCount: document.querySelector('#wordCount')
-};
 
 app.Words = function(data){
   this.data = data; // this is the actual array of strings: words
@@ -117,9 +112,9 @@ app.WordsView = function(el, collection){
 }
   
 app.words = new app.Words(['ichi', 'ni', 'san']);
-app.wordsView = new app.WordsView(app.nodes.words, app.words);
-app.wordCountView = new app.WordCountView(app.nodes.wordCount, app.words);
-app.editorView = new app.EditorView(app.nodes.editor, app.words);
+app.wordsView = new app.WordsView(document.querySelector('#words'), app.words);
+app.wordCountView = new app.WordCountView(document.querySelector('#wordCount'), app.words);
+app.editorView = new app.EditorView(document.querySelector('#editor'), app.words);
 
 app.wordsView.render();
 app.wordCountView.render();
