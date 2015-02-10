@@ -85,6 +85,8 @@ app.EditorView = function(el, collection){
   form.addEventListener('submit', function(ev){
     ev.preventDefault();
     this.addWord(input.value);
+    input.value = '';
+    input.focus();
   }.bind(this))
 }
   
