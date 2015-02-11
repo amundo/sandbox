@@ -75,16 +75,15 @@ app.EditorView = function(el, collection){
 
   this.addWord = function(){
     this.collection.add(input.value.trim());
-  }.bind(this)
+  }.bind(this);
 
   form.addEventListener('submit', function(ev){
     ev.preventDefault();
     this.addWord(input.value);
     input.value = '';
     input.focus();
-  }.bind(this))
-}
-  
+  }.bind(this));
+};
 
 app.WordCountView = function(el, collection){
   this.collection = collection;
@@ -94,7 +93,7 @@ app.WordCountView = function(el, collection){
   this.render = function(){
     wordCount.textContent = collection.count();
   };
-}
+};
   
 app.WordsView = function(el, collection){
   this.collection = collection;
@@ -107,9 +106,9 @@ app.WordsView = function(el, collection){
       var li = document.createElement('li');
       li.textContent = word;
       ul.appendChild(li);
-    }, this)
-  }
-}
+    }, this);
+  };
+};
   
 app.words = new app.Words(['ichi', 'ni', 'san']);
 app.wordsView = new app.WordsView(document.querySelector('#words'), app.words);
