@@ -6,9 +6,73 @@
 	<meta name=author content='Daniel W. Hieber'>
 	<meta name=description content='A stress test determining whether DOM IDs or rampant event listeners is a better solution to the data/view conundrum'>
 	<meta name=keywords content='linguistics, digital linguistics, wugbot'>
+  
+  <link rel=stylesheet type='text/css' href='style.css'>
 </head>
 <body>
-  <script src='rawData.js'></script>
+  <section id=introduction>
+    <h1>Stress Test</h1>
+    <p>This small app is designed to test the effects of different design decisions on how quickly texts are rendered in the browser. Select the feature youʼd like to test, then click <code>Run Test</code>. The time it took to execute the function will display below, and the results of the test will be stringified and stored in local storage along with the test settings for that particular test run. The test data is formatted like the following sample:</p>
+    <pre>
+      localStorage.testResults = [                // An array of test results
+        {                                         // A single test result, stored as a JSON object
+          "date": "2015-02-11T07:07:04.762Z",     // The date the test was run
+          "renderMethod": "with DOM IDs",         // The render method that was used for this test
+          "browser": "Chrome/40.0.2214.111",      // The browser the test was run in (shortened here for display purposes)
+          "speed": 2.34                           // The time it took the function to execute, in seconds
+        }
+      ];</pre>
+  </section>
+  <div id=dashboard>
+    <section id=testOptions>
+      <fieldset>
+        <legend>Render Method</legend>
+        <div id=renderMethod>
+          <label for=withids>
+            <input id=withListeners type=radio name=renderMethod value=withids checked>
+            <p>with DOM IDs</p>
+          </label>
+          <label for=withListeners>
+            <input id=withListeners type=radio name=renderMethod value=withListeners>
+            <p>with event listeners</p>
+          </label>
+        </div>
+      </fieldset>
+      <button id=runTestButton type=button value='Run Test'>Run Test</button>
+    </section>
+    <section id=testResults>
+      <h1>Test Results:</h1>
+      <p>Click <code>Run Test</code> to display the test result.</p>
+    </section>
+  </div>
+  <section id=corpusView>
+    <h1>Corpus Rendering Area</h1>
+    <ul class=textsView></ul>
+  </section>
+  
+  <div id=templates>
+    <template id=textTemplate>
+      <li class=textView>
+        <ol class=phrasesView></ol>
+      </li>
+    </template>
+    
+    <template id=phraseTemplate>
+      <li class=phraseView>
+        <p class=transcription></p>
+        <ol class=wordsView></ol>
+        <p class=translation></p>
+      </li>
+    </template>
+    
+    <template id=wordTemplate>
+      <li class=wordView>
+        <p class=wordToken></p>
+        <p class=wordGloss></p>
+      </li>
+    </template>
+  </div>
+  
   <script src='data.js'></script>
   <script src='script.js'></script>
 </body>

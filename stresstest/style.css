@@ -30,16 +30,35 @@ article, aside, canvas, details, embed, figure, figcaption, footer, header, hgro
 	text-decoration: none;
 	vertical-align: baseline;
 	/* font-family has to be last in this declaration */
-	font-family: "CharisSIL", "Charis SIL", "Gentium Plus", "Doulos SIL", "Lucida Sans Unicode", "Times New Roman", serif, sans-serif; }
+	font-family: 'Gentium Plus'; }
 
-/* Styling by classes or element type */
+/* Styling by CSS rule (alphabetical by CSS rule) */
+code {
+  background-color: lightgray; }
+
+button, code, #renderMethod {
+  padding: 0 0.25rem; }
+
+#dashboard, input[type=date], label, .wordsView {
+	flex-direction: row; }
+
+#dashboard > section, #introduction > *, .phraseView, pre {
+  padding: 0.5rem; }
+
+h1, legend {
+  font-weight: bold; }
+
+h1, legend, th {
+  text-align: center; }
+
+/* Styling by classes or element type (alphabetical by class/element type) */
 a, a:hover, a:visited, a:active {
 	background: transparent;
 	color: inherit;
 	text-decoration: none: }
 
-a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var {
-	display: inline; }
+a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, p, q, s, samp, small, strike, strong, sub, sup, tt, var {
+	display: inline-block; }
 
 blockquote, q {
 	quotes: none; }
@@ -48,17 +67,38 @@ blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none; }
 
-input {
-	background-color: lightgray; }
+button {
+  background: linear-gradient(to bottom, white, lightgray);
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: auto;
+}
 
-input[type="date"] {
-	flex-direction: row; }
+button:active {
+  background: linear-gradient(to top, white, lightgray);
+  box-shadow: 0px 0px 1px 1px gray inset; }
 
-input[type="radio"] {
-	align-self: center; }
+button:hover {
+  background: linear-gradient(to top, white, lightgray); }
+
+code, pre {
+  font-family: 'Consolas';
+  white-space: pre; }
+
+h1 {
+  font-size: 150%; }
+
+input[type=radio] {
+	align-self: center;
+  margin: 0 0.25rem; }
 
 ol, ul {
 	list-style: none; }
+
+pre {
+  background-color: black;
+  color: green;
+  overflow-x: scroll; }
 
 table {
 	border-collapse: collapse;
@@ -71,12 +111,8 @@ table {
 	td, td {
 		vertical-align: middle; }
 	
-	td {
+	td, th {
 		display: table-cell; }
-	
-	th {
-		display: table-cell;
-		text-align: center; }
 	
 	thead {
 		display: table-header-group; }
@@ -84,6 +120,12 @@ table {
 	tr {
 		display: table-row; }
 
-/* Styling by DOM elements */
+.wordView {
+  margin-left: 0.5rem; }
+
+/* Styling by DOM elements (organized by DOM hierarchy) */
 html, body {
 	background: white; }
+
+#dashboard {
+  justify-content: space-around; }
