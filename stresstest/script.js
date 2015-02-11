@@ -10,6 +10,34 @@ app.nodes = {
 };
 
 app.renderMethods = {
+  renderFirst10WithIDs: function() {
+    app.nodes.textsView.innerHTML = '';
+    texts.forEach(function(text, t) {
+      if (t<10) {
+        textTemplate.content.querySelector('.textView').id = 'text' + t;
+        var phrasesView = textTemplate.content.querySelector('.phrasesView');
+        phrasesView.innerHTML = '';
+        text.phrases.forEach(function(phrase, p) {
+          phraseTemplate.content.querySelector('.phraseView').id = 'text' + t + '_phrase' + p;
+          phraseTemplate.content.querySelector('.transcription').textContent = phrase.transcription;
+          phraseTemplate.content.querySelector('.translation').textContent = phrase.translation;
+          var wordsView = phraseTemplate.content.querySelector('.wordsView');
+          wordsView.innerHTML = '';
+          phrase.words.forEach(function(word, w) {
+            wordTemplate.content.querySelector('.wordView').id = 'text' + t + '_phrase' + p + '_word' + w;
+            wordTemplate.content.querySelector('.wordToken').textContent = word.token;
+            wordTemplate.content.querySelector('.wordGloss').textContent = word.gloss;
+            var newWord = wordTemplate.content.cloneNode(true);
+            wordsView.appendChild(newWord);
+          });
+          var newPhrase = phraseTemplate.content.cloneNode(true);
+          phrasesView.appendChild(newPhrase);
+        });
+        var newText = textTemplate.content.cloneNode(true);
+        app.nodes.textsView.appendChild(newText);
+      }
+    });
+  },
   renderWithIDs: function() {
     app.nodes.textsView.innerHTML = '';
     texts.forEach(function(text, t) {
@@ -34,6 +62,46 @@ app.renderMethods = {
       });
       var newText = textTemplate.content.cloneNode(true);
       app.nodes.textsView.appendChild(newText);
+    });
+  },
+  renderFirst10WithListeners: function() {
+    app.nodes.textsView.innerHTML = '';
+    texts.forEach(function(text, t) {
+      if (t<10) {
+        var newText = textTemplate.content.cloneNode(true);
+        app.nodes.textsView.appendChild(newText);
+        
+        var lastText = document.querySelector('.textsView > li:last-child');
+        lastText.addEventListener('click', function(ev) {
+          console.log(ev.target);
+        });
+        
+        var phrasesView = document.querySelector('.textsView > li:last-child .phrasesView');
+        text.phrases.forEach(function(phrase, p) {
+          phraseTemplate.content.querySelector('.transcription').textContent = phrase.transcription;
+          phraseTemplate.content.querySelector('.translation').textContent = phrase.translation;
+          var newPhrase = phraseTemplate.content.cloneNode(true);
+          phrasesView.appendChild(newPhrase);
+          
+          var lastPhrase = document.querySelector('.textsView > li:last-child .phrasesView > li:last-child');
+          lastPhrase.addEventListener('click', function(ev) {
+            console.log(ev.target);
+          });
+          
+          var wordsView = document.querySelector('.textsView > li:last-child .phrasesView > li:last-child .wordsView');
+          phrase.words.forEach(function(word, w) {
+            wordTemplate.content.querySelector('.wordToken').textContent = word.token;
+            wordTemplate.content.querySelector('.wordGloss').textContent = word.gloss;
+            var newWord = wordTemplate.content.cloneNode(true);
+            wordsView.appendChild(newWord);
+            
+            var lastWord = document.querySelector('.textsView > li:last-child .phrasesView > li:last-child .wordsView > li:last-child');
+            lastWord.addEventListener('click', function(ev) {
+              console.log(ev.target);
+            });
+          });
+        });
+      }
     });
   },
   renderWithListeners: function() {
@@ -124,8 +192,14 @@ app.Test = function() {
     case 'withids':
       app.renderMethods.renderWithIDs();
       break;
+    case 'first10withids':
+      app.renderMethods.renderFirst10WithIDs();
+      break;
     case 'withListeners':
       app.renderMethods.renderWithListeners();
+      break;
+    case 'first10withListeners':
+      app.renderMethods.renderFirst10WithListeners();
       break;
     default:
   }
