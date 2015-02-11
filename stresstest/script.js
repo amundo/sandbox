@@ -13,7 +13,6 @@ app.renderMethods = {
   renderWithIDs: function() {
     app.nodes.textsView.innerHTML = '';
     texts.forEach(function(text, t) {
-    if (t<2) {
       textTemplate.content.querySelector('.textView').id = 'text' + t;
       var phrasesView = textTemplate.content.querySelector('.phrasesView');
       phrasesView.innerHTML = '';
@@ -35,13 +34,11 @@ app.renderMethods = {
       });
       var newText = textTemplate.content.cloneNode(true);
       app.nodes.textsView.appendChild(newText);
-    }
     });
   },
   renderWithListeners: function() {
     app.nodes.textsView.innerHTML = '';
     texts.forEach(function(text, t) {
-      if (t<2) {
       var newText = textTemplate.content.cloneNode(true);
       app.nodes.textsView.appendChild(newText);
       
@@ -75,7 +72,6 @@ app.renderMethods = {
           });
         });
       });
-      }
     });
   }
 };
