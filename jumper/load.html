@@ -1,0 +1,18 @@
+<!doctype html>
+<meta charset=utf-8>
+<title></title>
+<style></style>
+
+
+<input type=file>
+<audio controls></audio>
+
+<script>
+var audio = document.querySelector('audio'),
+    input = document.querySelector('input');
+
+input.addEventListener('change', function(ev){
+  audio.src = window.URL.createObjectURL(this.files[0]);
+})
+
+</script>

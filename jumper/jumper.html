@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<title>jumper</title>
+<meta charset=utf-8>
+<style>
+input[type="text"] { 
+  width: 80%;
+  font-size: large;
+}
+
+div { 
+  display:none;
+}
+
+canvas { 
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  position: fixed;
+  left: 40%;;
+  bottom: 10px;;
+}
+</style>
+</head>
+<body>
+
+<h1>OCD transcription</h1>
+
+<canvas width=400 height=400></canvas>
+<p><input type=file>
+<div>
+  <p><audio controls style="width:100%;"></audio>
+  <p>
+    <label><input type=checkbox> random</label>
+
+    <label><input type=range min=-60 max=60>advance <span>0</span> seconds</label>
+
+  <p><input  autofocus type=text>
+  <p><button id=tsv>export</button> 
+  <button id=json>json</button> 
+  <button id=scription>scription</button> </p>
+</div>
+
+<footer>
+<span>0</span> annotations.
+</footer>
+
+<script src=js/circlemeter.js></script>
+<script>
+
+var audio   = document.querySelector('audio'),
+    h1      = document.querySelector('h1'),
+    input   = document.querySelector('input[type="text"]'),
+    chooser = document.querySelector('input[type="file"]'),
+    jump    = document.querySelector('input[type="checkbox"]'),
+    seconds = document.querySelector('input[type="range"]'),
+    div     = document.querySelector('div'),
+    footer  = document.querySelector('footer'),
+    tsvButton  = document.querySelector('button#tsv'),
+    jsonButton  = document.querySelector('button#json'),
+    scriptionButton  = document.querySelector('button#scription'),
+    body    = document.querySelector('body'),
+    saveAs = '',
+    annotations = [];
+
+audio.playbackRate *= 1.25;
+
+jump.addEventListener('change', function(ev){
+  seconds.disabled = this.checked;
+})
+
+seconds.nextElementSibling.textContent = seconds.value;
+
+seconds.addEventListener('change', function(ev){
+  this.nextElementSibling.textContent = this.value;
+})
+
+tsvButton.addEventListener('click', function(ev){
+  var copyable = '';
+  annotations.forEach(function(annotation){
+    copyable += annotation[0] + '\t' + annotation[1] + '\n';
+  })
+  console.log(copyable);
+})
+
+jsonButton.addEventListener('click', function(ev){
+  console.log(JSON.stringify(annotations,null,2));
+})
+
+scriptionButton.addEventListener('click', function(ev){
+  var copyable = 'start\nannotation\n\n';
+  annotations.forEach(function(annotation){
+    copyable += annotation[0] + '\n' + annotation[1] + '\n\n';
+  })
+  console.log(copyable);
+})
+
+chooser.addEventListener('change', function(ev){
+  var file = this.files[0];
+  audio.src = window.URL.createObjectURL(file);
+
+  h1.innerHTML = 'transcribing: <code>' + file.name + '</code>'; 
+
+  saveAs = file.name;
+  if(localStorage[saveAs]){
+     annotations = JSON.parse(localStorage[saveAs]); 
+  } else { 
+     localStorage[saveAs] = JSON.stringify([]); 
+  }
+
+  div.style.display = 'block';
+  chooser.style.display = 'none';
+
+  updateMeter(annotations.map(function(a){ return a[0] }), audio.duration);
+  input.focus();
+})
+
+
+function keyup(ev) { 
+  switch(ev.which){ 
+    case 27: // ESCAPE
+      if(audio.paused){ 
+        audio.play()
+      } else { 
+        audio.pause() 
+      }
+      input.value = '';
+      break;
+    case 13: // ENTER
+      if(input.value.trim().length > 0){
+        annotations.push([audio.currentTime, input.value, annotations.length]); 
+        annotations.sort(function(a,b){ return a[0] - b[0]});
+        updateMeter(annotations.map(function(a){ return a[0] }), audio.duration);
+      }
+      localStorage[saveAs] = JSON.stringify(annotations);
+
+      if(jump.checked){ 
+        audio.currentTime = Math.random() * audio.duration; 
+      } else { 
+        var skip = parseInt(seconds.value);
+        if(skip != 0){ 
+          audio.currentTime += skip
+        }
+      }
+      input.value = '';
+      audio.play();
+      break;
+   }
+   return false;
+}
+
+document.addEventListener('keyup', keyup);
+
+
+</script>
+
+</body>
+</html>
