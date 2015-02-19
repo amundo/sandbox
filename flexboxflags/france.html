@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+sticky footer 
+  </title>
+  <link rel=stylesheet href=style.css>
+  <style>
+body {
+  display:flex;
+  min-height: 100vh;
+  align-items:center;
+  justify-content:center;
+
+  flex-direction: row;
+  align-items: stretch;
+}  
+
+div {
+  padding: 1em;
+}
+
+div.blue {
+  background-color:#002395;
+  flex-grow: 1;
+}
+
+div.white {
+  background:white;
+  flex-grow: 1;
+}
+
+div.red {
+  background-color:#ED2939;
+  flex-grow: 1;
+}
+  </style>
+</head>
+<body>
+
+<div class=blue></div>
+<div class=white></div>
+<div class=red></div>
+
+</body>
+</html>

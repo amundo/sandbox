@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+sticky footer 
+  </title>
+  <link rel=stylesheet href=style.css>
+  <style>
+body {
+  display:flex;
+  min-height: 100vh;
+  align-items:center;
+  justify-content:center;
+
+  flex-direction: column;
+}  
+
+
+div {
+  background:red;
+  padding: 1em;
+}
+
+div.footer {
+  background:blue;
+  color:white;
+}
+  </style>
+</head>
+<body>
+
+<div>I’m not in the middle!</div>
+<div class=footer>my foot! this is wrong</div>
+
+</body>
+</html>

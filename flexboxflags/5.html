@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+sticky footer 
+  </title>
+  <link rel=stylesheet href=style.css>
+  <style>
+body {
+  display:flex;
+  min-height: 100vh;
+  align-items:center;
+  justify-content:center;
+
+  flex-direction: column;
+  align-items: stretch;
+}  
+
+div {
+  padding: 1em;
+}
+
+div.content {
+  background:red;
+  flex-grow: 1;
+}
+
+div.footer {
+  background:blue;
+  color:white;
+  flex-grow: 1;
+}
+  </style>
+</head>
+<body>
+
+<div class=content>I’m not in the middle!</div>
+<div class=footer>my foot! this is wrong</div>
+
+</body>
+</html>
