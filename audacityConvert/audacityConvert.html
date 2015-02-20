@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+ Convert Audacity labels to various formats 
+  </title>
+  <style>
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+} 
+
+main { 
+  flex: 1;  
+  display:flex;
+  padding: 2em;
+}
+
+textarea { 
+  flex: 1;
+
+  padding: 1em;
+  font-size: large;
+  font-family: monospace;
+}
+
+header h1 button {
+  font-size: x-large;
+  cursor: pointer;
+}
+  
+  </style>
+</head>
+<body>
+
+<header>
+<h1> Convert Audacity labels to… 
+  <button id=jsonButton>JSON</button>
+  <button id=webvttButton>WebVTT</button>
+</h1>
+</header>
+<main>
+<textarea></textarea>
+<textarea></textarea>
+</main>
+
+<script>
+var 
+  before = document.querySelectorAll('textarea')[0],
+  after = document.querySelectorAll('textarea')[1],
+  jsonButton = document.querySelector('#jsonButton'),
+  webvttButton = document.querySelector('#webvttButton');
+
+function fixNum(num){
+  return parseFloat(num).toFixed(4)
+}
+
+function parse(line){
+ var parts = line.trim().split('\t')
+ return {
+   startTime : fixNum(parts[0]), 
+   endTime : fixNum(parts[1]), 
+   phrase : parts[2] 
+ }
+}
+
+function labelToWebVTT(parts){
+ var result = [parts.startTime, parts.endTime, parts.phrase].join('\n') + '\n';
+ return result;
+}
+
+webvttButton.addEventListener('click', function(ev){
+  var 
+    audacity = before.value.trim().split('\n'),
+    webvtt = ['WEBVTT\n\n'];
+    
+    audacity.forEach(function(line, i){
+      var parts = parse(line);
+      webvtt.push(labelToWebVTT(parts))
+    });
+ 
+  after.value = '';
+  after.value = webvtt.join('\n');
+})
+
+jsonButton.addEventListener('click', function(ev){
+  var 
+    audacity = before.value.trim().split('\n'),
+    transcript = audacity.map(parse);
+ 
+  after.value = '';
+  after.value = JSON.stringify(transcript, null, 2);
+})
+</script>
+</body>
+</html>
