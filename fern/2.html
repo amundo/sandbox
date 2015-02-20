@@ -19,34 +19,41 @@ section {
 
 </head>
 <body>
+
 <header>
-<h1>fern</h1>
+  <h1>fern</h1>
 </header>
+
 <main>
 
-<section id=editor>
-<h2>Edit</h2>
-<form>
-<legend>add a word</legend>
-<input>
-</form>
-</section>
-
-<section id=wordList>
-<h2>Dictionary</h2>
-<blockquote>This is the section handled by the <code>WordListView</code>. It contains a <code>ul</code>
-of words:
-</blockquote>
-<ul></ul>
-</section>
-
-<section id=wordCount>
-<h2>Statistics</h2>
-<blockquote>This is the section handled by the <code>WordCountView</code>. It contains a <code>p</code>
-which is updated with the number of words.
-</blockquote>
-<p id=wordCount>
-</section>
+  <section id=editor>
+    <h2>Edit</h2>
+    <form>
+      <legend>add a word</legend>
+      <input>
+    </form>
+  </section>
+  
+  <section id=wordList>
+    <h2>Dictionary</h2>
+    <blockquote>
+       This is the section handled by the 
+       <code>WordListView</code>. It contains 
+        a <code>ul</code> of words:
+    </blockquote>
+    <ul></ul>
+  </section>
+  
+  <section id=wordCount>
+    <h2>Statistics</h2>
+    <blockquote>
+      This is the section handled by the 
+      <code>WordCountView</code>. It contains a 
+      <code>p</code> which is updated with the 
+      number of words.
+    </blockquote>
+    <p id=wordCount>
+  </section>
 
 </main>
 
@@ -58,6 +65,7 @@ app.Words = function(data){
 
   this.add = function(word){
     this.data.push(word);
+    this.data.sort();
     app.events.publish('wordAdded', this.render);
   }.bind(this); // tell our function not to reset `this`
 
@@ -137,7 +145,6 @@ app.editorView = new app.EditorView(document.querySelector('#editor'), app.words
 
 app.wordListView.render();
 app.wordCountView.render();
-
 </script>
 </body>
 </html>

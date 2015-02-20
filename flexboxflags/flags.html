@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+Flexbox Flags
+  </title>
+  <link rel=stylesheet href=style.css>
+  <style>
+
+body { 
+  width: 60%;
+}
+
+.flag {
+  margin: 1em 0;
+}
+
+h1, h2 { 
+  font-family: sans-serif;
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+<h1>Flexbox Flags</h1>
+</header>
+
+<section>
+<h2>Indonesia</h2>
+<style>
+.indonesia {
+  display:flex;
+  height: 200px;
+  width: 300px;
+ 
+  border:1px solid black;
+
+  flex-direction: column;
+}  
+
+.indonesia div {
+  flex: 1;
+}
+
+.indonesia div.red {
+  background-color:#EF4135;
+}
+
+.indonesia div.white {
+  background-color:white;
+}
+
+</style>
+
+<div class="indonesia flag">
+  <div class=white></div>
+  <div class=red></div>
+</div>
+
+<div>
+“Proportion: 2:3 Design. two equal horizontal bands, red (top) and white (bottom).”
+<p style=margin:1em;text-align:right;>
+<a title="Flag of Indonesia - Wikipedia, the free encyclopedia" href="https://en.wikipedia.org/wiki/Flag_of_Indonesia">Flag of Indonesia - Wikipedia, the free encyclopedia</a> 
+</p>
+</div>
+</section>
+
+<section>
+<h2>France</h2>
+<style>
+#france {
+  display:flex;
+  height: 200px;
+  width: 300px;
+ 
+  border:1px solid black;
+
+  flex-direction: row;
+}  
+
+#france div {
+  flex: 1;
+}
+
+#france div.blue {
+  background-color:#0055A4;
+}
+
+#france div.white {
+  background-color:white;
+}
+
+#france div.red {
+  background-color:#EF4135;
+}
+
+</style>
+
+<div class=flag id=france>
+
+  <div class=blue></div>
+  <div class=white></div>
+  <div class=red></div>
+
+</div>
+
+<div>
+“Proportion: 2:3.  A vertical tricolour of blue, white, and red.”
+<p style=margin:1em;text-align:right;>
+
+<a title="Flag of France - Wikipedia, the free encyclopedia" href="https://en.wikipedia.org/wiki/Flag_of_France">Flag of France - Wikipedia, the free encyclopedia</a> 
+</p>
+</div>
+</section>
+
+
+<section>
+<h2>Russia</h2>
+<style>
+.russia {
+  display:flex;
+  height: 200px;
+  width: 300px;
+ 
+  border:1px solid black;
+
+  flex-direction: column;
+}  
+
+.russia div {
+  flex: 1;
+}
+
+.russia div.blue {
+  background-color:#0039A6;
+}
+
+ 	
+.russia div.white {
+  background-color:white;
+}
+
+.russia div.red {
+  background-color:#D52B1E;
+}
+
+</style>
+
+<div class="russia flag">
+
+  <div class=blue></div>
+  <div class=white></div>
+  <div class=red></div>
+
+</div>
+
+<div>
+<p>
+“A horizontal tricolour of red (Bright Vermilion), white, and blue (Cobalt Blue).”
+<p style=margin:1em;text-align:right;>
+<a title="Флаг России — Википедия" href="https://ru.wikipedia.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8">Флаг России — Википедия</a> 
+</p>
+</div>
+</section>
+
+<section>
+<h2>Netherlands</h2>
+<style>
+.netherlands {
+  display:flex;
+  height: 200px;
+  width: 300px;
+ 
+  border:1px solid black;
+
+  flex-direction: column;
+}  
+
+.netherlands div {
+  flex: 1;
+}
+
+.netherlands div.blue {
+  background-color:#21468B;
+  order: 3;
+}
+
+.netherlands div.white {
+  background-color:white;
+  order: 2;
+}
+
+.netherlands div.red {
+  background-color:#AE1C28;
+  order: 1;
+}
+
+</style>
+
+<div class="netherlands flag">
+
+  <div class=blue></div>
+  <div class=white></div>
+  <div class=red></div>
+
+</div>
+
+<div>
+<p>
+“A horizontal tricolour of red (Bright Vermilion), white, and blue (Cobalt Blue).”
+<p style=margin:1em;text-align:right;>
+<a title="Flag of the Netherlands - Wikipedia, the free encyclopedia" href="https://en.wikipedia.org/wiki/Flag_of_the_Netherlands">Flag of the Netherlands - Wikipedia, the free encyclopedia</a> 
+</p>
+</div>
+</section>
+
+<section>
+<h2>Chile</h2>
+<style>
+#chile {
+  display:flex;
+  height: 200px;
+  width: 300px;
+ 
+  border:1px solid black;
+
+  flex-flow: row wrap;
+}  
+
+#chile div.blue {
+  flex: 2 1 100px;
+  background: url(whitestar.svg) center center no-repeat  #0039A6;
+  background-size: 50%;
+}
+
+#chile div.white {
+  flex: 2 1 200px;
+  background-color:white;
+
+}
+
+#chile div.red {
+  background-color:#D52B1E;
+  flex: 1 1 100%;
+}
+
+</style>
+
+
+<div class=flag id=chile>
+
+<div class=blue></div>
+<div class=white></div>
+<div class=red></div>
+
+</div>
+
+<p>
+“It has a 3:2 ratio between length and width, it is divided horizontally into two bands of equal size (being the lower red). The upper area is divided once: in a square (blue), with a single centered white star; and rectangle (white), whose lengths are in proportion 1:2.”
+<p style=margin:1em;text-align:right;>
+
+<a title="Flag of Chile - Wikipedia, the free encyclopedia" href="https://en.wikipedia.org/wiki/Flag_of_Chile">Flag of Chile - Wikipedia, the free encyclopedia</a> 
+</p>
+</div>
+
+
+</section>
+
+
+
+</body>
+</html>
