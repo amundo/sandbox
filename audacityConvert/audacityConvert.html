@@ -71,8 +71,22 @@ function parse(line){
  }
 }
 
+function secondsToTimestamp(time){
+  // WebVTT demands HH:MM:SS.sss
+  var 
+    totalSec = time,
+    hours = parseInt( totalSec / 3600 ) ,
+    minutes = parseInt( totalSec / 60 ) % 60,
+    seconds = totalSec % 60,
+    milliseconds = time - Math.floor(time);
+  
+  return (hours < 10 ? "0" + hours : hours) 
+     + ":" + (minutes < 10 ? "0" + minutes : minutes) 
+     + ":" + (seconds  < 10 ? "0" + seconds.toFixed(3) : seconds.toFixed(3)) ;
+}
+
 function labelToWebVTT(parts){
- var result = [parts.startTime, parts.endTime, parts.phrase].join('\n') + '\n';
+ var result = [secondsToTimestamp(parts.startTime) + ' --> ' + secondsToTimestamp(parts.endTime), parts.phrase].join('\n') + '\n';
  return result;
 }
 
