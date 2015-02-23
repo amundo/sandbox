@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<title>
+</title>
+<meta charset=utf-8>
+<script src=js/routie.js></script>
+            
+</head>
+<body>
+
+<header>
+<nav>
+  <a href=#about>about</a>
+  <a href=#lexicon>lexicon</a>
+  <a href=#text>text</a>
+</nav>
+</header>
+
+<main>
+  <section id=about>about</section>
+  <section id=lexicon>lexicon</section>
+  <section id=text>text</section>
+</main>
+
+<script>
+
+
+/* dom */
+function find(sel){ 
+  return document.querySelector(sel) 
+};
+function findAll(sel){ 
+  var nodes = document.querySelectorAll(sel);
+  return [].slice.call(nodes)
+};
+
+function hideNode(node){ 
+  node.style.visibility = 'hidden';
+};
+
+function showNode(node){ 
+  node.style.visibility = 'visible';
+};
+
+function hideNodes(nodes){ 
+  nodes.forEach(hideNode); 
+};
+
+var sections = findAll('section');
+
+hideNodes([].slice.call(sections));
+
+showNode(find('#text'));
+
+/* router */
+router({
+  'about': function() {
+    hideNodes(findAll('main > section'));
+    showNode(find('#about'));
+  },
+  'lexicon': function() {
+    hideNodes(findAll('main > section'));
+    showNode(find('#lexicon'));
+  },
+
+  'text': function() {
+    hideNodes(findAll('main > section'));
+    showNode(find('#text'));
+  }
+});
+</script>
+
+</body>
+</html>
