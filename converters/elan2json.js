@@ -13,7 +13,7 @@ function labelLine(line) {
 }
 
 
-
-after.value = JSON.stringify(lines.slice(1,lines.length).map(labelLine), null, 2);
+// have to hook up the button srry
+after.value = JSON.stringify(lines.slice(1).map(labelLine), null, 2);
 
 
