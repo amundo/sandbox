@@ -1,0 +1,37 @@
+/* Desktop CSS */
+/* Styling by CSS rule (alphabetical by CSS rule) */
+footer, footer label, nav > ul, main, #navbar {
+  -webkit-flex-direction: row;
+  flex-direction: row; }
+
+/* Styling by class or element type (alphabetical by class/element) */
+.hideonDesktop {
+  display: none; }
+
+.icon {
+  height: 2.5rem; }
+
+#popups > div {
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px 0px gray;
+  left: 50%;
+  padding: 1rem;
+  position: absolute;
+  top: 20%;
+  transform: translateX(-50%); }
+
+ul.bulletedList li {
+  margin-left: 1.5rem; }
+
+/* Styling by DOM (organized by DOM structure) */
+section {
+  -webkit-flex-grow: 1;
+  flex-grow: 1; }
+
+#navbar {
+  -webkit-align-items: center;
+  align-items: center; }
+
+#banner {
+  max-width: 300px; }
