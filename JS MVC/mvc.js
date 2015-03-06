@@ -6,34 +6,27 @@ var $ = function(selector) {
 }.bind(document);
 
 // Event System
-var EventRegistry = function() {
-  this.evRegistry = [];
+var ObserverList = function() {
+  this.observers = [];
   
-  this.evRegistry.add = function(evType, observer) {
-    var registeredEvent = {
-      evType: evType,
-      observer: observer
-    };
-    
-    this.evRegistry.push(registeredEvent);
+  this.observers.add = function(observer) {
+    this.observers.push(observer);
   };
   
-  this.notify = function(evType) {
-    this.evRegistry.forEach(function(event) {
-      event.observer.update(evType);
+  this.notify = function(ev) {
+    this.observers.forEach(function(observer) {
+      observer.update(ev);
     });
   };
   
-  this.evRegistry.remove = function(evType, observer) {
-    var registeredEvent = this.evRegistry.filter(function(registeredEvent) {
-      return registeredEvent.evType === evType && registeredEvent.observer === observer;
-    });
+  this.observers.remove = function(observer) {
+    // Function to remove the observer
   };
 };
 
 // Models
 var Model = function(data) {
-  EventRegistry.call(this);
+  ObserverList.call(this);
   
   Object.keys(data).forEach(function(key) {
     this[key] = data[key];
@@ -47,7 +40,7 @@ var Model = function(data) {
     },
     
     "update": {
-      value: function(evType) {
+      value: function(ev) {
       }
     }
   });
@@ -67,22 +60,22 @@ var Word = function(data) {
 
 // Views & Collections
 var View = function(model, options) {
-  EventRegistry.call(this);
+  ObserverList.call(this);
   
-  model.evRegistry.add(this);
-  this.evRegistry.add(model);
+  model.observers.add(this);
+  this.observers.add(model);
   
-  this.update = function(evType) {
+  this.update = function(ev) {
   };
 };
 
 var Collection = function(model, options) {
-  EventRegistry.call(this);
+  observers.call(this);
   
-  model.evRegistry.add(this);
-  this.evRegistry.add(model);
+  model.observers.add(this);
+  this.observers.add(model);
   
-  this.update = function(evType) {
+  this.update = function(ev) {
   };
 };
 
@@ -94,4 +87,6 @@ var phraseView = function(model, options) {
 // The model is an array of phrases
 var phrasesView = function(model, options) {
   View.call(this, model, options);
+  
+  this.addEventListener('click', this.notify);
 };
