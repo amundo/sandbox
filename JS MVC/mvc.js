@@ -1,8 +1,22 @@
+function augment(destination, source) {
+  Object.keys(source).forEach(function(key){
+    destination[key] = source[key];
+  })
+
+  return destination; 
+}
+
 // DOM selector that returns an array (not node list) of nodes
 var $ = function(selector) {
-  var nodeList = document.querySelectorAll(selector);
-  var nodes = Array.prototype.slice.call(nodeList);
-  return nodes;
+  var 
+    nodeList = document.querySelectorAll(selector),
+    nodes = Array.prototype.slice.call(nodeList);
+
+  if(nodes.length == 1){
+    return nodes[0]
+  } else { 
+    return nodes;
+  }
 }.bind(document);
 
 // Event System
@@ -36,9 +50,7 @@ var ObserverList = function() {
 var Model = function(data) {
   ObserverList.call(this);
   
-  Object.keys(data).forEach(function(key) {
-    this[key] = data[key];
-  }, this);
+  augment(this, data);
   
   Object.defineProperties(this, {
     "json": {
@@ -52,14 +64,24 @@ var Model = function(data) {
       }
     }
   });
+
 };
 
 var Text = function(data) {
   Model.call(this, data);
+
+  this.phrases = this.phrases.map(function(phraseData){
+    return new Phrase(phraseData)
+  }) 
+
 };
 
 var Phrase = function(data) {
   Model.call(this, data);
+
+  this.words = this.words.map(function(wordData){
+    return new Word(wordData)
+  }) 
 };
 
 var Word = function(data) {
