@@ -19,12 +19,8 @@ var EventRegistry = function() {
   };
   
   this.notify = function(evType) {
-    var events = this.evRegistry.filter(function(registeredEvent) {
-      return registeredEvent.evType === evType;
-    });
-    
-    events.forEach(function(event) {
-      event.update(evType);
+    this.evRegistry.forEach(function(event) {
+      event.observer.update(evType);
     });
   };
   
@@ -37,6 +33,8 @@ var EventRegistry = function() {
 
 // Models
 var Model = function(data) {
+  EventRegistry.call(this);
+  
   Object.keys(data).forEach(function(key) {
     this[key] = data[key];
   }, this);
@@ -68,12 +66,32 @@ var Word = function(data) {
 };
 
 // Views & Collections
-var View = function() {
+var View = function(model, options) {
+  EventRegistry.call(this);
+  
+  model.evRegistry.add(this);
+  this.evRegistry.add(model);
+  
   this.update = function(evType) {
   };
 };
 
-var Collection = function() {
+var Collection = function(model, options) {
+  EventRegistry.call(this);
+  
+  model.evRegistry.add(this);
+  this.evRegistry.add(model);
+  
   this.update = function(evType) {
   };
+};
+
+// The model is a single phrase
+var phraseView = function(model, options) {
+  View.call(this, model, options);
+};
+
+// The model is an array of phrases
+var phrasesView = function(model, options) {
+  View.call(this, model, options);
 };
