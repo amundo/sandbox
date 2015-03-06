@@ -9,17 +9,25 @@ var $ = function(selector) {
 var ObserverList = function() {
   this.observers = [];
   
-  this.observers.add = function(observer) {
-    this.observers.push(observer);
+  this.observers.add = function(observer, action) {
+    var sub = {
+      action: action,
+      observer: observer
+    };
+    this.observers.push(sub);
   };
   
-  this.notify = function(ev) {
-    this.observers.forEach(function(observer) {
-      observer.update(ev);
+  this.notify = function(action) {
+    var subs = this.observers.filter(function(sub) {
+      return sub.action === action;
+    });
+    
+    this.subs.forEach(function(sub) {
+      sub.observer.update(sub.action);
     });
   };
   
-  this.observers.remove = function(observer) {
+  this.observers.remove = function(observer, action) {
     // Function to remove the observer
   };
 };
@@ -40,7 +48,7 @@ var Model = function(data) {
     },
     
     "update": {
-      value: function(ev) {
+      value: function(action, data) {
       }
     }
   });
@@ -62,20 +70,18 @@ var Word = function(data) {
 var View = function(model, options) {
   ObserverList.call(this);
   
-  model.observers.add(this);
-  this.observers.add(model);
+  this.model = model;
   
-  this.update = function(ev) {
+  this.update = function(action, data) {
   };
 };
 
 var Collection = function(model, options) {
-  observers.call(this);
+  ObserverList.call(this);
   
-  model.observers.add(this);
-  this.observers.add(model);
+  this.model = model;
   
-  this.update = function(ev) {
+  this.update = function(action, data) {
   };
 };
 
@@ -88,5 +94,8 @@ var phraseView = function(model, options) {
 var phrasesView = function(model, options) {
   View.call(this, model, options);
   
-  this.addEventListener('click', this.notify);
+  this.addEventListener('click', function(ev) {
+    // Get ev, look at target, collect data from DOM, pass data to observers
+    this.notify(action, data);
+  });
 };
