@@ -41,6 +41,11 @@ window.location = 'http://mozilla.org';
 </code>
 </pre>
 
+<p>
+Then when you actually <em>get</em> to <code>http://mozilla.org</code>, the variable <code>important</code> no longer exists. 
+There’s no way for one page to communicate with another page, and for good reason. It would be a horrible security risk if <code>evilwebcompany.com</code>
+could access the Javascript variables from <code>mynotterriblyhighsecuritybankwebsite.com</code>.
+
 
 <p>
 There’s another way to do this, and it’s called <em>routing</em>. When you “route” with Javascript, you intercept the request to change
