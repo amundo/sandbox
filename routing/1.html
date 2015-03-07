@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+Routing  
+  </title>
+  <link rel=stylesheet href=style.css>
+  <script src=js/examples.js></script>
+</head>
+<body>
+
+  <h1> Routing  </h1>
+
+<h2>The Idea of Routing</h2>
+
+<p>
+Usually if you mess with the URL of the page you’re on with Javascript, the browser is going to 
+make a request for the new page.
+
+<p>
+The URL is available as <code>window.location</code>. You can set it, if you want, to any URL, 
+like:
+
+<pre>
+<code>
+window.location = 'http://mozilla.org';
+</code>
+</pre>
+
+<p>Go ahead and paste that into your console, press enter, and you’ll see that you end up at <a title="Home of the Mozilla Project — Mozilla" href="https://www.mozilla.org/en-US/">mozilla.org</a>. We’ll be here when you back button.
+
+<p>
+Welcome back. So we’ve seen that changing the URL can be accomplished by Javascript. But of course, when you go to that new page, 
+Javascript “starts over.” So if you do this: 
+
+<pre>
+<code>
+var important = "something important";
+window.location = 'http://mozilla.org';
+</code>
+</pre>
+
+
+<p>
+There’s another way to do this, and it’s called <em>routing</em>. When you “route” with Javascript, you intercept the request to change
+the URL you’re on, and instead of actually <em>going</em> to some other site, you just run a function of your own choosing. Normally,
+the point of this is that you can load up some part of the page with content. It has the effect of <em>looking</em> like you’ve gone
+to a different page, but there’s no actual network request — everything is done by Javascript.
+
+<p>
+An example will make all this clearer. Let’s say you’ve got three pieces of content: <code>about</code>, <code>contact</code>, and
+<code>welcome</code>:
+
+<dl>
+  <dt>Welcome 
+  <dd>Welcome to Zombocom!
+  <dt>About
+  <dd>Anything is possible with Zombocom!
+  <dt>Contact
+  <dd>Email us at zombocom@example.com.
+</dl>
+
+<p>
+Now, on a normal site you might have folders for each of these sections, and inside each folder (<code>about/</code>, <code>contact/</code>, and
+<code>welcome/</code>) there would be an <code>index.html</code>. So, the following links would work:
+
+
+<pre>
+<code>
+&lt;li&gt;&lt;a href="welcome/"&gt;welcome&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="about/"&gt;about&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="contact/"&gt;contact&lt;/a&gt;&lt;/li&gt;
+</code>
+</pre>
+
+<p>
+I.e., if you clicked <u style=color:blue>welcome</u>, you’d end up at <code>welcome/index.html</code> which would be a whole HTML page that 
+contained the content “Welcome to Zombocom!” and whatever else.
+
+<h2>The Routing Way</h2>
+
+Okay, that’s the non-routing way. Here’s what a routing-based approach might look like, as Javascript:
+
+<script class=example>
+var Router = {
+  routes: {
+    'about':   function(){ document.querySelector('#content').innerHTML = "Anything is possible with Zombocom!" },
+    'welcome': function(){ document.querySelector('#content').innerHTML = "Welcome to Zombocom!" },
+    'contact': function(){ document.querySelector('#content').innerHTML = "Email us at zombocom@example.com." }
+  }
+}
+</script>
+
+<p>
+This is a very (very!) crude router.  What it’s saying is: when the user goes to <code>/about</code>, fill up the HTML tag with the id of 
+<code>content</code> with the content “Anything is possible with Zombocom!”. 
+
+<p>Here’s a button that will fire <code>Router.routes.about()</code>
+
+<p><button onclick="Router.routes.about()">about button</button>
+
+<div style="border:2px dashed gray;padding: 1em;" id=content></div>
+
+<p>
+Okay, all well and good — we have a skeletal implementaiton of a Router. But  we haven’t actually done anything to do with URLs yet. Let’s 
+figure that out.
+
+
+<h2>Hooking up the <code>History</code> object</h2>
+
+
+
+
+
+<script>
+
+</script>
+</body>
+</html>
