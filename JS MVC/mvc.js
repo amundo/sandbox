@@ -48,8 +48,6 @@ var ObserverList = function() {
 
 // Models
 var Model = function(data) {
-  ObserverList.call(this);
-  
   augment(this, data);
   
   Object.defineProperties(this, {
@@ -79,9 +77,9 @@ var Text = function(data) {
 var Phrase = function(data) {
   Model.call(this, data);
 
-  this.words = this.words.map(function(wordData){
-    return new Word(wordData)
-  }) 
+  //this.words = this.words.map(function(wordData){
+  //  return new Word(wordData)
+  //}) 
 };
 
 var Word = function(data) {
@@ -90,16 +88,20 @@ var Word = function(data) {
 
 // Views & Collections
 var View = function(model, options) {
-  ObserverList.call(this);
+  augment(this, ObserverList);
   
   this.model = model;
+
+  this.el = options.el;
   
+  this.render = options.render;
+
   this.update = function(action, data) {
   };
 };
 
 var Collection = function(model, options) {
-  ObserverList.call(this);
+  augment(this, ObserverList);
   
   this.model = model;
   
@@ -108,12 +110,12 @@ var Collection = function(model, options) {
 };
 
 // The model is a single phrase
-var phraseView = function(model, options) {
+var PhraseView = function(model, options) {
   View.call(this, model, options);
 };
 
 // The model is an array of phrases
-var phrasesView = function(model, options) {
+var PhrasesView = function(model, options) {
   View.call(this, model, options);
   
   this.addEventListener('click', function(ev) {
