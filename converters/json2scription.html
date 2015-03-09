@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+ Convert JSON texts to various Scription 
+  </title>
+  <style>
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+} 
+
+main { 
+  flex: 1;  
+  display:flex;
+  padding: 2em;
+}
+
+main > ol { 
+  flex: 1;
+}
+
+main > div { 
+  display:flex;
+  flex: 4;
+  padding: 1em;
+  font-size: large;
+  font-family: monospace;
+} 
+
+main > div > textarea { 
+  min-width: 100%;
+  min-height: 100%;
+}
+
+main > div#before { 
+    
+}
+
+header h1 button {
+  font-size: x-large;
+  cursor: pointer;
+}
+
+ol#schema li { 
+  cursor: grab;
+}
+
+ol#schema li.sortable-grabbing { 
+  cursor: grabbing;
+  color:red;
+}
+
+[draggable] {
+  user-select: none;
+}
+[draggable] * {
+  user-drag: none;
+}
+  
+  </style>
+</head>
+<body>
+
+<header>
+<h1> Convert JSON texts to  
+  <button id=scriptionButton>Scription</button>
+</h1>
+</header>
+<main>
+<div id=before>
+  <textarea></textarea>
+</div>
+
+<ol class=sortable id=schema>
+
+</ol>
+
+<div id=after>
+  <textarea spellchecker=false></textarea>
+</div>
+</main>
+
+<script src=js/nativesortable.js></script>
+<script>
+var 
+  schema = document.querySelector('ol#schema'),
+
+  before = document.querySelectorAll('#before'),
+  beforeTA = document.querySelector('#before textarea'),
+
+  after = document.querySelectorAll('#after'),
+  afterTA = document.querySelector('#after textarea'),
+
+  jsonButton = document.querySelector('#jsonButton');
+
+
+function fixNum(num){
+  return parseFloat(num).toFixed(4)
+}
+
+function parse(line){
+ var parts = line.trim().split('\t')
+ return {
+   startTime : fixNum(parts[0]), 
+   endTime : fixNum(parts[1]), 
+   phrase : parts[2] 
+ }
+}
+
+function secondsToTimestamp(time){
+  // WebVTT demands HH:MM:SS.sss
+  var 
+    totalSec = time,
+    hours = parseInt( totalSec / 3600 ) ,
+    minutes = parseInt( totalSec / 60 ) % 60,
+    seconds = totalSec % 60,
+    milliseconds = time - Math.floor(time);
+  
+  return (hours < 10 ? "0" + hours : hours) 
+     + ":" + (minutes < 10 ? "0" + minutes : minutes) 
+     + ":" + (seconds  < 10 ? "0" + seconds.toFixed(3) : seconds.toFixed(3)) ;
+}
+
+function labelToWebVTT(parts){
+ var result = [secondsToTimestamp(parts.startTime) + ' --> ' + secondsToTimestamp(parts.endTime), parts.phrase].join('\n') + '\n';
+ return result;
+}
+
+function populateSchema(){
+  
+  var 
+    text = JSON.parse(beforeTA.value),
+    fields = Object.keys(text[0]);
+
+  schema.innerHTML = '';
+  fields.forEach(function(key){
+    var li = document.createElement('li');
+    li.textContent = key;
+    schema.appendChild(li);
+  })
+  nativesortable(schema);
+
+  
+}
+
+function renderScription(){
+  var 
+    fieldLIs = [].slice.call(document.querySelectorAll('#schema li')),
+    fields = [],
+    data = JSON.parse(beforeTA.value),
+    result = '';
+
+  fields = fieldLIs.map(function(li){
+    return li.textContent.trim()
+  })
+
+  fields.forEach(function(field){
+    result +=  field + '\n';
+  })
+  result +=  '\n';
+    
+  data.forEach(function(item){
+    fields.forEach(function(field){
+      result +=  item[field] + '\n'
+    })
+    result +=  '\n'
+  })
+
+  afterTA.value = result;
+}
+
+beforeTA.addEventListener('input', populateSchema);
+
+nativesortable(schema, { 
+  change: renderScription
+});
+
+</script>
+</body>
+</html>
