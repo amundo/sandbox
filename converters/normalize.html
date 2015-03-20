@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+Unicode Normalization
+  </title>
+  <style>
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+} 
+
+main { 
+  flex: 1;  
+  display:flex;
+  padding: 2em;
+}
+
+textarea { 
+  flex: 1;
+
+  padding: 1em;
+  font-size: large;
+  font-family: monospace;
+}
+
+header h1 button {
+  font-size: x-large;
+  cursor: pointer;
+}
+  
+  </style>
+</head>
+<body>
+
+<header>
+<h1>
+  Convert text to Unicode Normalization Form 
+  <button id="NFC">NFC</button> 
+  <button id="NFD">NFD</button> 
+  <button id="NFKC">NFKC</button> 
+  <button id="NFKD">NFKD</button> 
+</h1>
+</header>
+
+<main>
+<textarea></textarea>
+<textarea></textarea>
+</main>
+
+<script>
+var 
+  before = document.querySelectorAll('textarea')[0],
+  after = document.querySelectorAll('textarea')[1],
+  buttons = [].slice.call(document.querySelectorAll('h1 button'));
+
+['NFC', 'NFD', 'NFKC', 'NFKD'].forEach(function(form){
+  document.querySelector('#' + form).addEventListener('click', function(ev){
+    var normalized = before.value.normalize(form);
+    after.value = normalized;
+    console.log(after.value.length);
+  })
+})
+
+</script>
+</body>
+</html>
