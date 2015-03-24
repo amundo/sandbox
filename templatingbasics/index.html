@@ -1,0 +1,170 @@
+<!doctype html>
+<meta charset=utf-8>
+<title></title>
+<style>
+main { 
+  width: 50%;
+}
+
+.online .transcription, .online .token { 
+  font-weight: bold; 
+  font-family: sans-serif; 
+}
+
+.online .translation {  
+  font-style: italic; 
+}
+
+.online .gloss { 
+  font-size: 80%;
+}
+
+.compact { 
+  font-family: 'Gentium Plus';
+}
+
+.compact .transcription {
+  display:none;
+}
+
+.compact .translation { 
+  font-size: 110%; 
+}
+
+.compact .transcription, .compact .token { 
+  font-style: italic; 
+  font-weight: normal; 
+  font-family: 'Times New Roman', serif; 
+}
+
+.compact .morphemes { 
+  display:none;
+}
+
+.compact .translation {  
+  margin-top: 0;
+}
+
+.compact .gloss { 
+  font-size: 80%;
+}
+
+.transcription, .translation { 
+  font-size: 110%; 
+}
+
+.translation:before {  content: '‘'; }
+
+.translation:after {  content: '’'; }
+
+
+.analysis { 
+  flex-wrap: wrap;
+  display:flex;
+}
+
+.word { 
+  margin: 1em 0;
+  padding: 0 1em 0 0;
+}
+
+.word li { 
+  list-style-type: none;
+  margin: 0 .2em;
+  line-height: 1.3;
+}
+
+</style>
+
+<nav style="float:right;">
+<a href=#online>online</a> <a href=#compact>compact</a>
+</nav>
+
+
+<main class=online>
+<article>
+
+<p class="transcription">Pag ka ríng sang bell, dalagán dayón si Juan walá’ na ya recess-recess, ah.</p>
+
+<div class="online analysis">
+  <ol class="word">
+    <li class="token">pag=ka=ring</li>
+    <li class="morphemes">pag=ka=ring</li>
+    <li class="gloss">when=GEN=ring</li>
+  </ol> 
+  <ol class="word">
+    <li class="token">sang</li>
+    <li class="morphemes">sang</li>
+    <li class="gloss">GEN</li>
+  </ol> 
+  <ol class="word">
+    <li class="token">bell</li>
+    <li class="morphemes">bell</li>
+    <li class="gloss">bell</li>
+  </ol> 
+  <ol class="word">
+    <li class="token">dalagán</li>
+    <li class="morphemes">dalagán</li>
+    <li class="gloss">to.run</li>
+  </ol> 
+  <ol class="word">
+    <li class="token">dayón</li>
+    <li class="morphemes">dayón</li>
+    <li class="gloss">immediately</li>
+  </ol> 
+  <ol class="word">
+    <li class="token">si</li>
+    <li class="morphemes">si</li>
+    <li class="gloss">ABS.3.PERS</li>
+  </ol> 
+  <ol class="word">
+    <li class="token">Juan</li>
+    <li class="morphemes">Juan</li>
+    <li class="gloss">Juan</li>
+  </ol> 
+  <ol class="word">
+    <li class="token">walá’</li>
+    <li class="morphemes">walá’</li>
+    <li class="gloss">NEG</li>
+  </ol> 
+  <ol class="word">
+    <li class="token">na</li>
+    <li class="morphemes">na</li>
+    <li class="gloss">LINK</li>
+  </ol> 
+  <ol class="word">
+    <li class="token">ya</li>
+    <li class="morphemes">ya</li>
+    <li class="gloss">EMPH</li>
+  </ol> 
+  <ol class="word">
+    <li class="token">recess-recess</li>
+    <li class="morphemes">recess-recess</li>
+    <li class="gloss">recess</li>
+  </ol> 
+  <ol class="word">
+    <li class="token">ah</li>
+    <li class="morphemes">ah</li>
+    <li class="gloss">PART</li>
+  </ol> 
+</div>
+
+</article>
+<p class="translation">When the bell rang he ran to class right away without thinking about recess.</p>
+
+</main>
+
+<script>
+var styleLinks = document.querySelectorAll('nav a'),
+    main = document.querySelector('main');
+
+styleLinks = Array.prototype.slice.call(styleLinks,0); 
+
+styleLinks.forEach(function(a){ 
+  var className = a.textContent.trim();
+  a.addEventListener('click', function(){
+    main.className = className;
+  }, false);
+});
+</script>
+
