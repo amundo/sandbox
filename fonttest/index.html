@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+  
+  </title>
+  <link rel=stylesheet href=style.css>
+  <style>
+
+body { 
+  height: 100vh;
+}
+
+main { 
+  min-height: 100vh;
+  display:flex; 
+  flex-flow:row; 
+  flex-wrap: nowrap;
+}  
+
+main > textarea, main > #samples { 
+  flex: 1;
+  padding: 1em;
+}
+  </style>
+</head>
+<body>
+
+<main>
+<textarea></textarea>
+
+<div id=samples></div>
+</main>
+
+<script>
+
+var 
+  samples = document.querySelector('#samples'),
+  textarea = document.querySelector('textarea');
+
+var fonts = [
+  "Fira Sans",
+  "Aboriginal Sans",
+  "Aboriginal Serif",
+  "Arial",
+  "Arial Black",
+  "Arial Narrow",
+  "Courier",
+  "Doulos SIL",
+  "Gentium Plus",
+  "Georgia",
+  "Tahoma",
+  "Times",
+  "Times New Roman",
+  "Trebuchet MS",
+  "Verdana"
+]
+
+function renderSample(font, text){
+  var div = document.createElement('div');
+  div.style.fontFamily = font; 
+  div.textContent = text;
+  div.insertAdjacentHTML('afterbegin', '<h2>' + font + '</h2>');
+  samples.appendChild(div); 
+}
+
+fonts.forEach(function(font){ renderSample(font, font) })
+
+textarea.addEventListener('keyup', function(ev){
+  var text = ev.target.value;
+  samples.innerHTML = '';
+  fonts.forEach(function(font){
+    renderSample(font, text )
+  })
+})
+
+</script>
+</body>
+</html>
