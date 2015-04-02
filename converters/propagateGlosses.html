@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+propagate glosses
+  </title>
+  <link rel=stylesheet href=beforeAfter.css></link>
+
+</head>
+<body>
+
+<header>
+<h1>
+<button id=afterButton>propagate</button> glosses
+</h1>
+</header>
+
+<main>
+<div id=before>
+  <textarea spellchecker=false></textarea>
+</div>
+
+<div id=after>
+  <textarea spellchecker=false></textarea>
+</div>
+</main>
+
+<script>
+var 
+  before = document.querySelectorAll('#before'),
+  beforeTA = document.querySelector('#before textarea'),
+
+  after = document.querySelectorAll('#after'),
+  afterTA = document.querySelector('#after textarea'),
+
+  afterButton = document.querySelector('#afterButton');
+
+
+function Text(text){
+  this.phrases = text.phrases;
+
+  this.crib = new Lexicon();
+  
+  this.extractLexicon = () => {
+    return this.phrases.forEach(p => {
+      p.words.forEach(word => { 
+        this.crib.add(word)  
+      })
+    })
+  }
+}
+
+function Lexicon(){
+  this.words = [];
+
+  this.add = (word) => { 
+    this.words.push(word) 
+  } 
+
+  this.lookup = query => { 
+    return this.words
+      .filter(word => { 
+         return word.token == query 
+      })[0]
+  } 
+  
+}
+
+window.app = {};
+
+function tokenize(text){
+  return text.toLowerCase().replace('\.', ' ', 'g').split(/[ ]/);
+}
+
+function propagate(ev){
+  var text = new Text(JSON.parse(beforeTA.value));
+  text.extractLexicon();
+
+  var unglossed = text.phrases.filter(p => p.words.length == 0);
+
+
+  unglossed.forEach(p =>  {
+    var tokens = tokenize(p.transcription);
+
+    tokens.forEach(token =>  {
+      if(text.crib.lookup(token)){
+        p.words.push( text.crib.lookup(token) )
+      } else { 
+        p.words.push( {token: token, gloss: ''} )
+      }
+    })
+  })
+
+  afterTA.value = JSON.stringify(text, null, 2);
+}
+ 
+
+function doSomething(){
+}
+
+function convert(){
+  
+  var 
+    text = JSON.parse(beforeTA.value); 
+  
+  afterTA.value = propagate(text); 
+
+}
+
+afterButton.addEventListener('click', propagate);
+//beforeTA.addEventListener('input', convert);
+
+</script>
+</body>
+</html>

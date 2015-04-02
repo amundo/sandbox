@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+  </title>
+  <link rel=stylesheet href=beforeAfter.css></link>
+
+</head>
+<body>
+
+<header>
+<h1>
+before and <button id=afterButton>after</button> 
+</h1>
+</header>
+<main>
+<div id=before>
+  <textarea spellchecker=false></textarea>
+</div>
+
+<div id=after>
+  <textarea spellchecker=false></textarea>
+</div>
+</main>
+
+<script>
+var 
+  before = document.querySelectorAll('#before'),
+  beforeTA = document.querySelector('#before textarea'),
+
+  after = document.querySelectorAll('#after'),
+  afterTA = document.querySelector('#after textarea'),
+
+  afterButton = document.querySelector('#afterButton');
+
+
+function doSomething(){
+}
+
+function convert(){
+  
+  var 
+    text = JSON.parse(beforeTA.value); 
+  
+  //afterTA.value = doSomething(text); 
+
+}
+
+afterButton.addEventListener('click', convert);
+beforeTA.addEventListener('input', convert);
+
+</script>
+</body>
+</html>

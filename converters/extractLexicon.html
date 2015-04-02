@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+Extract Lexicon from Gloss JSON 
+  </title>
+  <style>
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+} 
+
+main { 
+  flex: 1;  
+  display:flex;
+  padding: 2em;
+}
+
+main > ol { 
+  flex: 1;
+}
+
+main > div { 
+  display:flex;
+  flex: 4;
+  padding: 1em;
+  font-size: large;
+  font-family: monospace;
+} 
+
+main > div > textarea { 
+  min-width: 100%;
+  min-height: 100%;
+}
+
+main > div#before { 
+    
+}
+
+header h1 button {
+  font-size: x-large;
+  cursor: pointer;
+}
+
+ol#schema li { 
+  cursor: grab;
+}
+
+ol#schema li.sortable-grabbing { 
+  cursor: grabbing;
+  color:red;
+}
+  
+  </style>
+</head>
+<body>
+
+<header>
+<h1>
+<button id=extractLexiconButton>Extract Lexicon</button> from Gloss JSON 
+</h1>
+</header>
+<main>
+<div id=before>
+  <textarea></textarea>
+</div>
+
+<ol class=sortable id=schema>
+
+</ol>
+
+<div id=after>
+  <textarea spellchecker=false></textarea>
+</div>
+</main>
+
+<script>
+var 
+  schema = document.querySelector('ol#schema'),
+
+  before = document.querySelectorAll('#before'),
+  beforeTA = document.querySelector('#before textarea'),
+
+  after = document.querySelectorAll('#after'),
+  afterTA = document.querySelector('#after textarea'),
+
+  extractLexiconButton = document.querySelector('#extractLexiconButton');
+
+
+function extractLexicon(){
+  
+  var 
+    text = JSON.parse(beforeTA.value), 
+    tabbedText = '',
+    lexicon = [];
+  
+  text.phrases.forEach((s) => {
+    if(s.words){
+      lexicon = lexicon.concat(s.words)
+    }
+  })
+  
+  
+  afterTA.value = JSON.stringify(lexicon, null, 2); 
+
+}
+
+extractLexiconButton.addEventListener('click', extractLexicon);
+beforeTA.addEventListener('input', extractLexicon);
+
+</script>
+</body>
+</html>
