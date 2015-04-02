@@ -27,6 +27,19 @@ propagate glosses
 </main>
 
 <script>
+/*
+Initializes a text from the left textarea, propagates known glosses to unknown token instances,
+and puts the resulting text to the right textarea.
+
+It does this by building a text-level lexicon (a “crib”) of the  text consisting of already-glossed words
+Then it goes through the phrases of the text, and if the .words array on the phrase is empty, it tokenizes 
+the transcription field and looks up each word in turn. if it finds it, it appends the word to the phrase.words, 
+if not it adds an empty word with the gloss as an empty string.
+
+This sort of thing will be incorporated into various interfaces and applications, but it's a reasonable 
+test bed for (for instance) working out the Lexicon API.
+
+*/
 var 
   before = document.querySelectorAll('#before'),
   beforeTA = document.querySelector('#before textarea'),
