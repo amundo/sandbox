@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+Hapax Legomenon
+  </title>
+  <link rel=stylesheet href=beforeAfter.css></link>
+
+</head>
+<body>
+
+<header>
+<h1>
+Find the <button id=afterButton>Hapax Legomenon</button> 
+</h1>
+</header>
+<main>
+<div id=before>
+  <textarea placeholder="Place some text here and click above" spellchecker=false></textarea>
+</div>
+
+<div id=after>
+  <textarea placeholder="Hapax legomenon will appear here." spellchecker=false></textarea>
+</div>
+</main>
+
+<script>
+var 
+  before = document.querySelectorAll('#before'),
+  beforeTA = document.querySelector('#before textarea'),
+
+  after = document.querySelectorAll('#after'),
+  afterTA = document.querySelector('#after textarea'),
+
+  afterButton = document.querySelector('#afterButton');
+
+
+/*
+ count the number of times each element in sequence occurs.
+ returns an object whose keys are things and values are counts. 
+
+ frequency(['a','a','a','b','b','c'])
+ {a: 3, b: 2, c: 1}
+
+*/
+function frequency(sequence){
+  // the count object
+  var tally = {};
+
+  // go through each item in the sequence
+  sequence.forEach(function(item){
+    // if the current item isn't in our count yet, 
+    // initialize it with a value of zero
+    if( !(item in tally)  ){
+      tally[item] = 0;
+    }
+    // now add one to the item's count
+    tally[item] += 1;
+  })
+
+  return tally;
+}
+
+// a simple tokenizer
+function tokenize(text){
+  // remove punctuation
+  //var depunctuated = text.replace(/[-\!;\.\?\'\"\,\n\t]/g, ' ', 'g');
+  var depunctuated = text.replace(/[\W]/g, ' ', 'g');
+
+  // compare words as lowercase 
+  var lowerCased = depunctuated.toLowerCase(); 
+
+  // tokenize 
+  var words = lowerCased.split(/\s+/);
+
+  // remove numbers
+  var words = words 
+    .filter(function(word){
+       return !(/[0-9]/.test(word))
+    })
+
+  return words;
+}
+
+// get the words with a frequency of 1
+function onlyHapaxes(wordCount){
+  var words = Object.keys(wordCount); 
+
+  var hapaxes = words.filter(function(word){
+    return wordCount[word] == 1
+  });
+
+  return hapaxes;  
+  
+}
+
+function convert(){
+  
+  var 
+    text = beforeTA.value,
+    words = tokenize(text),
+    wordCount = frequency(words), 
+    hapaxes = onlyHapaxes(wordCount);
+
+  afterTA.value = hapaxes.join('\n'); 
+}
+
+afterButton.addEventListener('click', convert);
+beforeTA.addEventListener('input', convert);
+
+</script>
+</body>
+</html>
