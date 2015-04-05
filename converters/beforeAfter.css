@@ -50,3 +50,8 @@ ol#schema li.sortable-grabbing {
   color:red;
 }
   
+
+.bar { 
+  min-width: 100%;
+}
+

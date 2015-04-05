@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+Find and Replace on Field
+  </title>
+  <link rel=stylesheet href=beforeAfter.css></link>
+
+<style>
+#substitution  {
+  display : flex;
+  flex-flow: column;
+  padding: 1em;
+  justify-content: space-around;
+}
+
+#substitution  input{
+  width: 80%;
+  margin-bottom: 1em;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>
+<button id=afterButton>Find and Replace</button> on Field
+</h1>
+</header>
+
+
+<section class=bar id=substitution>
+  <input placeholder=selector id=selector>
+  <input placeholder=key id=key>
+  <input placeholder=find     id=findMe>
+  <input placeholder=replace  id=replace>
+</section>
+
+<main>
+
+<div id=before>
+  <textarea spellchecker=false></textarea>
+</div>
+
+<div id=after>
+  <textarea spellchecker=false></textarea>
+</div>
+</main>
+
+<script>
+
+/*
+  Run find and replace on a selected field of a text.
+*/
+var 
+  before = document.querySelectorAll('#before'),
+  beforeTA = document.querySelector('#before textarea'),
+
+  after = document.querySelectorAll('#after'),
+  afterTA = document.querySelector('#after textarea'),
+
+  afterButton = document.querySelector('#afterButton'),
+
+  selector = document.querySelector('#selector'),
+  key = document.querySelector('#key'),
+  findMe = document.querySelector('#findMe'),
+  replace = document.querySelector('#replace');
+
+
+/*
+
+  select(object, selector)
+
+  Roughly, like CSS selectors, but for Javascript/JSON objects.
+
+  Given the following one-phrase text: 
+  
+  {"phrases":[ {
+    "transcription":"¡Hola señor!","translation":"hi sir",
+    "words":[
+      {"token":"hola","gloss":"hi"},
+      {"token":"señor","gloss":"sir"}
+    ]}
+  ]}
+  
+  Select the second word of the first phrase: 
+  
+  select(text, 'phrases.0.words.1')
+  { token: "señor", gloss: "sir" }
+  
+  Or all the words of the first phrase:
+  
+  select(text, 'phrases.0.words')
+    [
+      {"token":"hola","gloss":"hi"},
+      {"token":"señor","gloss":"sir"}
+    ]
+*/
+
+function select(o, selector){ 
+  var 
+    levels = selector.split('.'), 
+    selected = o; 
+
+  levels.forEach(function(level){
+    selected = selected[level]
+  }); 
+
+  return selected  
+}
+
+
+function convert(){
+  
+  var 
+    text = JSON.parse(beforeTA.value), 
+    selection = select(text, selector.value);
+
+
+  if(!(Array.isArray(selection))){
+    selection = [selection];
+  }
+    console.log(selection); // = item[key].replace(finder, replacement)
+
+  selection.forEach(function(item){
+    var 
+      finder = new RegExp(findMe.value, 'g'),
+      replacement = replace.value;
+      key = document.querySelector('#key').value;
+ 
+    console.log(item); // = item[key].replace(finder, replacement)
+    item[key] = item[key].replace(finder, replacement)
+  })
+ 
+
+  afterTA.value = JSON.stringify(text, null, 2);
+
+}
+
+afterButton.addEventListener('click', convert);
+beforeTA.addEventListener('input', convert);
+
+</script>
+</body>
+</html>
