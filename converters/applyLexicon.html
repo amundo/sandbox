@@ -3,7 +3,7 @@
 <head>
   <meta charset=utf-8>
   <title>
-Apply Lexicon from Gloss JSON 
+Apply Lexicon  to Gloss a Text  
   </title>
   <style>
 body {
@@ -64,7 +64,7 @@ ol#schema li.sortable-grabbing {
 
 <header>
 <h1>
-<button id=applyLexiconButton>Apply Lexicon</button> from Gloss JSON 
+<button id=applyLexiconButton>Apply Lexicon</button> to Gloss a Text  
 </h1>
 </header>
 <main>
@@ -96,7 +96,7 @@ var
   applyLexiconButton = document.querySelector('#applyLexiconButton');
 
 function tokenize(text){
-  return text.toLowerCase().split(/[ ./g);
+  return text.toLowerCase().split(/[ \.…\!\?\t]/g);
 }
 
 
@@ -128,17 +128,21 @@ function Lexicon(){
     this.words.push(word) 
   } 
 
-  this.lookup = query => { 
+  this.contains = token => { 
+    this.lookup(token).length > 0
+  } 
+
+  this.lookup = (query, defaultGloss) => { 
     var matches = this.words
       .filter(word => { 
          return word.token == query 
       })
     if(matches.length){ 
       return matches[0] 
-    }  else { 
-      return  {
+    }  else {
+      return {
         token: query,
-        gloss: '?'
+        gloss: '?' 
       }
     }
   } 
