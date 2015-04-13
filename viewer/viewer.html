@@ -59,9 +59,26 @@ section {
   font-style: italic;
 }  
 
-.phraseId:hover {
-
+.phrase header {
+  display:flex; 
+  justify-content: space-between;
 }
+
+.phrase header:hover {
+  cursor: pointer;
+}
+
+.phrase header button {
+  background:none;
+  border:none;
+  color: #666;
+}
+
+.phrase header:hover button {
+  color:black;
+  cursor:pointer;
+}
+
 
 .words [lang="en"]{
   font-style: normal;

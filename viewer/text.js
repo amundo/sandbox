@@ -7,7 +7,7 @@ var renderPhrase = function(phrase){
 
   div.classList.add('phrase');
   
-  html += '<span class=phraseId><audio src=' + app.text.metadata.media + '#t=' + phrase.startTime + ',' + phrase.endTime + '></audio> (' + phrase.id + ')</span>';
+  html += '<header><audio src=' + app.text.metadata.media + '#t=' + phrase.startTime + ',' + phrase.endTime + '></audio> <span class=phraseId>(' + phrase.id + ')</span> <button>edit</button></header>';
   html += '<p lang=mixtec>' + phrase.transcription + '</p>';
   html += '<ol class=words>';
 
@@ -45,8 +45,11 @@ app.initText = function(text){
   textDiv.innerHTML = '';
   textDiv.appendChild(textFragment);
   
-  [].slice.call(document.querySelectorAll('.phraseId')).forEach(function(phraseId){
-    var audio = phraseId.querySelector('audio');
+  [].slice.call(document.querySelectorAll('.phrase header')).forEach(function(phraseHeader){
+    var 
+      audio = phraseHeader.querySelector('audio');
+      phraseId = phraseHeader.querySelector('.phraseId');
+
     phraseId.addEventListener('click', function(ev){
       audio.play(); 
       audio.remove();
