@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+view dlx text  
+  </title>
+  <link rel=stylesheet href=style.css>
+  <style>
+
+main { 
+  display:flex; 
+  flex-flow:row;
+}
+
+section { 
+  padding: 1em;
+}
+
+#lexicon { 
+  flex: 1;
+  border-right: 2px solid gray;
+}
+
+#lexicon header { 
+  position: fixed;
+  height: 5em;
+  background:gray;
+}
+
+#lexicon #words { 
+  height: 90vh;
+  margin-bottom: 5em;
+  overflow-y: auto;
+}
+
+#text { 
+  flex: 3;
+  display: flex;
+  flex-flow: column;
+  min-height: 100%;
+}
+
+#text textarea { 
+  flex: 1;
+  display: none;
+}
+
+#text div { 
+  flex: 1;
+}
+
+[lang="mixtec"]{
+  font-weight:bold;
+  font-family:sans-serif;;
+}  
+
+[lang="en"]{
+  font-style: italic;
+}  
+
+.phraseId:hover {
+
+}
+
+.words [lang="en"]{
+  font-style: normal;
+  font-size: 80%;
+}  
+
+.phrase { margin-top: 2em; }
+.words { display:inline-block; padding: 0;}
+.words li { display:inline-block;}
+.words li ol.word { margin-bottom: 1em;}
+.word li {display:block;  }
+
+
+  </style>
+</head>
+<body>
+<main>
+
+<section id=lexicon>
+<!--
+  <header>
+    <input type=search></input>
+  </header>
+-->
+  <ol id=words></ol>
+
+</section>
+
+<section id=text>
+  <header>
+    <input type=file name=text></input>
+    <button id=pasteText>paste</button>
+  </header>
+ <textarea></textarea>
+ <div></div>
+</section>
+
+</main>
+
+<script src=ajax.js></script>
+<script src=lexicon.js></script>
+<script src=text.js></script>
+
+</body>
+</html>

@@ -70,15 +70,11 @@ Gloss JSON to Tabbed
 </header>
 <main>
 <div id=before>
-  <textarea></textarea>
+  <textarea spellcheck=false></textarea>
 </div>
 
-<ol class=sortable id=schema>
-
-</ol>
-
 <div id=after>
-  <textarea spellchecker=false></textarea>
+  <textarea spellcheck=false></textarea>
 </div>
 </main>
 
@@ -101,8 +97,9 @@ function toTabs(){
     text = JSON.parse(beforeTA.value), 
     tabbedText = '';
   
-  text.phrases.forEach((s) => {
-    tabbedText += '()\n';
+  text.phrases.forEach((s, i) => {
+    
+    tabbedText += '(' + (parseInt(s.id) + 1) + ')\n';
     if(s.transcription){
       tabbedText += s.transcription;
     } else { 
