@@ -38,6 +38,10 @@ describe("Lexicon", function() {
       expect(lexicon.length).toBe(3);
     })
 
+    xit('can load from URL', function(){
+      lexicon = new Lexicon(words);
+    })
+
     it('can reset' , function(){
       lexicon = new Lexicon(words);
       lexicon.reset([

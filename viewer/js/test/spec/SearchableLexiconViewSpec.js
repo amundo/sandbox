@@ -34,10 +34,7 @@ console.log(this.searchableLexiconView.el.outerHTML);
   describe('can', function(){
 
     it('render', function(){
-      var beforeRender = this.searchableLexiconView.el.outerHTML;
-      this.searchableLexiconView.render();
       var html = this.searchableLexiconView.el.outerHTML;
-      expect(html).not.toBe(beforeRender);
       expect(html.contains('carro')).toBe(true);
     })
 
