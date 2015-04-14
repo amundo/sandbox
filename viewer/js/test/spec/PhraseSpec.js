@@ -21,6 +21,11 @@ describe("Phrase", function() {
       expect(unglossedPhrase).not.toBe(null);
     })
 
+    it('is an instance of Phrase', function(){
+      phrase = new Phrase({ transcription: "apa kabar", translations: { en: "How are you?" } });
+      expect(phrase instanceof Phrase).toBe(true);
+    })
+
     it('has a tokenize method', function(){
       unglossedPhrase = new Phrase(transcriptionAndTranslation);
       expect(unglossedPhrase.tokenize).toBeDefined();
