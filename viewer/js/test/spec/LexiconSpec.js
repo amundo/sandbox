@@ -15,6 +15,11 @@ describe("Lexicon", function() {
   })
 
   describe('can be initialized', function(){ 
+    it('is an instance of Lexicon', function(){
+      lexicon = new Lexicon(words);
+      expect(lexicon instanceof Lexicon).toBe(true);
+    })
+
     it('with no arguments' , function(){
       lexicon = new Lexicon();
     })

@@ -1,7 +1,6 @@
-xdescribe("Text", function() {
+describe("Text", function() {
   var 
     text;
-
 
   describe('A Text', function(){ 
     beforeEach(function(){
@@ -21,12 +20,24 @@ xdescribe("Text", function() {
       );
     })
 
+    it('is an instance of Text', function(){
+      expect(text instanceof Text).toBe(true);
+    })
+
+
     it('has an initialize method', function(){
       expect(typeof text.initialize).toBe('function');
     })
 
-    it('has a phrases array', function(){
+    it('.phrases is an array', function(){
       expect(Array.isArray(text.phrases)).toBe(true);
+    })
+
+    it('.phrases is an array of Phrase instances', function(){
+      var 
+        isPhraseInstance = function(p){ return p instanceof Phrase };
+      
+      expect(text.phrases.every(isPhraseInstance)).toBe(true);
     })
 
     it('has a metadata object', function(){
@@ -39,14 +50,6 @@ xdescribe("Text", function() {
 
   })
 
-  describe('A Text can be initialized', function(){ 
-    xit('by providing a text object at initialization', function(){
-    })
-
-    xit('by calling `reset(data)`', function(){
-    })
-
-  })
 
   xdescribe('Metadata', function(){
   })
