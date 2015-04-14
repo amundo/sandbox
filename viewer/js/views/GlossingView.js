@@ -1,4 +1,5 @@
 var GlossingView = function(data){
+  this.el = data.el ||  document.createElement('div');
   this.text = data.text || new Text(); 
   this.lexicon = data.lexicon || new Lexicon(); 
 

@@ -1,29 +1,3 @@
-/*
-function renderWord(word){
-  var 
-    el = document.createElement('li'),
-    content = '<strong lang=mixtec>' + word.token + '</strong> <span lang=en>' + word.gloss + '</span>';
-
-  el.innerHTML = content;
-  return el;
-  
-}
-
-function render(lexicon){
-  var fragment = document.createDocumentFragment();
-  lexicon.forEach(function(word){
-    fragment.appendChild(renderWord(word))
-  })
-  document.querySelector('#lexicon #words').appendChild(fragment);
-}
-
-getJSON('data/lex.json', function(data){ 
-  window.lexicon = data;
-  render(lexicon);
-})
-
-*/
-
 var SearchableLexiconView = function(options){
   this.lexicon = options.lexicon;
   this.el = options.el;
@@ -42,10 +16,10 @@ var SearchableLexiconView = function(options){
   }
 
   this.template = `
-<div class=lexicon>
+<div class="searchable lexicon">
   <div class=search>
     <header>
-      <input type=search>
+      <input type=search placeholder="search lexicon">
     </header>
     <ol class=results></ol>
   </div>
@@ -56,30 +30,27 @@ var SearchableLexiconView = function(options){
 
   this.render = function(){
     var 
-      lexiconDiv = new DOMParser().parseFromString(this.template, 'text/html').querySelector('div.lexicon'),
-      wordsOL = lexiconDiv.querySelector('.words');
+      searchableLexiconDiv = new DOMParser().parseFromString(this.template, 'text/html').querySelector('.searchable.lexicon'),
+      wordsOL = searchableLexiconDiv.querySelector('.words');
 
     this.lexicon.forEach(function(word){
       wordsOL.appendChild(this.renderWord(word))
     }.bind(this))
 
-    this.el.appendChild(lexiconDiv);
+    this.el.innerHTML = '';
+    this.el.appendChild(searchableLexiconDiv);
 
+    this.setUpListeners();
   }.bind(this);
 
-  this.load = function(words){
-    this.lexicon.reset(words); 
-  }
-
-  this.loadFromURL = function(url){
-    getJSON(
-      url, 
-      function(data){ 
-        this.lexicon.reset(words); 
-      }, 
-      function(err){ console.log(err) }
-   )
-  }
+  this.setUpListeners = function(){
+    var searchBox = this.el.querySelector('.search input');
+    searchBox.addEventListener('keyup', function(ev){
+      if(ev.which == 13){
+        this.lexicon.search(this.value);
+      }
+    }.bind(this))
+  }.bind(this);
 
   this.render();
 }
