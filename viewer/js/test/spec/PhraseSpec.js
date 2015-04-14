@@ -84,7 +84,7 @@ describe("Phrase", function() {
       expect(JSON.parse(JSON.stringify(unglossed))).toEqual(glossed);
     })
 
-    it('has glosses "up" and "new"', function(){ 
+    it('has glosses "what" and "new"', function(){ 
       var phrase = new Phrase({transcription: "apa kabar", translations: {en: "sup"}});
       phrase.autogloss(lexicon);
       expect(phrase.words[0].gloss).toBe("what");

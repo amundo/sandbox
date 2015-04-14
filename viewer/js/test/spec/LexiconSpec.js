@@ -38,6 +38,17 @@ describe("Lexicon", function() {
       expect(lexicon.length).toBe(3);
     })
 
+    it('can reset' , function(){
+      lexicon = new Lexicon(words);
+      lexicon.reset([
+        {token: "Persona", gloss: "Person"},
+        {token: "Carro",   gloss: "Car"},
+        {token: "Calle",   gloss: "Street"}
+      ])
+      expect(lexicon.length).toBe(3);
+      expect(lexicon.contains('Persona')).toBe(true);
+      expect(lexicon.contains('persona')).toBe(false);
+   })
   })
 
   describe('can validate words', function(){
