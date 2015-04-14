@@ -64,7 +64,7 @@ ol#schema li.sortable-grabbing {
 
 <header>
 <h1>
-<button id=extractLexiconButton>Extract Lexicon</button> from Gloss JSON 
+Extract Lexicon</button> from text <button id=extractLexiconButton>as JSON</button> or <button id=extractTabbedLexiconButton>tab-delimited</button>
 </h1>
 </header>
 <main>
@@ -92,6 +92,24 @@ var
   afterTA = document.querySelector('#after textarea'),
 
   extractLexiconButton = document.querySelector('#extractLexiconButton');
+  extractTabbedLexiconButton = document.querySelector('#extractTabbedLexiconButton');
+
+
+function extractTabbedLexicon(){
+  
+  var 
+    text = JSON.parse(beforeTA.value), 
+    tabbedText = '',
+    lexicon = [];
+  
+  text.phrases.forEach((s) => {
+    if(s.words){
+      lexicon = lexicon.concat(s.words)
+    }
+  })
+  
+  afterTA.value = lexicon.map(word => word.token + '\t' + word.gloss).join('\n')
+}
 
 
 function extractLexicon(){
@@ -111,6 +129,9 @@ function extractLexicon(){
   afterTA.value = JSON.stringify(lexicon, null, 2); 
 
 }
+
+extractTabbedLexiconButton.addEventListener('click', extractTabbedLexicon);
+beforeTA.addEventListener('input', extractLexicon);
 
 extractLexiconButton.addEventListener('click', extractLexicon);
 beforeTA.addEventListener('input', extractLexicon);

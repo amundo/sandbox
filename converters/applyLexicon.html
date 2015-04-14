@@ -69,15 +69,15 @@ ol#schema li.sortable-grabbing {
 </header>
 <main>
 <div id=lexicon>
-  <textarea placeholder="Lexicon JSON"></textarea>
+  <textarea placeholder="Lexicon JSON" spellcheck=false></textarea>
 </div>
 
 <div id=before>
-  <textarea placeholder="Unglossed Text JSON" ></textarea>
+  <textarea placeholder="Unglossed Text JSON"  spellcheck=false></textarea>
 </div>
 
 <div id=after>
-  <textarea placeholder="Glossed Text JSON" spellchecker=false></textarea>
+  <textarea placeholder="Glossed Text JSON" spellcheck=false></textarea>
 </div>
 </main>
 
@@ -96,7 +96,7 @@ var
   applyLexiconButton = document.querySelector('#applyLexiconButton');
 
 function tokenize(text){
-  return text.toLowerCase().split(/[ \.…\!\?\t]/g);
+  return text.toLowerCase().split(/[ \.…\!\?\t]+/g);
 }
 
 
