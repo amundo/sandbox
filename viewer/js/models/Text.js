@@ -8,10 +8,6 @@ var Text = function(data){
     this.metadata = this._data.metadata || {};
   }.bind(this);
 
-  this.load = function(fileName){
-
-  }
-
 // how to define a property on a nested object?
 /*
   Object.defineProperty(this, 'title', { 
