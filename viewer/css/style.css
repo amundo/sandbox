@@ -1,0 +1,81 @@
+main { 
+  display:flex; 
+  flex-flow:row;
+}
+
+section { 
+  padding: 1em;
+}
+
+#lexicon { 
+  flex: 1;
+  border-right: 2px solid gray;
+}
+
+#lexicon header { 
+}
+
+#lexicon #words { 
+  height: 90vh;
+  margin-bottom: 5em;
+  overflow-y: auto;
+}
+
+#text { 
+  flex: 3;
+  display: flex;
+  flex-flow: column;
+  min-height: 100%;
+}
+
+#text textarea { 
+  flex: 1;
+  display: none;
+}
+
+#text div { 
+  flex: 1;
+}
+
+.token {
+  font-weight:bold;
+  font-family:sans-serif;;
+}  
+
+.gloss {
+  font-style: italic;
+}  
+
+.phrase header {
+  display:flex; 
+  justify-content: space-between;
+}
+
+.phrase header:hover {
+  cursor: pointer;
+}
+
+.phrase header button {
+  background:none;
+  border:none;
+  color: white;
+}
+
+.phrase:hover header button {
+  color:black;
+  cursor:pointer;
+}
+
+
+.words.gloss{
+  font-style: normal;
+  font-size: 80%;
+}  
+
+#text .phrase { margin-top: 2em; }
+#text .words { display:inline-block; padding: 0;}
+#text .words li { display:inline-block;}
+#text .words li ol.word { margin-bottom: 1em;}
+#text .word li {display:block;  }
+
+
