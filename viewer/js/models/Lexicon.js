@@ -2,6 +2,7 @@
 //
 // see  LexiconSpec.js for tests.
 var Lexicon = function(words){
+
   this._words = words || [];
   
   this.add = function(word){
@@ -24,11 +25,9 @@ var Lexicon = function(words){
   this.loadFromURL = function(url){
     getJSON(
       url, 
-      function(data){ 
-        this.reset(data); 
-      }.bind(this), 
+      function(data){ this.reset(data) }.bind(this), 
       function(err){ console.log(err) }.bind(this)
-   )
+    )
   }.bind(this)
 
   this.remove = function(word){

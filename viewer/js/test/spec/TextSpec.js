@@ -24,6 +24,9 @@ describe("Text", function() {
       expect(text instanceof Text).toBe(true);
     })
 
+    it('can be initialized empty', function(){
+      expect(new Text() instanceof Text).toBe(true);
+    })
 
     it('has an initialize method', function(){
       expect(typeof text.initialize).toBe('function');

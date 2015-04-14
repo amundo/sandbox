@@ -38,8 +38,9 @@ describe("Lexicon", function() {
       expect(lexicon.length).toBe(3);
     })
 
-    xit('can load from URL', function(){
+    it('loadFromURL exists', function(){
       lexicon = new Lexicon(words);
+      expect(lexicon.loadFromURL).not.toBe(null);
     })
 
     it('can reset' , function(){

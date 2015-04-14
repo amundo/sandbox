@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+glossing view
+  </title>
+  <link rel=stylesheet href=css/style.css>
+</head>
+<body>
+
+<main>
+  <section id=lexicon> </section>
+  <section id=text> </section>
+</main>
+
+<script src=js/ajax.js></script>
+<script src=js/models/Lexicon.js></script>
+<script src=js/models/Phrase.js></script>
+<script src=js/models/Text.js></script>
+
+<script src=js/views/GlossingView.js></script>
+
+<script>
+
+var glossingView = new GlossingView({
+  text : new Text(),
+  lexicon : new Lexicon()
+})
+
+glossingView.lexicon.loadFromURL('data/lex.json');
+glossingView.text.loadFromURL('data/lex.json');
+
+</script>
+
+
+
+</body>
+</html>

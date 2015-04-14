@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+searchable lexicon  
+  </title>
+  <link rel=stylesheet href=css/style.css>
+</head>
+<body>
+
+<main>
+
+<section id=lexicon>
+</section>
+
+<!--
+<section id=text>
+  <header>
+    <input type=file name=text></input>
+    <button id=pasteText>paste</button>
+  </header>
+ <textarea></textarea>
+ <div></div>
+</section>
+-->
+
+</main>
+
+<script src=js/ajax.js></script>
+<script src=js/mvc.js></script>
+<script src=js/models/Lexicon.js></script>
+
+<script src=js/views/SearchableLexiconView.js></script>
+
+<script>
+
+var searchableLexiconView = new SearchableLexiconView({
+  el: document.body.querySelector('section#lexicon'), 
+  lexicon : new Lexicon()
+})
+
+searchableLexiconView.lexicon.loadFromURL('data/lex.json');
+
+</script>
+
+</body>
+</html>
