@@ -1,12 +1,24 @@
 // Text.js
 
 var Text = function(data){
- 
-  this.initialize = function(){
-    this._data = data || {};
-    this.phrases = this._data.phrases || [];
-    this.metadata = this._data.metadata || {};
+
+  this.initialize = function(data){
+    this.metadata = data.metadata || {};
+
+    this.phrases = data.phrases || [];
+    this.initializePhrases();
+
   }.bind(this);
+
+
+  this.initializePhrases = function(){
+    var phraseInstances = [];
+    this.phrases.forEach(function(phrase){
+      phraseInstances.push(new Phrase(phrase))
+    })
+    this.phrases = phraseInstances;
+
+  }.bind(this)
 
 // how to define a property on a nested object?
 /*
@@ -20,5 +32,5 @@ var Text = function(data){
   })
 */
 
-  this.initialize();
+  this.initialize(data);
 }
