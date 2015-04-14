@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+Sort Lexicon
+  </title>
+  <link rel=stylesheet href=beforeAfter.css></link>
+
+</head>
+<body>
+
+<header>
+<h1>
+ Sort Lexicon <button id=byTokenButton>by token</button> <button id=byGlossButton>by gloss</button> 
+</h1>
+</header>
+<main>
+<div id=before>
+  <textarea placeholder="Unsorted lexicon" spellchecker=false></textarea>
+</div>
+
+<div id=after>
+  <textarea placeholder="Sorted lexicon" spellchecker=false></textarea>
+</div>
+</main>
+
+<script>
+var 
+  before = document.querySelectorAll('#before'),
+  beforeTA = document.querySelector('#before textarea'),
+
+  after = document.querySelectorAll('#after'),
+  afterTA = document.querySelector('#after textarea'),
+
+  byTokenButton = document.querySelector('#byTokenButton');
+  byGlossButton = document.querySelector('#byGlossButton');
+
+
+function sortLexicon(lexicon, by){
+  //return lexicon.sort(Intl.Collator('es').compare)
+  var by = by;
+  return lexicon.sort(function(a,b){
+    return Intl.Collator('es').compare(a[by], b[by])
+  })
+}
+
+byTokenButton.addEventListener('click', function(ev){
+  var lexicon = JSON.parse(beforeTA.value); 
+  var sorted = sortLexicon(lexicon, 'token')
+  afterTA.value = JSON.stringify(sorted, null, 2); 
+});
+
+byGlossButton.addEventListener('click', function(ev){
+  var lexicon = JSON.parse(beforeTA.value); 
+  var sorted = sortLexicon(lexicon, 'gloss')
+  afterTA.value = JSON.stringify(sorted, null, 2); 
+});
+
+</script>
+</body>
+</html>

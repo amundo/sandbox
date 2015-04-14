@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+  </title>
+  <link rel=stylesheet href=beforeAfter.css></link>
+
+</head>
+<body>
+
+<header>
+<h1>
+before and <button id=afterButton>after</button> 
+</h1>
+</header>
+<p>suppose you have <img src=sampleinput.png></p>
+
+<p>how do you get that into JSON, and then an HTML format, quickly?
+
+<main>
+<div id=before>
+  <textarea spellchecker=false>
+Va̠'a va.
+Alrighty then.  
+
+Va’a
+good
+
+va
+just
+
+
+
+Kixi-ra.
+He (should) come.
+    
+kixi
+to.come
+
+ra
+3M
+
+
+
+
+Suu könúna cuarto-i.
+But my room is super crowded.
+
+su
+but
+
+kö-nuna
+NEG-open
+
+cuarto
+room
+
+i
+1SG
+
+
+
+
+Kua̠'á na̠ yuví ndéé xí'in-i.
+I have a ton of roommates
+
+kua’a
+a.lot
+
+na yuvi
+people
+
+ndeé
+living
+
+xi’in
+with
+
+i
+me
+
+
+
+
+
+</textarea>
+</div>
+
+<div id=after>
+  <textarea spellchecker=false></textarea>
+</div>
+</main>
+
+<script>
+var 
+  before = document.querySelectorAll('#before'),
+  beforeTA = document.querySelector('#before textarea'),
+
+  after = document.querySelectorAll('#after'),
+  afterTA = document.querySelector('#after textarea'),
+
+  afterButton = document.querySelector('#afterButton');
+
+function renderExample(){
+}
+
+function parseText(txt){
+  var phrases = txt.split('\n\n\n+');
+  
+}
+
+function parseExample(txt){
+  var 
+    txt = txt, 
+    lines = txt.split('\n\n'),
+    transcription = lines.shift(),
+    translation = lines.shift(),
+    words = lines.join('\n\n'
+
+  
+}
+
+function convert(){
+  
+  var 
+    text = parseExample(beforeTA.value); 
+  
+  //afterTA.value = doSomething(text); 
+
+}
+
+afterButton.addEventListener('click', convert);
+beforeTA.addEventListener('input', convert);
+
+</script>
+</body>
+</html>

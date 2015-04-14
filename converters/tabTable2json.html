@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+tabbed table to collection
+  </title>
+  <link rel=stylesheet href=beforeAfter.css></link>
+
+</head>
+<body>
+
+<header>
+<h1>
+convert a tabbed table <button id=afterButton>to a collection</button>
+</h1>
+</header>
+
+<main>
+<div id=before>
+  <textarea spellchecker=false></textarea>
+</div>
+
+<div id=after>
+  <textarea spellchecker=false></textarea>
+</div>
+</main>
+
+<script>
+var 
+  before = document.querySelectorAll('#before'),
+  beforeTA = document.querySelector('#before textarea'),
+
+  after = document.querySelectorAll('#after'),
+  afterTA = document.querySelector('#after textarea'),
+
+  afterButton = document.querySelector('#afterButton');
+
+
+function stitch(headers, values){
+  var result = {};
+  headers.forEach(function(header, i){
+    result[header] = values[i]
+  })
+  return result;
+}
+
+function tabbedTableToCollection(){
+  var 
+    collection = [], 
+    tabbedTable = beforeTA.value.trim(),
+    rows = tabbedTable.split('\n').map(row => row.split('\t'));
+
+  var headers = rows.shift();
+
+  return rows.map(function(row){ return stitch(headers, row)});
+}
+
+function convert(){
+  
+  var 
+    text = beforeTA.value; 
+  
+  afterTA.value = JSON.stringify(tabbedTableToCollection(text), null, 2);
+
+}
+
+afterButton.addEventListener('click', convert);
+beforeTA.addEventListener('input', convert);
+
+</script>
+</body>
+</html>
