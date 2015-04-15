@@ -5,7 +5,7 @@ var Text = function(data){
   this.initialize = function(data){
     this.metadata = data && data.metadata ? data.metadata : {};
 
-    this.phrases = data && data.phrases ? data.phrases : {};
+    this.phrases = data && data.phrases ? data.phrases : [];
     if ( this.phrases.length > 0 ) { this.initializePhrases() };
  
   }.bind(this);
