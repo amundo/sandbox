@@ -17,6 +17,7 @@ describe('TextView', function(){
           },
           phrases: [ { transcription: "apa kabar", translations: { en: "How are you?" } } ]
         }
+    )
 
     this.textView = new TextView({
       el: this.el,

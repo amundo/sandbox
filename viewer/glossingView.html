@@ -7,8 +7,13 @@ glossing view
   </title>
   <link rel=stylesheet href=css/style.css>
 </head>
-<body>
+<body id=glossingView>
 
+<header>
+<p><label for=uploadLexicon>upload lexicon</label> <input id=uploadLexicon type=file>
+<p><label for=uploadText>upload text</label> <input id=uploadText type=file>
+<p><label for=glossText>gloss text from lexicon</label> <button id=glossText>(re)gloss text from lexicon</button>
+</header>
 <main>
   <!-- <section id=lexicon> </section> -->
   <section id=text> </section>

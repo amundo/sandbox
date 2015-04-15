@@ -37,11 +37,12 @@ section {
   flex: 1;
 }
 
-.token {
+.transcription, .token {
   font-weight:bold;
   font-family:sans-serif;;
 }  
 
+.translation,
 .gloss {
   font-style: italic;
 }  
@@ -79,3 +80,7 @@ section {
 #text .word li {display:block;  }
 
 
+#glossingView header { 
+  display: flex; 
+  justify-content: space-between;
+}

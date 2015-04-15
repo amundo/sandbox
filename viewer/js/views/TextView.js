@@ -1,100 +1,62 @@
-var app = app || {};
+var TextView = function(options){
+  this.text = options.text || new Text();
+  this.el = options.el || document.createElement('div');
 
-var renderPhrase = function(phrase){
-  var 
-    div = document.createElement('div');
-    html = '';
-
-  div.classList.add('phrase');
-  
-  html += '<header><audio src=' + app.text.metadata.media + '#t=' + phrase.startTime + ',' + phrase.endTime + '></audio> <span class=phraseId>(' + phrase.id + ')</span> <button>edit</button></header>';
-  html += '<p lang=mixtec>' + phrase.transcription + '</p>';
-  html += '<ol class=words>';
-
-  phrase.words.forEach(function(word){
-    html += '<li><ol class=word>';
-    html +=   '<li class=token lang=mixtec>' + word.token + '</li>';
-    html +=   '<li class=gloss lang=en>' + word.gloss + '</li>';
-    html += '</ol></li>';
-  })
-
-  html += '</ol>';
-  html += '<p lang=en>' + phrase.translations.en + '</p>';
-
-  div.insertAdjacentHTML('afterbegin', html);
-  return div;
-}
-
-var renderText = function(text){
-  var fragment = document.createDocumentFragment();
-
-  text.phrases.forEach(function(phrase){
-      
-    fragment.appendChild(renderPhrase(phrase));
- 
-  })
-
-  return fragment;
-}
-
-app.initText = function(text){
-  var 
-    textDiv = document.querySelector('#text div'),
-    textFragment = renderText(text);
-
-  textDiv.innerHTML = '';
-  textDiv.appendChild(textFragment);
-  
-  [].slice.call(document.querySelectorAll('.phrase header')).forEach(function(phraseHeader){
+  this.renderPhrase = function(phrase){
     var 
-      audio = phraseHeader.querySelector('audio');
-      phraseId = phraseHeader.querySelector('.phraseId');
+      div = document.createElement('div');
 
-    phraseId.addEventListener('click', function(ev){
-      audio.play(); 
-      audio.remove();
+    div.classList.add('phrase');
+
+    div.insertAdjacentHTML('afterbegin',  
+`   <p class=transcription>${phrase.transcription}</p>
+    <ol class=words></ol>
+    <p class=translation>${phrase.translations.en}</p>`) 
+
+    var wordsOL = div.querySelector('ol.words');
+
+    phrase.words.forEach(function(word){
+      wordsOL.insertAdjacentHTML('afterbegin', 
+`   <li>
+      <ol class=word>
+        <li class=token>${word.token}</li>
+        <li class=gloss>${word.gloss}</li>
+      </ol>
+    </li>
+`)
     })
-  })
   
-}
-
-var loader = document.querySelector('input[type="file"]');
-
-loader.addEventListener('change', function(ev){
-  var file = ev.currentTarget.files[0];
-
-  var reader = new FileReader();
-  
-  reader.onload = function(ev){
-    var text = JSON.parse(this.result);
-    app.text = text;
-    app.initText(text);
+    return div;
   }
 
-  reader.readAsText(file);
-})
-
-var pasteTextButton = document.querySelector('button#pasteText');
-
-pasteTextButton.addEventListener('click', function(ev){
-  var 
-    textDiv = document.querySelector('#text div'), 
-    ta = document.querySelector('#text textarea'); 
-
-  ta.style.display = 'flex';
-
-  ta.addEventListener('keyup', function(ev){
-    if(ev.which == 27){
-      var text = JSON.parse(this.value);
-      app.text = text;
-      app.initText(text);
-      ta.style.display = 'none'; 
-    } 
-  })
-})
-
-// getJSON('pear2015.04.06.json', function(data){ 
-//   app.text = data;
-//   app.initText(app.text);
-// })
-
+  this.render = function(text){
+    var fragment = document.createDocumentFragment();
+    this.text.phrases.forEach(function(phrase){
+      fragment.appendChild(this.renderPhrase(phrase));
+    }, this)
+    return fragment;
+  }.bind(this)
+  
+  this.initialize = function(){
+    var 
+      textFragment = this.render();
+  
+    this.el.innerHTML = '';
+    this.el.appendChild(textFragment);
+    
+    // [].slice.call(document.querySelectorAll('.phrase header')).forEach(function(phraseHeader){
+    //   var 
+    //     audio = phraseHeader.querySelector('audio');
+    //     phraseId = phraseHeader.querySelector('.phraseId');
+  
+    //   phraseId.addEventListener('click', function(ev){
+    //     audio.play(); 
+    //     audio.remove();
+    //   })
+    // })
+    
+  }.bind(this)
+  
+  
+  this.initialize();
+}

@@ -25,7 +25,6 @@ describe('SearchableLexiconView', function(){
     })
 
     it('search box', function(){
-console.log(this.searchableLexiconView.el.outerHTML);
       expect(this.searchableLexiconView.el.querySelector('input[type="search"]')).not.toBe(null);
     })
 
