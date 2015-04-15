@@ -10,7 +10,7 @@ glossing view
 <body>
 
 <main>
-  <section id=lexicon> </section>
+  <!-- <section id=lexicon> </section> -->
   <section id=text> </section>
 </main>
 
@@ -19,21 +19,33 @@ glossing view
 <script src=js/models/Phrase.js></script>
 <script src=js/models/Text.js></script>
 
+<script src=js/views/TextView.js></script>
 <script src=js/views/GlossingView.js></script>
 
 <script>
 
-var glossingView = new GlossingView({
-  text : new Text(),
-  lexicon : new Lexicon()
-})
+var app = {};
 
-glossingView.lexicon.loadFromURL('data/lex.json');
-glossingView.text.loadFromURL('data/lex.json');
+app.init = function(){
+  var textView = new TextView({
+     text: new Text(),
+     el: document.querySelector('#text') 
+  })
+
+  app.glossingView = new GlossingView({
+    textView : textView,
+    lexicon : new Lexicon()
+  })
+  
+  app.glossingView.lexicon.loadFromURL('data/lex.json');
+  //app.glossingView.text.loadFromURL('http://glyph.local/~pat/Languages/mixtec/papers/smd_accessibility/working_at_calfresh.json');
+  app.glossingView.text.loadFromURL('http://glyph.local/~pat/Languages/mixtec/papers/smd_accessibility/pear2015.04.12.json');
+
+}
+
+app.init();
 
 </script>
-
-
 
 </body>
 </html>
