@@ -10,13 +10,18 @@ describe('GlossingView', function(){
       ] 
     });
 
+    var textView = new TextView({
+      text : text,
+      el : document.createElement('div')
+    })
+
     var lexicon = new Lexicon([
       {token: "apa", gloss: "what"},
       {token: "kabar", gloss: "new"}
     ]);
 
     this.glossingView = new GlossingView({
-      text: text,
+      textView: textView,
       lexicon: lexicon
     });
   })
@@ -25,15 +30,16 @@ describe('GlossingView', function(){
 
   })
 
-  describe('inits a Text and a Lexicon', function(){
+  describe('needs', function(){
 
-    it('has a lexicon', function(){
+    it('a lexicon', function(){
       expect(this.glossingView.lexicon).not.toBe(null);
       expect(this.glossingView.lexicon instanceof Lexicon).toBe(true);
     })
 
-    it('has a text', function(){
+    it('a textView', function(){
       expect(this.glossingView.text).not.toBe(null);
+      expect(this.glossingView.phrases).not.toBe(null);
       expect(this.glossingView.text instanceof Text).toBe(true);
     })
 
@@ -45,7 +51,6 @@ describe('GlossingView', function(){
       this.glossingView.glossText();
       expect(this.glossingView.text.phrases[0].words[0].token).toBe('apa'); 
       expect(this.glossingView.text.phrases[0].words[1].gloss).toBe('new'); 
-
     })
 
   })
