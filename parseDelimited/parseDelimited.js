@@ -4,7 +4,7 @@ var parseDelimited = function(text, rowDelimiter, columnDelimiter){
     rowDelimiter = rowDelimiter,
     columnDelimiter = columnDelimiter,
     headers;
-  
+
   // this zip is cooler but more confusing at first :)
   function zip(keys, values){
     return keys.reduce(function(o, key, i){
@@ -52,7 +52,7 @@ var tsv2json = function(text){
 }
 
 var scription2json = function(text){
-  return parseDelimited(text, '\n\n', '\n')
+  return parseDelimited(text, /\n\n+/, '\n')
 }
 
 /*

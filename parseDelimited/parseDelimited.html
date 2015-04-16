@@ -13,7 +13,6 @@ Load and Parse Delimited Text File
 <body>
 
 <input type=file>
-<textarea></textarea>
 
 <script src=parseDelimited.js></script>
 <script>
@@ -28,6 +27,7 @@ input.addEventListener('change', function(ev){
 
   reader.addEventListener('load', function(ev){
     app.data = scription2json(this.result);
+    document.body.innerHTML = '<pre>' + JSON.stringify(app.data, null, 2);
   });
 
   reader.readAsText(file);
