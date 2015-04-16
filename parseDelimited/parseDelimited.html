@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+Load and Parse Delimited Text File  
+  </title>
+  <link rel=stylesheet href=style.css>
+  <style>
+  
+  </style>
+</head>
+<body>
+
+<input type=file>
+<textarea></textarea>
+
+<script src=parseDelimited.js></script>
+<script>
+
+var 
+  input = document.querySelector('input[type="file"]'),
+  reader = new FileReader,
+  app = {};
+
+input.addEventListener('change', function(ev){
+  var file = this.files[0];
+
+  reader.addEventListener('load', function(ev){
+    app.data = scription2json(this.result);
+  });
+
+  reader.readAsText(file);
+})
+
+</script>
+</body>
+</html>
