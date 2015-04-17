@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+find and replace
+  </title>
+  <link rel=stylesheet href=beforeAfter.css></link>
+
+</head>
+<body>
+
+<header>
+<h1>
+Find and <button>Replace</button> <input id=replaceable> with <input id=replacement>
+</h1>
+</header>
+<main>
+<div id=before>
+  <textarea spellchecker=false></textarea>
+</div>
+
+<div id=after>
+  <textarea spellchecker=false></textarea>
+</div>
+</main>
+
+<script>
+var 
+  before = document.querySelectorAll('#before'),
+  beforeTA = document.querySelector('#before textarea'),
+
+  after = document.querySelectorAll('#after'),
+  afterTA = document.querySelector('#after textarea'),
+
+  replaceable = document.querySelector('input#replaceable'),
+  replacement = document.querySelector('input#replacement'),
+
+  button = document.querySelector('button');
+
+
+
+function findAndReplace(text){
+  var re = new RegExp(replaceable.value, 'g');
+
+  var fixed =  text.replace(re, replacement.value)
+  return fixed;
+}
+
+function convert(){
+  
+  var text = beforeTA.value; 
+  
+  afterTA.value = findAndReplace(text); 
+
+}
+
+button.addEventListener('click', convert);
+beforeTA.addEventListener('input', convert);
+
+</script>
+</body>
+</html>
