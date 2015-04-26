@@ -135,12 +135,17 @@ describe("Lexicon", function() {
     })
 
     it('can find by token query', function(){
-      expect(lexicon.search("carro")).toEqual([{token: "carro", gloss: "car"}]);
+      expect(lexicon.search("carro")).toEqual({results: [{token: "carro", gloss: "car"}, {homonym: false}]});
     })
 
     it('can find by word query', function(){
       var queryWord = { token: "carro", gloss: "car"};
-      expect(lexicon.search(queryWord)).toEqual([{token: "carro", gloss: "car"}]);
+      expect(lexicon.search(queryWord)).toEqual({ "results": [{token: "carro", gloss: "car"}], {homonym: false}});
+    })
+
+    it('marks unknown words as unknown', function(){
+      var queryWord = { token: "UNKNOWN###"};
+      expect(lexicon.search(queryWord)).toEqual([{token: "carro", gloss: null, unknown: true]);
     })
   })
 
@@ -150,6 +155,19 @@ describe("Lexicon", function() {
       expect(lexicon.contains(queryWord)).toEqual(true);
     })
 
+  })
+
+  describe('senses', function(){
+    beforeEach(function() {
+      lexicon = new Lexicon([
+        {token: "nda’a", gloss: "hand"},
+        {token: "nda’a", gloss: "OBJ"}
+      ]);
+    });
+
+    it('can return a list of senses for a token', function(){
+      expect(lexicon.senses('nda’a').toEqual([ 'hand', 'OBJ'])
+    })
   })
 
   xdescribe('fuzzy searching', function(){

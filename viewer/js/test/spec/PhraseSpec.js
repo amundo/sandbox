@@ -62,35 +62,43 @@ describe("Phrase", function() {
       phrase = new Phrase(phraseData);
     })
 
-    it('has two tokens', function(){ 
-      var tokenCount = phrase.tokens.length;
-      expect(tokenCount).toEqual(2);
+    describe('known words', function(){
+      it('has two tokens', function(){ 
+        var tokenCount = phrase.tokens.length;
+        expect(tokenCount).toEqual(2);
+      })
+  
+      it('has tokens "apa" and "kabar"', function(){ 
+        expect(phrase.tokens[0]).toBe("apa");
+        expect(phrase.tokens[1]).toBe("kabar");
+      })
+  
+      it('can autogloss', function(){ 
+        var unglossed = new Phrase({transcription: "apa kabar", translations: {en: "sup"}});
+        unglossed.autogloss(lexicon);
+        var glossed = {
+          words: [{token: "apa", gloss: "what"}, {token: "kabar", gloss: "new" }], 
+          transcription: "apa kabar", 
+          translations: {en: "sup"}
+        };
+        /* this forces the Phrase's toJSON method to be called  for the sake of .toEqual */
+        expect(JSON.parse(JSON.stringify(unglossed))).toEqual(glossed);
+      })
+  
+      it('has glosses "what" and "new"', function(){ 
+        var phrase = new Phrase({transcription: "apa kabar", translations: {en: "sup"}});
+        phrase.autogloss(lexicon);
+        expect(phrase.words[0].gloss).toBe("what");
+        expect(phrase.words[1].gloss).toBe("new");
+      })
     })
 
-    it('has tokens "apa" and "kabar"', function(){ 
-      expect(phrase.tokens[0]).toBe("apa");
-      expect(phrase.tokens[1]).toBe("kabar");
+    describe('unglossed words', function(){
+      it('are okay in .words collection', function(){
+        var unglossedWord = {token: "NeverHeardOfThisWord"};
+      })
     })
-
-    it('can autogloss', function(){ 
-      var unglossed = new Phrase({transcription: "apa kabar", translations: {en: "sup"}});
-      unglossed.autogloss(lexicon);
-      var glossed = {
-        words: [{token: "apa", gloss: "what"}, {token: "kabar", gloss: "new" }], 
-        transcription: "apa kabar", 
-        translations: {en: "sup"}
-      };
-      /* this forces the Phrase's toJSON method to be called  for the sake of .toEqual */
-      expect(JSON.parse(JSON.stringify(unglossed))).toEqual(glossed);
-    })
-
-    it('has glosses "what" and "new"', function(){ 
-      var phrase = new Phrase({transcription: "apa kabar", translations: {en: "sup"}});
-      phrase.autogloss(lexicon);
-      expect(phrase.words[0].gloss).toBe("what");
-      expect(phrase.words[1].gloss).toBe("new");
-    })
-
+  
   })
   
 

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+ Convert JSON to Audacity 
+  </title>
+  <style>
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+} 
+
+main { 
+  flex: 1;  
+  display:flex;
+  padding: 2em;
+}
+
+textarea { 
+  flex: 1;
+
+  padding: 1em;
+  font-size: large;
+  font-family: monospace;
+}
+
+header h1 button {
+  font-size: x-large;
+  cursor: pointer;
+}
+  
+  </style>
+</head>
+<body>
+
+<header>
+<h1>  
+ Convert <button>JSON</button> to Audacity…
+</h1>
+</header>
+<main>
+<textarea></textarea>
+<textarea></textarea>
+</main>
+
+<script>
+
+var 
+  beforeTA = document.querySelectorAll('textarea')[0],
+  afterTA = document.querySelectorAll('textarea')[1],
+  button = document.querySelector('button');
+
+button.addEventListener('click', function(ev){
+  var text = JSON.parse(beforeTA.value);
+ 
+  afterTA.value = text.phrases
+    .map(phrase => {  return [phrase.startTime, phrase.endTime, phrase.transcription + '[' + phrase.translations.en + ']'].join('\t')  })
+    .join('\n')
+
+})
+
+</script>
+</body>
+</html>
