@@ -67,6 +67,3 @@ var TranscriptionView = function(options){
   
 }
 
-//var tv = new TranscriptionView({
-//  el : document.querySelector('.transcriptionView')
-//})

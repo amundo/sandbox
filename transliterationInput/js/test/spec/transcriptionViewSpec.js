@@ -68,6 +68,10 @@ c C
       input.dispatchEvent(inputEvent);
       expect(input.value).toBe('A\u0301'); 
     })
+
+    it('transliterates on input event', function(){
+    })
+
   })
 
 })
