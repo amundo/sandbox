@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>
+wtf  
+  </title>
+  <link rel=stylesheet href=style.css>
+  <style>
+  
+  </style>
+</head>
+<body>
+
+<header>
+  <input type=file>
+</header>
+
+<main style=display:flex;flex-direction:row;>
+
+  <section id=image style=flex:1;>
+    <figure style=width:100%;>
+       <img style=max-width:100%;>
+    </figure>
+  </section>
+
+  <section id=transcribe style=flex:1;>
+    <header>
+      <input value="C č, ? ʔ, D ð, ̀ ̀, ' ́, ̃ ̃, Z ž, C č, 0 ∅, W ʷ, 1 ɨ " placeholder="transliteration rules" id=rules>
+    </header>
+ 
+    <div id=edit>
+      <textarea spellcheck=off></textarea>
+    </div>
+    <div id=render></div>
+
+  </section>
+
+</main>
+
+<script>
+var readRules = function(selector){
+  return document.body.querySelector(selector).value.trim();
+}
+
+var parseRules = function(rulesText){
+  var rules = rulesText.split(',')
+    .map(String.trim)
+    .map(function(rule){ return rule.split(/[ ]+/)} )
+
+  rules = rules.map(function(rule){
+    rule.map(function(side){
+      if(side.startsWith('U+')){
+        var codePoint = side.split('U+')[1];
+        return String.fromCodePoint(parseInt(codePoint), 16)
+      } else {
+        return side
+      } 
+    })
+  })
+  // return rules.sort(function(a,b){ // TODO how to sort by length of LHS?
+  //   return a[0].length < b[0].length
+  // })
+  return rules
+}
+
+var Transliterator = function(rules){
+  this.transliterate = function(text){
+    rules.forEach(function(rule){ 
+      text = text.replace(rule[0], rule[1], 'g') 
+    })
+    return text;
+  }
+}
+
+var 
+  rules = parseRules(readRules('input#rules')),
+  transliterator = new Transliterator(rules);
+var
+  input = document.querySelector('input'),
+  ta = document.querySelector('#edit textarea'),
+  rules = document.querySelector('#edit rules');
+
+input.addEventListener('change', function(ev){
+  var img = document.querySelector('img');
+  img.src = URL.createObjectURL(input.files[0])
+})
+
+function tokenize(text){ return text.trim().split(' ') };
+
+function parsePhrase(text){
+  var 
+    lines = text.split(/\n/),
+    free = lines.pop(),
+    wordLines = lines.map(String.trim),
+    tokenLine = wordLines[0],
+    glossLine = wordLines[1],
+    tokens,
+    glosses;
+
+  tokens = tokenize(tokenLine);
+  glosses = tokenize(glossLine);
+   
+  var words = tokens.map(function(token, i){
+    return { 
+      token: token,
+      gloss: glosses[i],
+    } 
+  }) 
+
+  return { 
+    translations:  {
+      en: free // TODO ARGH
+    },
+    words: words
+  }
+ 
+}
+
+var PhraseView = function(options){
+  this.el = options.el || document.createDocumentFragment();
+  var phrase = options.phrase;
+
+  var html = `
+  <div class=phrase>
+    <p class=translation lang=en>${phrase.translations.en}</p>
+    <ol class=words>
+     ${phrase.words.map( word => `
+       <li class=word>
+        <p class=token>${word.token}</p>
+        <p class=gloss>${word.gloss}</p>
+       </li>
+     `).join('\n')}
+    </ol>
+  </div>`
+
+  this.el.innerHTML = html;
+}
+
+var phrases = [];
+
+ta.addEventListener('input', function(ev){
+  var text = this.value.trim();
+  var phrase = parsePhrase(text);
+  phrases.push(phrase);
+})
+
+ta.addEventListener('keyup', function(ev){
+  if(ev.which == 27){
+    var phrase = parsePhrase(ta.value); 
+    var pv = new PhraseView({
+      phrase: phrase
+    })
+  }
+})
+
+
+</script>
+</body>
+</html>
