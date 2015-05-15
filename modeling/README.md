@@ -11,26 +11,26 @@ this could really save some time.
 
 Well, how about:
 
-  // guess which transcription words align with which translation words
-  function guess(text){
-    var 
-      alignment = {},
-      transcriptions = text.phrases.map(p => p.transcriptions.mixtec),
-      translations = text.phrases.map(p => p.transcriptions.en);
-    
-    transcriptions.forEach((transcription, i) => {
-      var tokens = transcription.split(' '),
-          translationWords = translations[i].split(' ');
+    // guess which transcription words align with which translation words
+    function guess(text){
+      var 
+        alignment = {},
+        transcriptions = text.phrases.map(p => p.transcriptions.mixtec),
+        translations = text.phrases.map(p => p.transcriptions.en);
       
-      tokens.forEach(token => {
-        'token' in alignment ? alignment[token] = alignment.token.concat(translationWords) : alignment.token = translationWords;
-      })  
+      transcriptions.forEach((transcription, i) => {
+        var tokens = transcription.split(' '),
+            translationWords = translations[i].split(' ');
+        
+        tokens.forEach(token => {
+          'token' in alignment ? alignment[token] = alignment.token.concat(translationWords) : alignment.token = translationWords;
+        })  
+      
+      })
+      return alignment;
+    }
+                           
     
-    })
-    return alignment;
-  }
-                         
-  
-  guess(text);
+    guess(text);
 
 
