@@ -1,0 +1,147 @@
+To Do
+- font chooser (by tier if possible)
+- support multiple orthographies for each tier
+- add single quotes back to translation on blur, not just on enter
+- Add the ability to see what a gloss stands for on hover (also put all the glosses in small caps)
+- create a generic 'dynamic popup', and use a series of event listeners to automatically generate the content inside the popup as needed
+  - use this for the add new database popup, and the file popup - each 'popup' then becomes a function that gets run that generates the content inside the dynamic popup
+- add :lang pseudo-class to everywhere it's appropriate, and style things based on it
+- create a 'count' option that just returns the number of results rather than the results themselves
+- globally bind Ctrl+F to the search box
+- write a 'copy this phrase to Word' function, as well as a 'cite this phrase' option (in the Phrase Tools popup)
+- your spliceTags function within deleteTag doesn't seem to be working properly - it leaves the tags on the data (though removes them from the database)
+- redo search tool to be more general
+  - hits should store all the information they need to display and highlight correctly
+  - any type of search should return a hit, which can then be displayed by a separate function
+  - create a createHit function that can be plugged into any search
+  - each display level (text, phrase, word, morpheme) should be identically structured and consistently ID'd with a breadcrumb
+  - a search unit returns that search unit (so searching for texts returns a text)
+  - a search domain highlights that domain (so searching for a phrase within a text highlights that phrase)
+  - a search string bolds that search string (so searching for a text that contains a phrase with a given string bolds that string)
+  - searching within results should take the results, and literally go to the location of each search hit and search within it, then return the new hits
+    - this is opposed to just comparing the results of two search hits arrays
+    - you can compare the results of two arrays when you add the functionality of 'search for X and Y'  
+- ability to show the surrounding phrases of a search item
+- allow panels to scroll independently
+- when you click 'search for this morpheme', open the search panel and display the results
+- pin title of text to top of view window when scrolling
+- search results are sometimes messed up by the fact that there's a text being displayed in the text viewer - find a way to filter this out
+- a search for teetiqi displays some results with blank words tiers
+- clicking on any search result checks all of the search results boxes
+- check that your 'search within results' option is working properly
+- fix highlighting so that, when there are two hits in the same domain, it'll highlight the second hit in the second result, rather than both in the first
+- Highlighting is fixed, but you'll need to re-add the bolding of the search term
+  - highlighting also doesn't work as expected when searching only on words rather than phrases
+- Add logic to preset all the bulkActions popups as appropriate, and reset them when they're closed or a new search is run
+  - Or, you might just have to worry about the selectedAction dropdown rather than the popups themselves
+- re-add headers to your search results (this will require looking up the search unit and populating one instance of the relevant templates down to the appropriate level)
+  - you'll need to re-add the bold on the header result too (you removed it)
+- adjust your searching mechanism so that subsequent searches actually go to the reference in the database and search downwards from there (rather than just using the hits, which is inaccurate)
+- ultimately it would be nice to have the morpheme search also search for any morphemes within morphemes (e.g. if you tag a word just for wetk, the search would still find it if you looked for -k)
+- maybe you could have a morpheme grouper, that groups morphemes within a word into their largest possible units, but still searches within them
+- in the morphemeBox, list each allomorph between slashes (e.g. -k/-i:g/-dk) (and add support for allomorphs in the first place)
+- when you click the lexicon tab, it should open the workspace with the current lexeme displayed in it
+- when you switch to Analyze Morphemes, it unchecks all the boxes - stop it from doing this
+- recheck the same boxes after you've finished analyzing morphemes
+- add 'includes' vs. 'does not include' functionality to searching
+- a second search result is showing up every time there are two results in the same phrase
+  - these are the ones that don't display anything for the words tier
+  - see if you can adjust the search so that only the first search result is found, and that phrase is displayed, with that part highlighted, followed by the second search result with its own phrase and highlighting
+  - better might be to allow for multi-parameter searching (e.g. if both x and y are true, return result)
+- fix the Texts to Export list
+- windows are closing when they shouldn't be for some reason, especially when you click the moduleShiftRight button
+- after a searchWithinResults, reset the selectedAction dropdown
+- The delete selected tags button is only deleting one tag at a time
+- if the last search result is checked it checks all of this - stop that!
+- allow user to reorder morphemes in a word (in bulk too)
+- fix the selected action box to better represent the behavior you want when things change
+  - I think it's happening on submit for the morpheme analysis popup
+  - don't clear the checkboxes from the search results either
+- ability to delete lexemes (checkboxes in the module, as well as in the workspace pane, which should auto-populate when you click on a lexeme)
+- on reload, sometimes the Lexicon tab stays highlighted
+- The words for A66 (12) are hidden when I do a word token search for c@13k$ 
+- use the lastSearch variable to display the last search, and add a button to repeat search
+  - actually, make a list of the past ten recent searches, so that someone can click and repeat them
+  - allow users to save search (to tags list), and then give them a way to click the search and repeat it
+- add a fieldset to the advanced search options, allowing user to choose between searching by string or searching by lexicon entry
+  - searching by lexicon entry will only be availble for items below the translation/transcription
+- add morpheme lemma and gloss search
+- The token search function seems to be displaying multiple instances of morphemes, even though there's only one morpheme in the array
+  - This suggests that somewhere a search or replace function needs to be set to just a single instance, rather than a global search
+- create a highlightResults function that takes each object in the hits array, finds the ID of its associated result on the page, and replaces the innerHTML with a <strong> highlight
+  - you'll need to have the morpheme token and gloss functions completed first
+- make the search results area just use the regular phrase template instead of the search result template (maybe modify the phrase template and save it as a new one before searching with it)
+- make sure all of the IDs you use to display things are stripped of white space before being calculated
+- look into web cache to save your app offline for users
+- switch to IndexedDB: http://www.html5rocks.com/en/tutorials/indexeddb/todo/ (see also Mozilla's specs)
+- when analyzing morphemes, check to make sure the morpheme doesn't already exist for that word
+  - then write a function that checks for duplicates, in case you already made a few
+- add a 'save search' button to the bulk actions menu
+  - this will operate exactly the same as tags, and will even be one, except for the UI
+  - you'll just save the search as a tag of the format 'search: [search expression]'
+  - you can then display saved searches in the same module as the tags (maybe directly beneath it)
+- auto-populate tag boxes
+- add ability to search by tags
+- consider redoing the CSS styles from the ground up
+- add morphemes as a tier under words
+- add options for what tiers to display (maybe in a tiered header at the top, where you can check or uncheck the box next to the tiers you want)
+- allow the search box to also search the lexicon, including allomorphs
+- rather than saving searches, allow users to simply tag all the items in a search
+- add ability to search within search results (in the actions dropdown)
+- inline tagging: will have a single floating tag icon that moves to whatever's selected, and whatever's selected will have a light background coloring
+  - when the tag button is clicked an editable tag tier will show up below that item, consisting of two fields (category, tag)
+- add inline options to individual words, morphemes, glosses, etc., such as 'concordance search on this word', etc.
+- add ability to choose lexicon for searching
+- add leading and trailing tokens to morpheme search box (and adjust the gloss to display either the lexical or grammatical gloss, depending on which it is)
+- add options to search by tags / content / everything (this'll be a new group of options)
+- a search with a space in it completely destroys your search function - fix this!
+  - seems that doing an empty search does too, although I thought I had already accounted for that
+- ability to group any elements of the text into units
+  - This will be how you build up to syllables and the prosodic hierarchy, as well as syntactic relations, and most importantly constructions
+  - But the text > phrase > word > morpheme > phoneme tree will be the structure off of which everything else is built
+- Add ability to add/delete existing texts, both individually within the text viewer, and collectively in the texts list
+- when you type [], then arrow back one, then type the ` shortcut, it displays an extra bracket - find out why and fix it
+  - Also seems to be an issue where white space is lost
+  - I think you need to escape literals
+- display the search term before the search results
+- character palette still appears on load even after user closed it - seems to happen when the exit button is clicked rather than the character palette button
+- lexical entries should have a general gloss and a sense-specific gloss
+- Add link to regular expressions reference by search box (tooltip?):
+  - http://www.w3schools.com/jsref/jsref_obj_regexp.asp
+- also add a note about searching for literal characters
+  - OR, just give the option of searching either by regex or by ASCII
+- Remember display preferences for which module the user was working in
+- An auto-analyzer, which assigns the appropriate morphemes to a word as you gloss it
+  - Users will have the option to turn it on or off, and the only glosses that are allowed are the ones stored in the lexicon
+  - Another useful feature would be 'gloss based on morphemes', which takes the morphemic analysis and creates the gloss
+- unbind shortcut after item deleted from character palette
+- fix the display issue with the shortcuts popup
+- add ability to edit text details, in a details dropdown at the top of the text viewing panel
+- show the search settings next to the results counter
+- use the expand/collapse icons in the icon set to add collapse/expand buttons instead of exit buttons
+- add an option to import/export preferences (which would include keyboards, etc.)
+- when importing a corpus, give users the option to add to an existing corpus, with a dropdown, or to create a new one
+- add a monitor of what % of local storage is used up, with a little progress bar in Settings
+- Create a loadable version of the SIL keyboard that users can load, but then it saves to their profiles so it's now customized
+  - As part of this, create the general ability to load/save keyboard sets
+- Add ability to change font size
+- Add some keyboard functionality
+	- Esc clears search field
+	- Esc closes popup window
+- Add functionality to maximize buttons
+- Add sort and column selection functionality to:
+  - Search results (???)
+  - textsToExportList (in Export Options)
+  - textsList
+- Add 'number selected' to textsList (in Export Options)
+- Add 'select all' functionality to the Export Texts option
+- Ask if user would like to export database when browser is closed
+- Ask every month whether user would like to backup the database
+- Add popout functionality for panels
+- Allow draggable-width panels (cf. Eloquent Javascript pp. 259-260) (??? Might take too long to render and cause the browser to lag)
+- Add ability to export search results
+- Add ability to reposition popups by dragging
+- If the user clicks a text to open it, it should open the Workspace panel and display it (same with clicking on a lexicon entry)
+- If search results is really large, open Toolbar in a new fullscreen window (???)
+- Add ability to drag and rearrange the characters in the character palette
+- Make exports save to an actual text file and prompt user to download
