@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTLX</title>	
+	<meta name="author" content="Daniel W. Hieber">
+	<meta name="description" content="Home page of Hypertext Linguistics (HTLX)">
+	<meta name="keywords" content="linguistics, computational linguistics, web linguistics, corpus linguistics">
+	<meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+	<meta name="dcterms.created" content="[Sat, 31 May 2014 03:08:23 GMT]">
+	
+	<base target="_self">
+	
+	<!--[if IE]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="overviewPane" class="pane">
+		<img id="closeOverviewPane" class="cornerIcon" src="images/close.svg" alt="Close pane">
+		<img id="overviewPaneShiftLeft" class="shiftLeft" src="images/shiftLeft.svg" alt="Collapse pane left">
+  	<nav id="overviewPaneNav">
+			<ul>
+				<li id="corporaNav">Corpora</li>
+				<li id="documentsNav">Documents</li>
+				<li id="lexiconNav">Lexicon</li>
+				<li id="mediaNav">Media</li>
+				<li id="orthographiesNav">Orthographies</li>
+				<li id="tagsNav">Tags</li>
+				<li id="textsNav">Texts</li>
+			</ul>
+		</nav>
+
+		<div id="corporaOverviewModule"></div>
+		
+		<div id="documentsOverviewModule">
+			<button id="addDocumentButton" type="button">Add new document</button>
+		</div>
+		
+		<div id="lexiconOverviewModule">
+			<ul id="lexiconList"></ul>
+		</div>
+		
+		<div id="mediaOverviewModule"></div>
+		
+		<div id="orthographiesOverviewModule">
+			<select id="orthographiesDropdown"></select>
+			<div id="orthographyButtons">
+				<button id="addOrthographyButton" type="button" value="Add Orthography">Add orthography</button>
+				<button id="deleteOrthographyButton" type="button" value="Delete this orthography">Delete this orthography</button>
+			</div>
+			<div id="orthographySummary">
+				<label for="orthographyLanguageBox">
+					<p>Language Name</p>
+					<input id="orthographyLanguageBox" type="text" placeholder="Language Name">
+				</label>
+				<label for="orthographyNameBox">
+					<p>Orthography Name</p>
+					<input id="orthographyNameBox" type="text" placeholder="Orthography Name">
+				</label>
+			</div>
+			<h1>Graphemes</h1>
+			<ul id="graphemesList"></ul>
+			<button id="addGraphemeButton" type="button" value="Add grapheme">Add grapheme</button>
+		</div>
+		
+		<div id="tagsOverviewModule">
+			<h2>Available Tags</h2>
+			<ul id="tagsList"></ul>
+		</div>
+		
+		<div id="textsOverviewModule">
+  		<p>Select a corpus to work with.</p>
+  		<select id="corpusList"></select>
+  		<nav id="textsList"></nav>
+		</div>
+  </div>
+  
+  <div id="detailPane" class="pane">
+		<img id="closeDetailPane" class="cornerIcon" src="images/close.svg" alt="Close pane">
+		<img id="overviewPaneShiftRight" class="shiftRight" src="images/shiftRight.svg" alt="Collapse pane right">
+		<img id="toolbarPaneShiftLeft" class="shiftLeft" src="images/shiftLeft.svg" alt="Collapse pane left">
+  	<h1 id="detailPaneHeader" class="navSelected">Details</h1>
+		
+		<div id="corporaDetailModule">
+			<h1>Corpus</h1>
+		</div>
+		
+		<div id="documentsDetailModule">
+			<h1>Document</h1>
+		</div>
+		
+		<form id="lexiconDetailModule">
+			<div id="lexEntryViewerTools">
+				<button id="addNewLexEntryButton" type="button">Add New Entry</button>
+				<button id="deleteCurrentLexEntryButton" type="button">Delete Current Entry</button>
+			</div>
+			<label for="lemmaBox">
+				<p>Lemma</p>
+				<input id="lemmaBox" type="text" class="characterInput">
+			</label>
+			<label for="glossBox">
+				<p>Gloss</p>
+				<input id="glossBox" type="text">
+			</label>
+			<label for="definitionBox">
+				<p>Definition</p>
+				<input id="definitionBox" type="text">
+			</label>
+			<label for="POSBox">
+				<p>Part of Speech</p>
+				<select id="POSBox"></select>
+			</label>
+			<label for="morphemeTypeBox">
+				<p>Morpheme Type</p>
+				<select id="morphemeTypeBox"></select>
+			</label>
+		</form>  	
+		
+		<div id="mediaDetailModule"></div>
+		
+		<div id="orthographiesDetailModule"></div>
+		
+		<div id="tagsDetailModule"></div>
+		
+		<div id="textsDetailModule"></div>
+	</div>
+	
+	<div id="toolbarPane" class="pane">
+		<img id="closeToolbarPane" class="cornerIcon" src="images/close.svg" alt="Close pane">
+		<img id="toolbarPaneShiftRight" class="shiftRight" src="images/shiftRight.svg" alt="Collapse pane right">
+		<h1 class="navSelected">Toolbar</h1>
+		
+		<div id="tools">
+			<img id="characterPaletteButton" src="images/character.svg" alt="Character Palette" class="svgButton">
+			<img id="statisticsButton" src="images/graph.svg" alt="Statistics" class="svgButton">
+			<img id="importExportOptionsButton" src="images/arrowDownUp.svg" alt="Import/Export" class="svgButton">
+			<img id="saveButton" src="images/save.svg" alt="Save" class="svgButton">
+			<img id="settingsButton" src="images/settings.svg" alt="Settings" class="svgButton">
+		</div>
+		
+		<div id="characterPalette" class="insetPopup">
+			<img id="closeCharacterPalette" class="cornerIcon" src="images/close.svg" alt="Close character palette">
+			<h2>Character Palette</h2>
+			<div id="characterGallery"></div>
+			<form id="addCharacterForm">
+				<fieldset id="addCharacterOptions" name="addCharacterOptions">
+					<div> <!-- This div is required because fieldset elements cannot behave like flexboxes -->
+						<legend>Add Character</legend>
+						<label for="characterBox" class="tooltip characterInput" name="Enter text, or Unicode values in uXXXX format">
+							<p>Character:</p>
+							<input id="characterBox" type="text">
+						</label>
+						<label for="shortcutBox">
+							<p>Keyboard Shortcut:</p>
+							<input id="shortcutBox" type="text">
+						</label>
+						<input id="addCharacterButton" type="button" value="Add">
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		
+		<form id="searchForm">
+     	<fieldset id="simpleSearchTools">
+				<div>
+  	  		<input id="searchBox" type="search" autocomplete placeholder="Enter text or regular expression (without //) to search" class="characterInput">
+    			<input id="searchButton" type="submit" value="Search">
+				</div>
+     	</fieldset>
+    
+    	<fieldset id="advancedSearchTools">
+				<div>
+	    		<p id="advancedSearchToolsSummary"><legend>Advanced Search Options</legend><img class="expandCollapse" src="images/expand.svg" alt"Expand Advanced Search Tools></p>
+					<div id="advancedSearchToolsDetails" class="insetPopup">
+  					<fieldset id="searchUnitType"><div>
+  						<legend>Search for...</legend>
+							<label for="searchUnitTypeTexts">
+								<input id="searchUnitTypeTexts" type="radio" name="searchUnitType" value="text">
+								<p>texts</p>
+							</label>
+							<label for="searchUnitTypePhrases">
+								<input id="searchUnitTypePhrases" type="radio" name="searchUnitType" value="phrase" checked>
+								<p>phrases</p>
+							</label>
+							<label id="searchUnitTypeWords">
+								<input id="searchUnitTypeWords" type="radio" name="searchUnitType" value="word">
+								<p>words</p>
+							</label>
+							<label id="searchUnitTypeMorphemes">
+								<input id="searchUnitTypeMorphemes" type="radio" name="searchUnitType" value="morpheme">
+								<p>morphemes</p>
+							</label>
+  					</div></fieldset>
+						<fieldset id="searchDomainType"><div>
+							<legend>...with...</legend>
+							<label for="searchDomainTypeTexts">
+								<input id="searchDomainTypeTexts" type="radio" name="searchDomainType" value="text">
+								<p>text</p>
+							</label>
+							<label for="searchDomainTypePhrases">
+								<input id="searchDomainTypePhrases" type="radio" name="searchDomainType" value="phrase" checked>
+								<p>phrase</p>
+							</label>
+							<label for="searchDomainTypeWords">
+								<input id="searchDomainTypeWords" type="radio" name="searchDomainType" value="word">
+								<p>word</p>
+							</label>
+							<label for="searchDomainTypeMorphemes">
+								<input id="searchDomainTypeMorphemes" type="radio" name="searchDomainType" value="morpheme">
+								<p>morpheme</p>
+							</label>
+						</div></fieldset>
+						<fieldset id="searchTermValue"><div>
+							<legend>...containing the search text...</legend>
+						</div></fieldset>
+						<fieldset id="searchTierType"><div>
+							<legend>...on the...</legend>
+							<label for="textTranscriptionTier">
+								<input id="textTranscriptionTier" type="radio" name="tierType" value="textTranscription">
+								<p>transcription (text)</p>
+							</label>
+							<label for="textTranslationTier">
+								<input id="textTranslationTier" type="radio" name="tierType" value="textTranslation">
+								<p>translation (text)</p>
+							</label>
+							<label for="phraseTranscriptionTier">
+								<input id="phraseTranscriptionTier" type="radio" name="tierType" value="transcription" checked>
+								<p>transcription (phrase)</p>
+							</label>
+							<label for="phraseTranslationTier">
+								<input id="phraseTranslationTier" type="radio" name="tierType" value="translation">
+								<p>translation (phrase)</p>
+							</label>
+							<label for="wordTokenTier">
+								<input id="wordTokenTier" type="radio" name="tierType" value="wordToken">
+								<p>token (word)</p>
+							</label>
+							<label for="wordGlossTier">
+								<input id="wordGlossTier" type="radio" name="tierType" value="wordGloss">
+								<p>gloss (word)</p>
+							</label>
+							<label for="morphemeTokenTier">
+								<input id="morphemeTokenTier" type="radio" name="tierType" value="morphemeToken">
+								<p>token (morpheme)</p>
+							</label>
+							<label for="morphemeGlossTier">
+								<input id="morphemeGlossTier" type="radio" name="tierType" value="morphemeGloss">
+								<p>gloss (morpheme)</p>
+							</label>
+						</div></fieldset>
+						<fieldset><div><legend>tier.</legend></div></fieldset>
+					</div>
+				</div>
+    	</fieldset>
+    </form>
+    
+    <div id="resultsArea">
+    	<div id="resultsSummary">
+				<p id="resultsCounter">0 results returned</p>
+				<select id="selectedAction" name="selectedAction">
+					<option id="chooseAction" value="chooseAction" selected>Choose an action</option>
+					<option id="tagAction" value="tagAction">Add tag</option>
+					<option id="glossAction" value="glossAction">Add gloss</option>
+					<option id="morphemeAnalysisAction" value="morphemeAnalysisAction">Analyze morphemes</option>
+					<option id="replaceAction" value="replaceAction">Replace</option>
+					<option id="searchWithinItemsAction" value="searchWithinItemsAction">Search within selected</option>
+				</select>
+			</div>
+			
+			<div id="bulkActionsPopup" class="insetPopup">
+				<form id="glossActionPopup">
+					<label for="glossActionBox">
+						<p>Gloss to add:</p>
+						<input id="glossActionBox" type="text">
+					</label>
+					<label id="replaceGlossesCheckboxLabel" for="replaceGlossesCheckbox">
+						<input id="replaceGlossesCheckbox" type="checkbox" unchecked>
+						<div>
+							<p>Replace glosses?</p>
+							<p>(If checked, glosses for each checked item will be overwritten. If left unchecked, glosses will only be added to unglossed words.)</p>
+						</div>
+					</label>
+					<input type="submit" value="Add Gloss">
+					<p id="totalItemsGlossed">Total items glossed: 0</p>
+				</form>
+				
+				<form id="morphemeAnalysisActionPopup">
+					<label for="morphemeBox">
+						<p>Search for morpheme:</p>
+						<select id="morphemeBox" class="characterInput">
+						</select>
+					</label>
+					<button id="morphemeAnalysisButton" type="button" value="Analyze selected words as containing this morpheme">Analyze selected words as containing this morpheme</button>
+					<button id="removeMorphemeAnalysisButton" type="button" value="Remove this morpheme from the selected words">Remove this morpheme from the selected words</button>
+					<button id="addMorphemeToLexiconButton" type="button" value="Add new morpheme to lexicon">Add new morpheme to lexicon</button>
+					<p id="totalItemsAnalyzed">Total items analyzed: 0</p>
+				</form>
+				
+				<form id="tagActionPopup">
+					<label for="tagCategoryBox">
+						<p>Category/Feature</p>
+						<input id="tagCategoryBox" list="tagCategoryList" type="search">
+						<datalist id="tagCategoryList"></datalist>
+					</label>
+					<label for="tagValueBox">
+						<p>Value</p>
+						<input id="tagValueBox" list="tagValueList" type="search" class="characterInput">
+						<datalist id="tagValueList"></datalist>
+					</label>
+					<input id="addTagButton" type="submit" value="Add tag to the selected items">
+					<p id="totalTagsApplied">Total tags applied: 0</p>
+				</form>
+			</div>
+			
+    	<div id="searchResultsList"></div>
+    </div>
+	</div>
+	
+	<div id="popups">
+		<form id="addTagPopup" class="popup">
+			<img class="closeIcon" src="images/closeIcon.png" alt="Close">
+			<label for="tagCategoryPopupBox">
+				<p>Category/Feature</p>
+				<input id="tagCategoryPopupBox" list="tagCategoryList" type="search">
+				<datalist id="tagCategoryPopupList"></datalist>
+			</label>
+			<label for="tagValuePopupBox">
+				<p>Value</p>
+				<input id="tagValuePopupBox" list="tagValueList" type="search" class="characterInput">
+				<datalist id="tagValuePopupList"></datalist>
+			</label>
+			<input id="addTagPopupButton" type="submit" value="Add tag to the selected items">
+		</form>
+
+		<div id="dynamicPopup" class="popup">
+			<img class="closeIcon" onclick="closePopup(event)" src="images/closeIcon.png" alt="Close">
+			<div id="dynamicPopupContentArea"></div>
+		</div>
+		
+		<div id="filePopup" class="popup">
+			<img id="closeFilePopup" class="closeIcon" src="images/closeIcon.png" alt="Close">
+			<p id="filePromptDisplayText">Please select the file to import.</p>
+			<form id="fileSubmitForm">
+				<input id="filePrompt" type="file">
+				<input id="fileSubmit" type="submit" value="Upload">
+			</form>
+			<input id="processUploadButton" type="button" value="Import">
+		</div>
+		
+		<div id="importExportOptionsPopup" class="popup">
+			<img class="closeIcon" src="images/closeIcon.png" alt="Close">
+			<h1>Import & Export Options</h1>
+			
+			<form id="importForm">
+				<fieldset id="importOptions" class="insetPopup">
+					<legend>Import Options</legend>
+					<div id="importContentOptionsWrapper">
+    				<fieldset id="importContentOptions">
+    					<legend>Content to Import</legend>
+    					<label for="importCorpus">
+    						<input id="importCorpus" type="radio" name="importContent" value="corpus" checked>
+    						<p>Corpus</p>
+    					</label>
+    					<label for="importText">
+    						<input id="importText" type="radio" name="importContent" value="text">
+    						<p>Text</p>
+    					</label>
+    					<label for="importDatabase">
+    						<input id="importDatabase" type="radio" name="importContent" value="database">
+    						<p>Database</p>
+    					</label>
+    				</fieldset>
+						
+						<fieldset id="importFormatOptions">
+							<legend>Format to Import</legend>
+							<label for="importJSON">
+								<input id="importJSON" type="radio" name="importFormat" value="json" checked>
+								<p>JSON</p>
+							</label>
+						</fieldset>
+						
+  					<input id="importButton" type="submit" value="Import">
+					</div>
+				</fieldset>
+			</form>
+			
+			<form id="exportForm">
+				<fieldset id="exportOptions" class="insetPopup">
+					<legend>Export Options</legend>
+					<div id="exportContentOptionsWrapper">
+    				<fieldset id="exportContentOptions" name="exportContentOptions">
+    					<legend>Content to Export</legend>
+      				<label for="exportCorpus">
+      					<input id="exportCorpus" type="radio" name="exportContent" value="corpus" checked>
+      					<p>Corpus</p>
+      				</label>
+      				<label for="exportTexts">
+      					<input id="exportTexts" type="radio" name="exportContent" value="texts">
+    						<p>Text(s)</p>
+      				</label>
+  						<label for="exportDatabase">
+  							<input id="exportDatabase" type="radio" name="exportContent" value="database">
+  							<p>Database</p>
+  						</label>
+    				</fieldset>
+    				
+    				<fieldset name="exportFormatOptions">
+    					<legend>Export Format</legend>
+    					<label for="exportJSON">
+    						<input id="exportJSON" type="radio" name="exportFormat" value="json">
+    						<p>JSON</p>
+    					</label>
+    					<label for="exportSFM">
+    						<input id="exportSFM" type="radio" name="exportFormat" value="sfm">
+    						<p>SFM</p>
+    					</label>
+    				</fieldset>
+    				
+    				<input id="exportButton" type="submit" value="Export">
+					</div>
+				</fieldset>
+
+				<fieldset id="selectTextsToExport" name="selectTextsToExport">
+					<legend id="textsToExportListLegend">Choose texts to export:</legend>
+					<div id="textsToExportList"></div>
+					
+					<template id="selectTextsToExportTemplate">
+						<label for="selectAllTextsToExport">
+  					<input id="selectAllTextsToExport" type="checkbox" name="textsToExport">
+							<p class="textTitle">Title of Text</p>
+						</label>
+					</template>
+				</fieldset>
+			</form>
+		</div>
+		
+		<div id="newDatabasePopup" class="popup">
+			<p>No database detected. Would you like to import a database or create a new one?</p>
+			<p>Select the database file to import (.json), then click 'Import'.</p>
+			<p>Import successful!</p>
+			<div>
+				<input id="importExistingDatabaseButton" type="button" value="Import an existing database">
+				<input id="newDatabaseButton" type="button" value="Create a new database">
+				<input id="databaseFilePrompt" type="file">
+				<input id="importDatabaseButton" type="button" value="Import">
+			</div>
+		</div>
+		
+		<div id="notificationPopup" class="popup"></div>
+		
+		<div id="rightClickMenu" class="menu">
+			<ul>
+				<!-- Append list items here dynamically with Javascript -->
+			</ul>
+		</div>
+				
+		<div id="settingsPopup" class="popup">
+			<img class="closeIcon" src="images/closeIcon.png" alt="Close">
+			<h1>Settings</h1>
+			<label for="delimiterListBox">
+				<p>Delimiters:</p>
+				<input id="delimiterListBox" type="text" placeholder="Enter list of delimiters here" class="displayInput characterInput">
+			</label>
+			<input id="retokenizeCorpusButton" type="button" value="Retokenize Corpus">
+			<input id="resetDisplayButton" type="button" value="Reset Display Settings">
+		</div>
+
+		<div id="shortcutsPopup" class="popup">
+			<img class="closeIcon" src="images/closeIcon.png" alt="Close">
+			<h1>Enter keyboard shortcut following the examples below:</h1>
+			<p><a href="http://craig.is/killing/mice" target="_blank">View the rest of the documentation on keyboard shortcuts here.</a></p>
+			<ul>
+				<li>
+					<code>a</code>
+					<div>Inserts the assigned character when you press the <kbd>a</kbd> key.</div>
+				</li>
+				<li>
+					<code>\</code>
+					<div>Inserts the assigned character when you press the <kbd>\</kbd> key.</div>
+				</li>
+				<li>
+					<code>?</code>
+					<div>Inserts the assigned character when you press <kbd>Shift</kbd>+<kbd>/</kbd> together.</div>
+				</li>
+				<li>
+					<code>ctrl+a</code>
+					<div>Inserts the assigned character when you press <kbd>Ctrl</kbd>+<kbd>a</kbd> together.</div>
+				</li>
+				<li>
+					<code>ctrl+A</code>
+					<div>Inserts the assigned character when you press <kbd>Ctrl</kbd>+<kbd>Shift</kbd> + <kbd>A</kbd> together.</div>
+				</li>
+				<li>
+					<code>a =</code>
+					<div>Inserts the assigned character when you press <kbd>a</kbd> and <kbd>=</kbd> in sequence.</div>
+				</li>
+				<li>
+					<code>a @ 1</code>
+					<div>Inserts the assigned character when you press <kbd>a</kbd>, <kbd>Shift</kbd>+<kbd>2</kbd>, <kbd>1</kbd>, and <kbd>1</kbd> in sequence.</div>
+				</li>
+				<li>
+					<code>ctrl+/ a</code>
+					<div>Inserts the assigned character when you press <kbd>Ctrl</kbd>+<kbd>/</kbd>, then <kbd>a</kbd> in sequence</div>
+				</li>
+				<li>
+					<code>a b c =</code>
+					<div>Inserts the assigned character when you press <kbd>a</kbd>, <kbd>b</kbd>, <kbd>c</kbd>, and <kbd>=</kbd> in sequence.</div>
+				</li>
+			</ul>
+		</div>
+
+		<div id="statisticsPopup" class="popup">
+			<img class="closeIcon" src="images/closeIcon.png" alt="Close">
+			<h1>Statistics</h1>
+			<button id="phonemeFrequenciesButton" type="button" value="Phoneme Frequencies (by Token)">Phoneme Frequencies (by Token)</button>
+			<svg id="statisticsGraphArea" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="500" width="500"></svg>
+			<button id="exportStatisticalDataButton" type="button" value="Export Data">Export Data</button>
+		</div>
+	</div>
+	
+	<div id="templates">
+		<template id="graphemesListItemTemplate">
+			<li>
+				<input class="graphemeBox characterInput" type="text" placeholder="grapheme">
+				<input class="ipaBox" type="text" placeholder="IPA">
+				<img src="images/close.svg" alt="Delete grapheme">
+			</li>
+		</template>
+		
+		<template id="lexiconListItemTemplate">
+			<li class="lexiconListItem">
+				<div class="lemma"></div>
+				<div class="gloss"></div>
+			</li>
+		</template>
+		
+		<template id="morphemeTemplate">
+			<li class="morpheme">
+				<ul class="morphemeWrapper">
+  				<li class="morphemeLemma"></li>
+  				<li class="morphemeGloss"></li>
+				</ul>
+			</li>
+		</template>
+		
+		<template id="optionListItemTemplate">
+			<option value=""></option>
+		</template>
+		
+		<template id="phraseTemplate">
+			<li class="phraseWrapper">
+				<div class="location">Location</div>
+				<ul class="phrase">
+					<li class="transcription"><div class="transcriptionWrapper characterInput" spellcheck="false">Transcription</div></li>
+					<li class="words">
+						<div class="wordsWrapper"></div>
+					</li>
+					<li class="translation"><div class="translationWrapper characterInput">Translation</div></li>
+				</ul>
+				<div class="phraseTools">
+					<img src="images/tag.svg" alt="Tag this phrase" class="svgButton">
+					<img src="images/insertBelow.svg" alt="Add a phrase below" class="svgButton">
+					<img src="images/moveRowUp.svg" alt="Move this phrase up" class="svgButton">
+					<img src="images/moveRowDown.svg" alt="Move this phrase down" class="svgButton">
+					<img src="images/deleteRow.svg" alt="Delete this phrase" class="svgButton">
+				</div>
+			</li>
+		</template>
+		
+		<template id="searchResultTemplate">
+			<li class="searchResult">
+				<img class="viewButton" src="images/view.svg" alt="View in text">
+	 			<input id="selectAllResults" type="checkbox">
+				<label for="selectAllResults" class="resultWrapper"></div>
+			</li>
+    </template>
+
+		<template id="textsListItemTemplate">
+			<a href="#"></a>
+		</template>
+		
+		<template id="textTemplate">
+			<li id="" class="text">
+				<h2 class="textTitle"></h2>
+				<ul class="textBody"></ul>
+			</li>
+		</template>
+		
+		<template id="wordTemplate">
+			<ul class="word">
+				<li class="token"><div class="tokenWrapper">Token</div></li>
+				<li class="morphemes"><ul class="morphemesWrapper"></ul></li>
+				<li class="gloss">Gloss</li>
+			</ul>
+		</template>
+	</div>
+	
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="mousetrap.js"></script>
+	<script type="text/javascript" src="mousetrap-global-bind.js"></script>
+	<script type="text/javascript" src="mousetrap-bind-dictionary.js"></script>
+</body>
+</html>

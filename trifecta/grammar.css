@@ -1,0 +1,186 @@
+/* Stylesheet for the grammar document */
+*[lang] {} /* Any content with a lang attribute */
+
+*[lang=ipa] {} /* Any content written in IPA that is NOT representing a particular language */
+
+*.ungram {} /* Any content that is marked as grammatically unacceptable or odd */
+
+*.ungram-1 {} /* 1 level of ungrammaticality */
+
+*.ungram-2 {} /* 2 level of ungrammaticality */
+
+*.ungram-2 {} /* 3 level of ungrammaticality */
+
+*.unsem {} /* Any content that is marked as semantically unacceptable or odd */
+
+*.unsem-1 {} /* 1 level of semantically oddness */
+
+*.unsem-2 {} /* 2 level of semantically oddness */
+
+*.unsem-3 {} /* 3 level of semantically oddness */
+
+#abbreviations {} /* The abbreviations list */
+
+#abbreviations dl {} /* The content of the abbreviations list */
+
+#abbreviations dt > abbr {} /* The abbreviation within the abbreviations list */
+
+#abbreviations dd {} /* The description of the abbreviation in the abbreviations list */
+
+#abstract {} /* The abstract */
+
+#acknowledgements {} /* The acknowledgements section */
+
+address {} /* Author address */
+
+.affiliation {} /* Author affiliation */
+
+aside {} /* Page asides */
+
+audio {} /* Embedded audio */
+
+.author {} /* Author of the document */
+
+blockquote {} /* Block quotations */
+
+caption {} /* For table captions and captions other than for figures */
+
+col {}
+
+colgroup {}
+
+cite {} /* Citations */
+
+.cr {} /* Cross references */
+
+.cr-section {} /* Cross references to headings and sections */
+
+.cr-item {} /* Cross references to items such as figures, tables, etc. */
+
+.cr-ex {} /* Cross-references to examples */
+
+dt > abbr {} /* An abbreviation in the abbreviations list */
+
+dt > dfn {} /* A definition in a definition list */
+
+em {} /* Emphasized text (italics) | May need to change this to p > em */
+
+.ex {} /* Examples */
+
+.ex em {} /* Emphasis inside a linguistic example */
+
+.ex strong {} /* Focus inside a linguistic example */
+
+.exlabel {} /* A label on an example */
+
+figure {}
+
+figcaption {}
+
+.fn {} /* A footnote */
+
+.foreign {} /* Foreign words and phrases in use rather than citation */
+
+.gl {} /* Content that is a gloss */
+
+.gl-gr {} /* Grammatical glosses */
+
+.gl-lex {} /* Lexical glosses */
+
+.graphemic {} /* Any graphemic representation */
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+img {} /* Embedded images */
+
+li {} /* Lists within the text (these do not live under paragraphs) */
+
+.lx {} /* Language data (citation rather than use) */
+
+.morphemic /* Any representation that is morphemic */
+
+p {}
+
+p > a, p > a:visited {} /* Inline links */
+
+p > a:active {} /* Inline links */
+
+p > a:hover {} /* Inline links */
+
+p > dfn {} /* Inline definitions */
+
+.pageNum {} /* Page numbers */
+
+.phonemic {} /* Any phonemic representation */
+
+.phonetic {} /* Any phonetic representation */
+
+.ref {} /* An item in the reference list */
+
+#references {} /* The reference list */
+
+.run {} /* Running text */
+
+.run-foot {} /* Running footers */
+
+.run-head {} /* Running headers */
+
+section > dfn {} /* A definition given its own paragraph */
+
+span.gl, span.gl-gr, span.gl-lex {} /* Inline glossing */
+
+span[lang=ipa] {} /* Inline IPA that is NOT representing any particular language */
+
+span.lx {} /* Inline language data */
+
+span.quote {} /* Inline quotes */
+
+span.tx {} /* Inline translations */
+
+.speaker {} /* Speaker label */
+
+strong {} /* Focused text (bold) | May need to change this to p > strong */
+
+sub {} /* Indexes */
+
+.subex {} /* Subexamples | All examples contain at least one subexample */
+
+.subex:only-child {} /* Subexample that is the only subexample in its example */
+
+sup {} /* References to footnotes */
+
+table {}
+
+tbody {}
+
+td {}
+
+tfoot {}
+
+th {}
+
+thead {}
+
+tr {}
+
+.title {} /* Title of the document */
+
+.transcript {} /* Content that is a transcript */
+
+.tx {} /* Content that is a translation */
+
+ul {} /* Lists within the text (these do not live under paragraphs */
+
+video {} /* Embedded video */
+
+.words {} /* The array of words in an interlinear gloss
