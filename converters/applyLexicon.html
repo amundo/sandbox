@@ -49,15 +49,6 @@ header h1 button {
   cursor: pointer;
 }
 
-ol#schema li { 
-  cursor: grab;
-}
-
-ol#schema li.sortable-grabbing { 
-  cursor: grabbing;
-  color:red;
-}
-  
   </style>
 </head>
 <body>
@@ -83,8 +74,6 @@ ol#schema li.sortable-grabbing {
 
 <script>
 var 
-  schema = document.querySelector('ol#schema'),
-
   lexiconTA = document.querySelector('#lexicon textarea'),
 
   before = document.querySelectorAll('#before'),
@@ -96,7 +85,7 @@ var
   applyLexiconButton = document.querySelector('#applyLexiconButton');
 
 function tokenize(text){
-  return text.toLowerCase().split(/[ \.…\!\?\t]+/g);
+  return text.toLowerCase().split(/[- \.…\!\?\t]+/g);
 }
 
 
@@ -108,11 +97,12 @@ function applyLexicon(){
     var lexiconJSON = JSON.parse(lexiconTA.value); 
     lexiconJSON.forEach(word => lexicon.add(word) );
 
-app.lexicon = lexicon;
-app.text = text;
+
+  app.lexicon = lexicon;
+  app.text = text;
 
   text.phrases.forEach(phrase => {
-    phrase.words = tokenize(phrase.transcription).map( word => {
+    phrase.words = tokenize(phrase.transcriptions.jmx).map( word => {
       return lexicon.lookup(word)
     })
   })

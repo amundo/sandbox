@@ -53,11 +53,11 @@ describe('Modeling', function(){
       expect(this.alignment).not.toBe(null)
     })
 
-    it('model of good ', function(){
+    it('model of ‘good’ ', function(){
       expect(this.alignment['good']).toEqual({ "selamat": 4, "pagi": 1, "siang" : 1, "sore" :1, "malam": 1})
     })
 
-    it('best for good is selamat', function(){
+    it('best for ‘good’ is ‘selamat’', function(){
       expect(this.alignment['good']).toEqual({ "selamat": 4, "pagi": 1, "siang" : 1, "sore" :1, "malam": 1})
     })
 

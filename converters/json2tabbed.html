@@ -99,7 +99,7 @@ function toTabs(){
   
   text.phrases.forEach((s, i) => {
     
-    tabbedText += '(' + (parseInt(s.id) + 1) + ')\n';
+    tabbedText += '(' + (parseInt(s.id) + 1) + ')' + '\t[' + s.startTime.toFixed(3) + '-' + s.endTime.toFixed(3) + ']\n\n';
     if(s.transcription){
       tabbedText += s.transcription;
     } else { 
@@ -107,8 +107,16 @@ function toTabs(){
     }
     tabbedText += '\n\n';
 
-    if(s.words){
-      tabbedText += s.words.map(w => w.token).join('\t') + '\n' + s.words.map(w => w.gloss).join('\t') + '\n\n';
+    var wordsCopy = s.words.slice();
+
+    while(wordsCopy.length) {
+      var wordsLine = wordsCopy.splice(0,6);
+      tabbedText += '\t' 
+                  + wordsLine.map(w => w.token).join('\t') 
+                  + '\n' 
+                  + '\t' 
+                  + wordsLine.map(w => w.gloss).join('\t') 
+                  + '\n\n\n';
     }
 
     if(s.translations){

@@ -17,8 +17,8 @@ function guess(text, from, to){
     translations = text.phrases.map(p => p.translations[to]);
   
   transcriptions.forEach((transcription, i) => {
-    var tokens = transcription.split(' '),
-        translationWords = translations[i].split(' ');
+    var tokens = transcription.toLowerCase().split(' '),
+        translationWords = translations[i].toLowerCase().split(' ');
     
     tokens.forEach(function(token){
       translationWords.forEach(function(translationWord){
