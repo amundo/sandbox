@@ -1,2 +1,2 @@
-# Sandbox
-Prototypes and other non-final versions of project components
+# DLx Sandbox
+This repository is a collection of prototypes, mockups, and other miscellany for DLx-related projects.
